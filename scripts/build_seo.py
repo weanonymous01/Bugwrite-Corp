@@ -4,14 +4,34 @@ import os
 import re
 import shutil
 import subprocess
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
+from email.utils import format_datetime
 
 DOMAIN = "https://www.bugwrite.com"
-LASTMOD = "2026-11-18"
+NOW_UTC = datetime.now(timezone.utc).replace(microsecond=0)
+LASTMOD = NOW_UTC.strftime("%Y-%m-%d")
+MOD_ISO = NOW_UTC.strftime("%Y-%m-%dT%H:%M:%SZ")
 CSS_VERSION = "2"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PUBLIC = os.path.join(ROOT, "public")
 DATA_JS = os.path.join(PUBLIC, "blog", "articles-data.js")
+
+
+def get_article_pub_dt(iso_date, idx):
+    """Return a clean UTC publication datetime that is never in the future."""
+    try:
+        d = datetime.strptime(iso_date, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+    except Exception:
+        d = NOW_UTC.replace(hour=0, minute=0, second=0)
+    if d.date() == NOW_UTC.date():
+        # Spread today's articles cleanly across earlier hours today, never after NOW_UTC
+        offset_mins = min(15 + (idx * 13) % 480, max(1, int((NOW_UTC - d).total_seconds() // 60)))
+        dt = NOW_UTC - timedelta(minutes=offset_mins)
+    else:
+        pub_hour = 18 - (idx % 12)
+        pub_min = (idx * 7) % 60
+        dt = d.replace(hour=pub_hour, minute=pub_min, second=0)
+    return dt if dt <= NOW_UTC else NOW_UTC
 
 PUBLISHER_ORG = {
     "@type": "NewsMediaOrganization",
@@ -1123,11 +1143,10 @@ def generate_article_pages(articles):
         word_count = len(plain_body.split())
         keywords_list = art.get("keywords", [])
 
-        # Stagger publication timestamps cleanly across the day for News Sitemap & Schema clarity
-        pub_hour = 18 - (idx % 12)
-        pub_min = (idx * 7) % 60
-        pub_iso = f"{iso_date}T{pub_hour:02d}:{pub_min:02d}:00Z"
-        mod_iso = f"{LASTMOD}T14:00:00Z"
+        # Clean UTC publication timestamp (never in the future; dateModified always >= datePublished)
+        pub_dt = get_article_pub_dt(iso_date, idx)
+        pub_iso = pub_dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+        mod_iso = MOD_ISO
 
         schemas = [
             {
@@ -1521,19 +1540,29 @@ def generate_sitemap(articles):
 
 
 def generate_news_sitemap(articles):
-    # Google News Sitemap: covers recent 48-hour articles (Nov 17-18, 2026)
+    # Google News Sitemap: automatically includes articles from the rolling last 48 hours
+    today = NOW_UTC.date()
+    recent = []
+    for idx, art in enumerate(articles):
+        iso_date = parse_iso_date(art.get("publishedDate", LASTMOD))
+        try:
+            art_date = datetime.strptime(iso_date, "%Y-%m-%d").date()
+        except Exception:
+            art_date = today
+        age_days = (today - art_date).days
+        if 0 <= age_days <= 2:
+            recent.append((idx, art, iso_date))
+
+    # Fallback so news-sitemap.xml is never empty even if no new story was published in the last 48h
+    if not recent:
+        recent = [(idx, art, parse_iso_date(art.get("publishedDate", LASTMOD))) for idx, art in enumerate(articles[:10])]
+
     lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">',
     ]
-    count = 0
-    for idx, art in enumerate(articles):
-        iso_date = parse_iso_date(art.get("publishedDate", LASTMOD))
-        if iso_date not in ("2026-11-18", "2026-11-17"):
-            continue
-        pub_hour = 18 - (idx % 12)
-        pub_min = (idx * 7) % 60
-        pub_iso = f"{iso_date}T{pub_hour:02d}:{pub_min:02d}:00Z"
+    for idx, art, iso_date in recent:
+        pub_iso = get_article_pub_dt(iso_date, idx).strftime("%Y-%m-%dT%H:%M:%SZ")
         loc = f"{DOMAIN}{get_article_path(art)}"
         kws = ", ".join(art.get("keywords", [])[:5])
         kw_xml = f"\n      <news:keywords>{esc(kws)}</news:keywords>" if kws else ""
@@ -1550,13 +1579,13 @@ def generate_news_sitemap(articles):
             f"    </news:news>\n"
             f"  </url>"
         )
-        count += 1
     lines.append("</urlset>\n")
     write_file("public/news-sitemap.xml", "\n".join(lines))
-    print(f"Generated public/news-sitemap.xml with {count} recent news URLs")
+    print(f"Generated public/news-sitemap.xml with {len(recent)} recent news URLs (window ending {LASTMOD})")
 
 
 def generate_rss_feed(articles):
+    build_rfc = format_datetime(NOW_UTC, usegmt=True)
     lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">',
@@ -1566,7 +1595,7 @@ def generate_rss_feed(articles):
         f'    <atom:link href="{DOMAIN}/rss.xml" rel="self" type="application/rss+xml" />',
         '    <description>Independent technology, gaming, cybersecurity, and AI business journalism from Bugwrite.</description>',
         '    <language>en-us</language>',
-        '    <lastBuildDate>Wed, 18 Nov 2026 14:00:00 GMT</lastBuildDate>',
+        f'    <lastBuildDate>{build_rfc}</lastBuildDate>',
         '    <image>',
         f'      <url>{DOMAIN}/blog/bugwrite-logo.png</url>',
         '      <title>Bugwrite</title>',
@@ -1577,10 +1606,7 @@ def generate_rss_feed(articles):
         loc = f"{DOMAIN}{get_article_path(art)}"
         img_url = f"{DOMAIN}{art['image']}"
         iso_date = parse_iso_date(art.get("publishedDate", LASTMOD))
-        dt = datetime.strptime(iso_date, "%Y-%m-%d")
-        pub_hour = 18 - (idx % 12)
-        pub_min = (idx * 7) % 60
-        rfc_date = dt.strftime(f"%a, %d %b %Y {pub_hour:02d}:{pub_min:02d}:00 GMT")
+        rfc_date = format_datetime(get_article_pub_dt(iso_date, idx), usegmt=True)
         lines.append(
             f"    <item>\n"
             f"      <title>{esc(art['title'])}</title>\n"

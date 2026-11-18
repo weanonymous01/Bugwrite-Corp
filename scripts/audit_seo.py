@@ -69,12 +69,14 @@ for fp in html_files:
 
 print(f"Audited {len(html_files)} HTML pages: 0 Tailwind CDN, all www canonicals, max-image-preview:large, favicons, {total_schemas} valid JSON-LD schemas, 0 em/en dashes!")
 
-# 4. Validate sitemap.xml, news-sitemap.xml, and rss.xml
+# 4. Validate sitemap.xml, news-sitemap.xml, and rss.xml dynamically
+article_pages = glob.glob("public/*/article/*/index.html")
+expected_total_urls = len(article_pages) + 9
 tree = ET.parse("public/sitemap.xml")
 urls = tree.getroot().findall("{http://www.sitemaps.org/schemas/sitemap/0.9}url")
 imgs = tree.getroot().findall(".//{http://www.google.com/schemas/sitemap-image/1.1}image")
-assert len(urls) == 93, f"Expected 93 sitemap URLs, got {len(urls)}"
-assert len(imgs) == 84, f"Expected 84 image sitemap entries, got {len(imgs)}"
+assert len(urls) == expected_total_urls, f"Expected {expected_total_urls} sitemap URLs, got {len(urls)}"
+assert len(imgs) == len(article_pages), f"Expected {len(article_pages)} image sitemap entries, got {len(imgs)}"
 for u in urls:
     loc = u.find("{http://www.sitemaps.org/schemas/sitemap/0.9}loc").text
     assert loc.startswith(CANONICAL_HOST), f"Non-www URL in sitemap: {loc}"
@@ -87,8 +89,10 @@ print(f"Valid news-sitemap.xml: {len(news_urls)} recent news URLs")
 
 rss_tree = ET.parse("public/rss.xml")
 rss_items = rss_tree.getroot().findall("./channel/item")
-assert len(rss_items) == 50, f"Expected 50 RSS items, got {len(rss_items)}"
+assert len(rss_items) == min(50, len(article_pages)), f"Unexpected RSS item count: {len(rss_items)}"
 print(f"Valid rss.xml: {len(rss_items)} feed items")
+
+assert os.path.exists("public/e7b4c9a21f6d48039b5e2a8c1d7f4e90.txt"), "Missing IndexNow verification key file!"
 
 # 5. Verify live HTTP 200 on local Vite
 live_routes = [

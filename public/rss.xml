@@ -6,7 +6,7 @@
     <atom:link href="https://www.bugwrite.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>Independent technology, gaming, cybersecurity, and AI business journalism from Bugwrite.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Nov 2026 14:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 09:42:31 GMT</lastBuildDate>
     <image>
       <url>https://www.bugwrite.com/blog/bugwrite-logo.png</url>
       <title>Bugwrite</title>
@@ -16,7 +16,7 @@
       <title>Apple confirms internal software update triggered widespread iCloud, Apple Pay, and App Store outage</title>
       <link>https://www.bugwrite.com/big-tech/article/apple-outage</link>
       <guid isPermaLink="true">https://www.bugwrite.com/big-tech/article/apple-outage</guid>
-      <pubDate>Wed, 18 Nov 2026 18:00:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 09:27:31 GMT</pubDate>
       <category>Big Tech</category>
       <description>Apple confirmed an internal software update caused widespread outages across iCloud, Apple Pay, the App Store, and Apple Music, ruling out any cyberattack.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/apple-outage.jpg" medium="image" width="1280" height="720" />
@@ -25,7 +25,7 @@
       <title>FBI issues urgent warning over ARTEX, an AI framework turning novice hackers into machine-speed intruders</title>
       <link>https://www.bugwrite.com/security/article/artex-ai-cyber-framework</link>
       <guid isPermaLink="true">https://www.bugwrite.com/security/article/artex-ai-cyber-framework</guid>
-      <pubDate>Wed, 18 Nov 2026 17:07:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 09:14:31 GMT</pubDate>
       <category>Cybersecurity</category>
       <description>The FBI warns organizations about ARTEX, an LLM-driven autonomous cyber framework capable of escalating network intrusions to domain-level access in under three hours.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/artex.jpg" medium="image" width="1280" height="720" />
@@ -34,7 +34,7 @@
       <title>Java4Shell: Red Hat urges immediate patching for critical OpenJDK remote code execution flaw</title>
       <link>https://www.bugwrite.com/security/article/java4shell-cve-2026-114938</link>
       <guid isPermaLink="true">https://www.bugwrite.com/security/article/java4shell-cve-2026-114938</guid>
-      <pubDate>Wed, 18 Nov 2026 16:14:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 09:01:31 GMT</pubDate>
       <category>Security</category>
       <description>Red Hat disclosed CVE-2026-114938, known as Java4Shell, a critical OpenJDK Base64 heap buffer overflow vulnerability affecting x86-64 AVX-512 servers.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/java4shell.jpg" medium="image" width="1280" height="720" />
@@ -43,7 +43,7 @@
       <title>Nvidia&#x27;s first board chair Harvey Jones rules out Jensen Huang&#x27;s return as CEO</title>
       <link>https://www.bugwrite.com/business/article/harvey-jones-nvidia-chair</link>
       <guid isPermaLink="true">https://www.bugwrite.com/business/article/harvey-jones-nvidia-chair</guid>
-      <pubDate>Wed, 18 Nov 2026 15:21:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 08:48:31 GMT</pubDate>
       <category>Business</category>
       <description>Nvidia&#x27;s newly appointed board chair Harvey Jones confirmed during Q3 earnings that the board will not reinstate co-founder Jensen Huang as CEO.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/harvey-jones.jpg" medium="image" width="1280" height="720" />
@@ -52,7 +52,7 @@
       <title>Players already have the Ocarina of Time Switch 2 remake running natively on PC</title>
       <link>https://www.bugwrite.com/gaming/article/ocarina-of-time-remake-pc-port</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/ocarina-of-time-remake-pc-port</guid>
-      <pubDate>Wed, 18 Nov 2026 14:28:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 08:35:31 GMT</pubDate>
       <category>Gaming</category>
       <description>Less than two weeks after launch, modding developers are running Nintendo&#x27;s Switch 2 Ocarina of Time remake natively on Windows PCs via static recompilation.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/ocarina-pc-port.jpg" medium="image" width="1280" height="720" />
@@ -61,7 +61,7 @@
       <title>When is GTA 6 playable? Global unlock schedule, preload size, and midnight rollout details</title>
       <link>https://www.bugwrite.com/gaming/article/when-is-gta-6-playable-release-times</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/when-is-gta-6-playable-release-times</guid>
-      <pubDate>Wed, 18 Nov 2026 13:35:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 08:22:31 GMT</pubDate>
       <category>Gaming</category>
       <description>Grand Theft Auto VI unlocks Thursday, November 19, 2026 on PS5 and Xbox Series X|S via a rolling midnight local-time rollout. Check preload size and launch timing.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta6-release-time.jpg" medium="image" width="1280" height="720" />
@@ -70,7 +70,7 @@
       <title>The New Zealand GTA 6 trick explained: How Xbox and PS5 players try to unlock early and the risks involved</title>
       <link>https://www.bugwrite.com/gaming/article/new-zealand-gta-6-trick</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/new-zealand-gta-6-trick</guid>
-      <pubDate>Wed, 18 Nov 2026 12:42:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 08:09:31 GMT</pubDate>
       <category>Gaming</category>
       <description>Because GTA 6 uses a rolling midnight launch on November 19, players are eyeing the New Zealand region trick on Xbox and PS5. Here is how it works and the TOS risks.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta6-new-zealand.jpg" medium="image" width="1280" height="720" />
@@ -79,7 +79,7 @@
       <title>GTA 6 Metacritic watch: When the review embargo lifts and the historic bar Rockstar is chasing</title>
       <link>https://www.bugwrite.com/gaming/article/gta-6-metacritic-score-review-embargo</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/gta-6-metacritic-score-review-embargo</guid>
-      <pubDate>Wed, 18 Nov 2026 11:49:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 07:56:31 GMT</pubDate>
       <category>Gaming</category>
       <description>Reports point to the GTA 6 review embargo lifting November 18, 2026 ahead of launch as Metacritic expectations hover near Rockstar&#x27;s historic 97 and 98 scores.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta6-metacritic.jpg" medium="image" width="1280" height="720" />
@@ -88,7 +88,7 @@
       <title>How long is GTA 6 story mode? Campaign hours, chapter structure, and 100 percent completion estimates</title>
       <link>https://www.bugwrite.com/gaming/article/how-long-is-gta-6-story-mode</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/how-long-is-gta-6-story-mode</guid>
-      <pubDate>Wed, 18 Nov 2026 10:56:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 07:43:31 GMT</pubDate>
       <category>Gaming</category>
       <description>Grand Theft Auto VI&#x27;s focused main story runs around 50 hours across five chapters, expanding to 80 hours with side stories and roughly 200 hours for 100% completion.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta6-story-length.jpg" medium="image" width="1280" height="720" />
@@ -97,7 +97,7 @@
       <title>New GTA 6 screenshots show off Vice City nightlife and torrential Leonida storms ahead of launch</title>
       <link>https://www.bugwrite.com/gaming/article/gta-6-screenshots-gallery-weather</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/gta-6-screenshots-gallery-weather</guid>
-      <pubDate>Wed, 18 Nov 2026 09:03:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 07:30:31 GMT</pubDate>
       <category>Gaming</category>
       <description>Rockstar Games rolled out 39 official 4K GTA 6 screenshots in its Launch Gallery and partnered with The Weather Channel to reveal dynamic storms over Vice City.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta6-screenshots.jpg" medium="image" width="1280" height="720" />
@@ -106,7 +106,7 @@
       <title>The Game Awards 2026 nominees: GTA 6 leads with 8 nods alongside Ocarina of Time and Resident Evil Requiem</title>
       <link>https://www.bugwrite.com/gaming/article/the-game-awards-2026-nominees</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/the-game-awards-2026-nominees</guid>
-      <pubDate>Wed, 18 Nov 2026 08:10:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 07:17:31 GMT</pubDate>
       <category>Gaming</category>
       <description>The Game Awards 2026 nominees were announced November 17, led by Grand Theft Auto VI with 8 nominations ahead of the December 10 ceremony in Los Angeles.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/game-awards-2026.jpg" medium="image" width="1280" height="720" />
@@ -115,7 +115,7 @@
       <title>Mega Millions drawing November 17, 2026: Winning numbers and why the jackpot climbed to $629 million</title>
       <link>https://www.bugwrite.com/business/article/mega-millions-drawing-november-17-2026</link>
       <guid isPermaLink="true">https://www.bugwrite.com/business/article/mega-millions-drawing-november-17-2026</guid>
-      <pubDate>Wed, 18 Nov 2026 07:17:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 07:04:31 GMT</pubDate>
       <category>Business</category>
       <description>Check the Mega Millions winning numbers for Tuesday, November 17, 2026 (03, 10, 19, 28, 33 and Mega Ball 21) as the rollover pushes Friday&#x27;s jackpot to $629 million.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/mega-millions-nov17.jpg" medium="image" width="1280" height="720" />
@@ -124,7 +124,7 @@
       <title>FBI warning today: Automated AI intrusions and deepfake video scams put companies on high alert</title>
       <link>https://www.bugwrite.com/security/article/fbi-warning-today-facestealer-artex</link>
       <guid isPermaLink="true">https://www.bugwrite.com/security/article/fbi-warning-today-facestealer-artex</guid>
-      <pubDate>Wed, 18 Nov 2026 18:24:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 06:51:31 GMT</pubDate>
       <category>Security</category>
       <description>Federal officials issued urgent mid-November cyber warnings covering the $400 million FaceStealer deepfake video scam and the automated ARTEX hacking framework.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/fbi-warning.jpg" medium="image" width="1280" height="720" />
@@ -133,7 +133,7 @@
       <title>Xbox Black Friday Sale 2026 starts November 19 with up to 80 percent off over 2,000 games</title>
       <link>https://www.bugwrite.com/gaming/article/xbox-black-friday-sale-2026</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/xbox-black-friday-sale-2026</guid>
-      <pubDate>Wed, 18 Nov 2026 17:31:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 06:38:31 GMT</pubDate>
       <category>Deals</category>
       <description>Microsoft&#x27;s Xbox Black Friday Sale 2026 launches November 19 at 9 PM PST with up to 80% off over 2,000 Xbox and PC titles, Design Lab discounts, and TV bundles.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/xbox-black-friday.jpg" medium="image" width="1280" height="720" />
@@ -142,7 +142,7 @@
       <title>PlayStation Plus November 2026 lineup adds Death Stranding 2, Atomfall, and Dragon Quest III HD-2D</title>
       <link>https://www.bugwrite.com/gaming/article/playstation-plus-november-2026</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/playstation-plus-november-2026</guid>
-      <pubDate>Wed, 18 Nov 2026 16:38:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 06:25:31 GMT</pubDate>
       <category>Gaming</category>
       <description>Sony&#x27;s November 2026 PlayStation Plus Extra and Premium Game Catalog adds Death Stranding 2: On the Beach, Like a Dragon: Pirate Yakuza in Hawaii, Atomfall, and more.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/playstation-plus.jpg" medium="image" width="1280" height="720" />
@@ -151,7 +151,7 @@
       <title>Salesforce unveils Microsoft Copilotforce partnership amid fresh job cuts and internal AI budgets</title>
       <link>https://www.bugwrite.com/business/article/salesforce-copilotforce-layoffs-november-2026</link>
       <guid isPermaLink="true">https://www.bugwrite.com/business/article/salesforce-copilotforce-layoffs-november-2026</guid>
-      <pubDate>Wed, 18 Nov 2026 15:45:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 06:12:31 GMT</pubDate>
       <category>Enterprise</category>
       <description>Salesforce and Microsoft announced Copilotforce with Zero Copy Data 360 integration as reports reveal fresh layoffs, employee AI token caps, and Q3 earnings prep.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/salesforce.jpg" medium="image" width="1280" height="720" />
@@ -223,7 +223,7 @@
       <title>Anthropic IPO: What Investors Should Know About the Company&#x27;s Public Listing Plans</title>
       <link>https://www.bugwrite.com/business/article/anthropic-ipo-nasdaq-ant-2026</link>
       <guid isPermaLink="true">https://www.bugwrite.com/business/article/anthropic-ipo-nasdaq-ant-2026</guid>
-      <pubDate>Wed, 18 Nov 2026 07:41:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 04:28:31 GMT</pubDate>
       <category>Business</category>
       <description>Anthropic prepares to price its Nasdaq IPO under ticker ANT at $70 to $78 per share, pairing $17B quarterly revenue with $900.9B in compute commitments.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/anthropic-ipo-nasdaq-ant-2026.jpg" medium="image" width="1280" height="720" />
@@ -241,7 +241,7 @@
       <title>GTA 6 PC Release Date: Will It Come to Windows?</title>
       <link>https://www.bugwrite.com/gaming/article/gta-6-pc-release-date-windows</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/gta-6-pc-release-date-windows</guid>
-      <pubDate>Wed, 18 Nov 2026 17:55:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 04:02:31 GMT</pubDate>
       <category>Gaming</category>
       <description>Grand Theft Auto 6 launches November 19, 2026 on PS5 and Xbox Series X|S with no PC release date announced. Here is what Rockstar&#x27;s past launches tell us about Windows.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta-6-pc-release-date-windows.jpg" medium="image" width="1280" height="720" />
@@ -268,7 +268,7 @@
       <title>GTA 6 Standard vs Ultimate Edition: Which Version Should You Choose?</title>
       <link>https://www.bugwrite.com/gaming/article/gta-6-standard-vs-ultimate-edition</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/gta-6-standard-vs-ultimate-edition</guid>
-      <pubDate>Wed, 18 Nov 2026 14:16:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 03:23:31 GMT</pubDate>
       <category>Gaming</category>
       <description>Compare GTA 6 Standard Edition ($79.99) and Ultimate Edition ($99.99), including the 16 exclusive story items, vehicles, and pre-order bonuses before launch.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta-6-standard-vs-ultimate-edition.jpg" medium="image" width="1280" height="720" />
@@ -376,7 +376,7 @@
       <title>GTA 6 Gameplay Features: 10 Details Players Should Know</title>
       <link>https://www.bugwrite.com/gaming/article/gta-6-gameplay-features-details</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/gta-6-gameplay-features-details</guid>
-      <pubDate>Wed, 18 Nov 2026 14:40:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 08:47:31 GMT</pubDate>
       <category>Gaming</category>
       <description>Before GTA 6 unlocks on November 19, here are 10 confirmed gameplay, world, customization, and platform details every PS5 and Xbox Series X|S player should know.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta-6-gameplay-features-details.jpg" medium="image" width="1280" height="720" />

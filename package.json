@@ -6,6 +6,8 @@
     "dev": "vite",
     "css": "tailwindcss -i ./src/input.css -o ./public/assets/styles.css --minify",
     "seo": "python scripts/build_seo.py && npm run css",
+    "audit": "python scripts/audit_seo.py",
+    "indexnow": "python scripts/ping_indexnow.py",
     "build": "npm run css && vite build",
     "preview": "vite preview"
   },
