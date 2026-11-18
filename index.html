@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bugwrite: Tech, Gaming, Cybersecurity &amp; Business News</title>
+  <meta name="description" content="Independent tech, gaming, cybersecurity, and AI business news from Bugwrite. Read GTA 6 launch guides, outage reports, and verified daily coverage." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bugwrite.com/" />
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:site_name" content="Bugwrite" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bugwrite: Tech, Gaming, Cybersecurity &amp; Business News" />
+  <meta property="og:description" content="Independent tech, gaming, cybersecurity, and AI business news from Bugwrite. Read GTA 6 launch guides, outage reports, and verified daily coverage." />
+  <meta property="og:url" content="https://bugwrite.com/" />
+  <meta property="og:image" content="https://bugwrite.com/blog/articles/gta6-release-time.jpg" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="720" />
+
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bugwrite: Tech, Gaming, Cybersecurity &amp; Business News" />
+  <meta name="twitter:description" content="Independent tech, gaming, cybersecurity, and AI business news from Bugwrite. Read GTA 6 launch guides, outage reports, and verified daily coverage." />
+  <meta name="twitter:image" content="https://bugwrite.com/blog/articles/gta6-release-time.jpg" />
+
+  <!-- Google Analytics 4 (Replace G-XXXXXXXXXX with your live GA4 Measurement ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <!-- Google Search Console Verification (Replace content with your GSC token) -->
+  <meta name="google-site-verification" content="YOUR_GSC_VERIFICATION_CODE" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Alliance No.1"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', '"Fira Sans"', '"Droid Sans"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    * {
+      font-family: "Alliance No.1", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    body {
+      background-color: #ffffff;
+      color: #111827;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    html.dark body {
+      background-color: #0d0f12;
+      color: #f3f4f6;
+    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+    html.dark ::-webkit-scrollbar-thumb { background: #374151; }
+    .article-headline { transition: color 0.15s ease-in-out; }
+    .group:hover .article-headline { color: #0057b8; }
+    html.dark .group:hover .article-headline { color: #60a5fa; }
+    .article-prose p {
+      margin-bottom: 1.35rem;
+      line-height: 1.75;
+      color: #262626;
+      font-size: 1.0625rem;
+    }
+    html.dark .article-prose p { color: #d4d4d8; }
+    .article-prose h2 {
+      margin-top: 2.15rem;
+      margin-bottom: 0.85rem;
+      font-size: 1.375rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      color: #0a0a0a;
+    }
+    html.dark .article-prose h2 { color: #fafafa; }
+    .article-prose h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.6rem;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #171717;
+    }
+    html.dark .article-prose h3 { color: #f4f4f5; }
+    .article-prose code {
+      background-color: #f3f4f6;
+      color: #111827;
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+    }
+    html.dark .article-prose code { background-color: #1f242d; color: #e5e7eb; }
+    .article-prose em { font-style: italic; }
+  </style>
+  <script>
+    (function () {
+      if (localStorage.getItem('bugwrite-theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Bugwrite",
+  "url": "https://bugwrite.com/",
+  "description": "Independent tech, gaming, cybersecurity, and AI business news from Bugwrite. Read GTA 6 launch guides, outage reports, and verified daily coverage.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://bugwrite.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsMediaOrganization",
+  "name": "Bugwrite",
+  "url": "https://bugwrite.com/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://bugwrite.com/blog/articles/gta6-release-time.jpg",
+    "width": 1280,
+    "height": 720
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Bugwrite News & Launch Tracker",
+  "url": "https://bugwrite.com/",
+  "applicationCategory": "NewsApplication",
+  "operatingSystem": "All",
+  "description": "Free real-time technology, gaming, cybersecurity, and AI business news platform with live search and launch countdown tools.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What topics does Bugwrite cover every day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bugwrite publishes daily reporting, explainers, and buyer guides across four primary desks: Gaming, Big Tech, Security, and Business. Coverage spans major video game launches like Grand Theft Auto VI, live platform outages across Apple, Microsoft, Google, and Amazon, critical CVE advisories, and semiconductor and AI market developments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Bugwrite verify breaking outages and cybersecurity alerts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Before publishing any outage or security story, our editors cross-check primary status dashboards, official vendor advisories, CVE databases such as Red Hat and NVD, and federal alerts from agencies like the FBI and CISA. Whenever user-reported outage spikes turn out to be localized or unrelated false alarms, we clearly separate confirmed disruptions from speculation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can readers find GTA 6 release times, guides, and updates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every GTA 6 launch guide, including local midnight unlock schedules, preload storage requirements, Metacritic review tracking, campaign length estimates, Leonida map breakdowns, and edition comparisons, is organized inside the dedicated GTA VI section on our homepage and under the Gaming desk at bugwrite.com/gaming."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Bugwrite free to read without a paid subscription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every news article, security explainer, launch countdown tool, and buying guide on Bugwrite is completely free to access on desktop and mobile with no paywall or account registration required."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body class="bg-white dark:bg-[#0d0f12] text-neutral-900 dark:text-neutral-100 font-sans selection:bg-neutral-200 dark:selection:bg-neutral-700">
+
+  <!-- GTA 6 LAUNCH COUNTDOWN ANNOUNCEMENT BAR -->
+  <div id="gta-announcement-bar" class="bg-neutral-950 dark:bg-[#161a22] text-white border-b border-neutral-800">
+    <div class="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between gap-3 text-xs">
+      <div class="w-4 hidden sm:block shrink-0" aria-hidden="true"></div>
+      <div class="flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 text-center">
+        <span class="font-bold uppercase tracking-[0.09em] text-neutral-200">GTA VI Launch</span>
+        <span class="text-neutral-600 hidden sm:inline">|</span>
+        <span id="gta-countdown-text" class="text-neutral-300">Unlocks Nov 19 at midnight local time:</span>
+        <span id="gta-countdown-timer" class="font-bold tabular-nums tracking-wider text-white">00h 00m 00s</span>
+        <a href="/gaming/article/when-is-gta-6-playable-release-times" onclick="event.preventDefault(); openArticleView('when-is-gta-6-playable-release-times')" class="ml-1 font-semibold underline underline-offset-4 text-neutral-200 hover:text-white transition-colors">
+          Launch Guide &rarr;
+        </a>
+      </div>
+      <button id="dismiss-announcement-btn" type="button" aria-label="Dismiss announcement bar" class="text-neutral-400 hover:text-white transition-colors cursor-pointer shrink-0 p-0.5">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- TOP NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-white dark:bg-[#0d0f12] border-b border-neutral-200/90 dark:border-neutral-800 shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
+    <div class="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 h-[56px] flex items-center justify-between">
+      <div class="flex items-center gap-6 lg:gap-8">
+        <a href="/" id="site-logo" onclick="resetHome(event)" class="flex items-center select-none group">
+          <span class="text-[24px] font-black tracking-[-0.055em] text-black dark:text-white leading-none lowercase">bugwrite</span>
+        </a>
+        <nav aria-label="Primary navigation" class="hidden xl:flex items-center gap-6 text-[13px] font-medium text-neutral-700 dark:text-neutral-300" id="desktop-nav">
+          <a href="/" data-cat="All" onclick="event.preventDefault(); filterCategory('All')" class="nav-cat hover:text-black dark:hover:text-white py-2 transition-colors text-black dark:text-white font-semibold">News</a> <a href="/gaming" data-cat="Gaming" onclick="event.preventDefault(); filterCategory('Gaming')" class="nav-cat hover:text-black dark:hover:text-white py-2 transition-colors">Gaming</a> <a href="/#gta6-hub" onclick="event.preventDefault(); jumpToGtaHub()" class="nav-cat hover:text-black dark:hover:text-white py-2 transition-colors text-black dark:text-white font-semibold">GTA VI</a> <a href="/big-tech" data-cat="Big Tech" onclick="event.preventDefault(); filterCategory('Big Tech')" class="nav-cat hover:text-black dark:hover:text-white py-2 transition-colors">Big Tech</a> <a href="/security" data-cat="Security" onclick="event.preventDefault(); filterCategory('Security')" class="nav-cat hover:text-black dark:hover:text-white py-2 transition-colors">Security</a> <a href="/business" data-cat="Business" onclick="event.preventDefault(); filterCategory('Business')" class="nav-cat hover:text-black dark:hover:text-white py-2 transition-colors">Business</a>
+        </nav>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="search-toggle-btn" aria-label="Search articles" class="p-1.5 text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors cursor-pointer">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </button>
+        <button id="theme-toggle-btn" type="button" aria-label="Toggle dark and light mode" class="inline-flex items-center gap-1.5 text-[12px] font-medium text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-500 px-3 py-1.5 rounded-md transition-colors cursor-pointer">
+          <svg id="theme-icon-moon" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+          </svg>
+          <svg id="theme-icon-sun" class="w-3.5 h-3.5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"></circle>
+            <path stroke-linecap="round" d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+          </svg>
+          <span id="theme-toggle-label">Dark</span>
+        </button>
+        <button id="mobile-menu-btn" aria-label="Toggle categories" class="xl:hidden p-1.5 text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-nav-drawer" class="hidden xl:hidden border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0d0f12] px-4 py-2.5 overflow-x-auto">
+      <div class="flex items-center gap-4 text-[13px] font-medium text-neutral-700 dark:text-neutral-300 whitespace-nowrap">
+        <a href="/" onclick="event.preventDefault(); filterCategory('All')" class="hover:text-black dark:hover:text-white font-semibold text-neutral-900 dark:text-white">News</a> <a href="/gaming" onclick="event.preventDefault(); filterCategory('Gaming')" class="hover:text-black dark:hover:text-white">Gaming</a> <a href="/#gta6-hub" onclick="event.preventDefault(); jumpToGtaHub()" class="font-semibold text-neutral-900 dark:text-white hover:text-black">GTA VI</a> <a href="/big-tech" onclick="event.preventDefault(); filterCategory('Big Tech')" class="hover:text-black dark:hover:text-white">Big Tech</a> <a href="/security" onclick="event.preventDefault(); filterCategory('Security')" class="hover:text-black dark:hover:text-white">Security</a> <a href="/business" onclick="event.preventDefault(); filterCategory('Business')" class="hover:text-black dark:hover:text-white">Business</a>
+      </div>
+    </div>
+    <!-- Live Search Dropdown Drawer -->
+    <div id="search-drawer" class="hidden border-t border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-[#14171c] px-4 py-3">
+      <div class="max-w-[1240px] mx-auto flex items-center gap-3">
+        <svg class="w-4 h-4 text-neutral-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <input id="search-input" type="text" placeholder="Search Bugwrite coverage (GTA 6, Apple, ARTEX, Java4Shell, Nvidia, Xbox, PlayStation...)" class="w-full bg-transparent text-sm focus:outline-none text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 dark:placeholder-neutral-500" />
+        <button id="clear-search-btn" class="text-xs text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white uppercase font-medium cursor-pointer">Close</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HOME FEED VIEW (Pre-rendered static crawlable HTML + progressive enhancement) -->
+  <main id="home-view" class="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-7">
+
+    <div id="filter-status-bar" class="hidden mb-6 pb-3 border-b border-neutral-200 dark:border-neutral-800 flex items-center justify-between">
+      <div class="text-sm text-neutral-700 dark:text-neutral-300">
+        Showing results for <span id="filter-label" class="font-bold text-black dark:text-white"></span>
+        <span id="filter-count" class="text-neutral-400 ml-1"></span>
+      </div>
+      <button type="button" onclick="resetHome()" class="text-xs font-semibold text-blue-700 dark:text-blue-400 hover:underline cursor-pointer">Clear filter</button>
+    </div>
+
+    <!-- ZONE 1 & ZONE 2: FEATURED GTA 6 HERO (LEFT) + 4 SUB-FEATURED (RIGHT 2x2) -->
+    <section id="featured-section" aria-label="Featured coverage">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-x-7 gap-y-8 items-start">
+        <div id="featured-slot" class="lg:col-span-6 lg:pr-7 lg:border-r lg:border-neutral-200/80 dark:lg:border-neutral-800">
+        <article class="flex flex-col h-full group">
+          <a href="/gaming/article/when-is-gta-6-playable-release-times" onclick="event.preventDefault(); openArticleView('when-is-gta-6-playable-release-times')" class="block">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/gta6-release-time.jpg?v=bit1" alt="Midnight Black PlayStation 5 DualSense wireless controller photographed cleanly from the front" width="1280" height="720" loading="eager" fetchpriority="high" class="w-full h-full object-cover group-hover:scale-[1.015] transition-transform duration-300" />
+            </div>
+            <div class="mt-4 mb-1.5 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.09em]">
+              <span class="text-blue-700 dark:text-blue-400">Gaming</span>
+              <span class="text-neutral-300 dark:text-neutral-700">/</span>
+              <span class="text-neutral-500 dark:text-neutral-400 font-semibold">Nov 18, 2026</span>
+            </div>
+            <h1 class="text-2xl sm:text-[30px] lg:text-[32px] font-bold text-neutral-950 dark:text-white leading-[1.15] tracking-[-0.03em] mb-3 article-headline">
+              When is GTA 6 playable? Global unlock schedule, preload size, and midnight rollout details
+            </h1>
+            <p class="text-[15px] sm:text-base text-neutral-600 dark:text-neutral-400 font-normal leading-[1.6] mb-5">
+              Rockstar is using a rolling midnight console launch on November 19, and players need roughly 212 GB of free SSD space ready.
+            </p>
+          </a>
+          <div class="mt-auto pt-4 border-t border-neutral-200/75 dark:border-neutral-800/90 space-y-2">
+            <a href="/gaming/article/new-zealand-gta-6-trick" onclick="event.preventDefault(); openArticleView('new-zealand-gta-6-trick')" class="w-full text-left flex items-baseline justify-between gap-3 text-[13px] text-neutral-700 dark:text-neutral-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors group/sub"><span class="font-medium leading-snug line-clamp-1">The New Zealand GTA 6 trick explained: How Xbox and PS5 players try to unlock early and the risks involved</span><span class="text-neutral-400 dark:text-neutral-500 group-hover/sub:text-blue-700 dark:group-hover/sub:text-blue-400 shrink-0">&rarr;</span></a>
+            <a href="/gaming/article/gta-6-metacritic-score-review-embargo" onclick="event.preventDefault(); openArticleView('gta-6-metacritic-score-review-embargo')" class="w-full text-left flex items-baseline justify-between gap-3 text-[13px] text-neutral-700 dark:text-neutral-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors group/sub"><span class="font-medium leading-snug line-clamp-1">GTA 6 Metacritic watch: When the review embargo lifts and the historic bar Rockstar is chasing</span><span class="text-neutral-400 dark:text-neutral-500 group-hover/sub:text-blue-700 dark:group-hover/sub:text-blue-400 shrink-0">&rarr;</span></a>
+          </div>
+          <a href="/gaming/article/when-is-gta-6-playable-release-times" onclick="event.preventDefault(); openArticleView('when-is-gta-6-playable-release-times')" class="mt-4 pt-3.5 border-t border-neutral-200 dark:border-neutral-800 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center text-xs text-neutral-500 dark:text-neutral-400">
+              <span class="font-semibold text-neutral-900 dark:text-neutral-100">Samira Patel</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>25 mins ago</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>4 min read</span>
+            </div>
+            <span class="inline-flex items-center gap-1 text-[13px] font-bold text-neutral-950 dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">
+              Read Story
+              <span class="inline-block transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+            </span>
+          </a>
+        </article>
+        </div>
+        <div id="subfeatured-slot" class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-6 content-start">
+        <article class="flex flex-col group">
+          <a href="/big-tech/article/apple-outage" onclick="event.preventDefault(); openArticleView('apple-outage')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/apple-outage.jpg?v=bit1" alt="An aluminum laptop and dark glass smartphone resting side by side on an oak desk in morning light" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <h2 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">Apple confirms internal software update triggered widespread iCloud, Apple Pay, and App Store outage</h2>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>Elena Rostova</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>2 hours ago</span>
+            </div>
+          </a>
+        </article>
+        <article class="flex flex-col group">
+          <a href="/security/article/artex-ai-cyber-framework" onclick="event.preventDefault(); openArticleView('artex-ai-cyber-framework')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/artex.jpg?v=bit1" alt="Cybersecurity analyst workstation with dual monitors and a mechanical keyboard in a dim operations room" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <h2 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">FBI issues urgent warning over ARTEX, an AI framework turning novice hackers into machine-speed intruders</h2>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>Marcus Vance</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>3 hours ago</span>
+            </div>
+          </a>
+        </article>
+        <article class="flex flex-col group">
+          <a href="/security/article/java4shell-cve-2026-114938" onclick="event.preventDefault(); openArticleView('java4shell-cve-2026-114938')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/java4shell.jpg?v=bit1" alt="Row of matte black enterprise data center server blades with subtle blue and amber indicator lights" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <h2 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">Java4Shell: Red Hat urges immediate patching for critical OpenJDK remote code execution flaw</h2>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>Priya Nair</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>4 hours ago</span>
+            </div>
+          </a>
+        </article>
+        <article class="flex flex-col group">
+          <a href="/business/article/harvey-jones-nvidia-chair" onclick="event.preventDefault(); openArticleView('harvey-jones-nvidia-chair')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/harvey-jones.jpg?v=bit1" alt="Modern Silicon Valley glass and brushed steel corporate headquarters exterior in late afternoon sunlight" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <h2 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">Nvidia&#x27;s first board chair Harvey Jones rules out Jensen Huang&#x27;s return as CEO</h2>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>David Lindholm</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>5 hours ago</span>
+            </div>
+          </a>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEDICATED GTA 6 FEATURED LAUNCH SECTION -->
+    <section id="gta6-hub" aria-label="GTA 6 Launch Coverage" class="mt-9 pt-8 border-t border-neutral-200/90 dark:border-neutral-800 scroll-mt-20">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
+        <div>
+          <p class="text-[11px] font-bold uppercase tracking-[0.08em] text-neutral-500 dark:text-neutral-400 mb-1">GTA VI Coverage</p>
+          <h2 class="text-xl sm:text-2xl font-bold text-neutral-950 dark:text-white tracking-[-0.02em]">Latest GTA 6 News, Guides &amp; Reviews</h2>
+        </div>
+        <a href="/gaming" onclick="event.preventDefault(); filterCategory('Gaming')" class="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-neutral-800 dark:text-neutral-200 hover:text-blue-700 dark:hover:text-blue-400 transition-colors shrink-0">
+          All Gaming News
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+
+      <div id="gta6-hub-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-7">
+        <article class="flex flex-col group">
+          <a href="/gaming/article/new-zealand-gta-6-trick" onclick="event.preventDefault(); openArticleView('new-zealand-gta-6-trick')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/gta6-new-zealand.jpg?v=bit1" alt="Auckland, New Zealand city skyline illuminated at night across the harbor" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <h3 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">The New Zealand GTA 6 trick explained: How Xbox and PS5 players try to unlock early and the risks involved</h3>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>Jordan Kim</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>40 mins ago</span>
+            </div>
+          </a>
+        </article>
+        <article class="flex flex-col group">
+          <a href="/gaming/article/gta-6-metacritic-score-review-embargo" onclick="event.preventDefault(); openArticleView('gta-6-metacritic-score-review-embargo')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/gta6-metacritic.jpg?v=bit1" alt="Journalist workstation with a laptop, paper notebook, and cup of coffee in morning light" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <h3 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">GTA 6 Metacritic watch: When the review embargo lifts and the historic bar Rockstar is chasing</h3>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>Samira Patel</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>1 hour ago</span>
+            </div>
+          </a>
+        </article>
+        <article class="flex flex-col group">
+          <a href="/gaming/article/how-long-is-gta-6-story-mode" onclick="event.preventDefault(); openArticleView('how-long-is-gta-6-story-mode')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/gta6-story-length.jpg?v=bit1" alt="Aerial view of the Seven Mile Bridge highway stretching across turquoise waters of the Florida Keys" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <h3 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">How long is GTA 6 story mode? Campaign hours, chapter structure, and 100 percent completion estimates</h3>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>Samira Patel</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>1 hour ago</span>
+            </div>
+          </a>
+        </article>
+        <article class="flex flex-col group">
+          <a href="/gaming/article/gta-6-screenshots-gallery-weather" onclick="event.preventDefault(); openArticleView('gta-6-screenshots-gallery-weather')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/gta6-screenshots.jpg?v=bit1" alt="Neon-lit Ocean Drive in South Beach Miami at night lined with art-deco buildings and palm trees" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <h3 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">New GTA 6 screenshots show off Vice City nightlife and torrential Leonida storms ahead of launch</h3>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>Jordan Kim</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>2 hours ago</span>
+            </div>
+          </a>
+        </article>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-neutral-100 dark:border-neutral-800/80 flex flex-wrap items-center justify-between gap-3 text-xs text-neutral-500 dark:text-neutral-400">
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+          <span class="font-bold text-neutral-800 dark:text-neutral-200">More Gaming News:</span>
+          <button type="button" onclick="quickSearch('Xbox')" class="hover:text-black dark:hover:text-white cursor-pointer">Xbox</button>
+          <span class="text-neutral-300 dark:text-neutral-700">&middot;</span>
+          <button type="button" onclick="quickSearch('PlayStation')" class="hover:text-black dark:hover:text-white cursor-pointer">PlayStation</button>
+          <span class="text-neutral-300 dark:text-neutral-700">&middot;</span>
+          <button type="button" onclick="quickSearch('PC')" class="hover:text-black dark:hover:text-white cursor-pointer">PC Gaming</button>
+          <span class="text-neutral-300 dark:text-neutral-700">&middot;</span>
+          <button type="button" onclick="quickSearch('Game Awards')" class="hover:text-black dark:hover:text-white cursor-pointer">Game Awards</button>
+        </div>
+        <span class="text-[11px] text-neutral-400 dark:text-neutral-500">Updated for November 19 console launch</span>
+      </div>
+    </section>
+
+    <!-- ZONE 3: RECENTLY UPLOADED BLOGS (4-Column Grid Under the Divider Line) -->
+    <section id="recent-section" aria-label="Recently uploaded articles" class="mt-9 pt-8 border-t border-neutral-200/90 dark:border-neutral-800">
+      <div class="flex items-center justify-between mb-5">
+        <h2 id="recent-heading" class="text-xs font-bold uppercase tracking-[0.08em] text-neutral-500 dark:text-neutral-400">Recently Uploaded</h2>
+        <span id="recent-counter" class="text-xs text-neutral-400 dark:text-neutral-500">8 of 75 stories</span>
+      </div>
+
+      <div id="recent-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-8">
+        <article class="flex flex-col group">
+          <a href="/gaming/article/ocarina-of-time-remake-pc-port" onclick="event.preventDefault(); openArticleView('ocarina-of-time-remake-pc-port')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/ocarina-pc-port.jpg?v=bit1" alt="Modern PC gaming desk setup with an ultrawide monitor showing a sunlit fantasy meadow and temple ruins" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <h3 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">Players already have the Ocarina of Time Switch 2 remake running natively on PC</h3>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>Samira Patel</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>6 hours ago</span>
+            </div>
+          </a>
+        </article>
+        <article class="flex flex-col group">
+          <a href="/gaming/article/the-game-awards-2026-nominees" onclick="event.preventDefault(); openArticleView('the-game-awards-2026-nominees')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/game-awards-2026.jpg?v=bit1" alt="Interior auditorium and stage of the Peacock Theater in Los Angeles before a live awards ceremony" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <h3 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">The Game Awards 2026 nominees: GTA 6 leads with 8 nods alongside Ocarina of Time and Resident Evil Requiem</h3>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>Samira Patel</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>3 hours ago</span>
+            </div>
+          </a>
+        </article>
+        <article class="flex flex-col group">
+          <a href="/business/article/mega-millions-drawing-november-17-2026" onclick="event.preventDefault(); openArticleView('mega-millions-drawing-november-17-2026')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/mega-millions-nov17.jpg?v=bit1" alt="Printed Mega Millions lottery tickets photographed cleanly on a flat surface" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <h3 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">Mega Millions drawing November 17, 2026: Winning numbers and why the jackpot climbed to $629 million</h3>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>David Lindholm</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>4 hours ago</span>
+            </div>
+          </a>
+        </article>
+        <article class="flex flex-col group">
+          <a href="/security/article/fbi-warning-today-facestealer-artex" onclick="event.preventDefault(); openArticleView('fbi-warning-today-facestealer-artex')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/fbi-warning.jpg?v=bit1" alt="Stately limestone federal government building columns in Washington D.C. under overcast morning sky" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <h3 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">FBI warning today: Automated AI intrusions and deepfake video scams put companies on high alert</h3>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>Marcus Vance</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>7 hours ago</span>
+            </div>
+          </a>
+        </article>
+        <article class="flex flex-col group">
+          <a href="/gaming/article/xbox-black-friday-sale-2026" onclick="event.preventDefault(); openArticleView('xbox-black-friday-sale-2026')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/xbox-black-friday.jpg?v=bit1" alt="Matte black and matte white wireless gaming controllers resting on a dark slate studio surface" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <h3 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">Xbox Black Friday Sale 2026 starts November 19 with up to 80 percent off over 2,000 games</h3>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>Jordan Kim</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>8 hours ago</span>
+            </div>
+          </a>
+        </article>
+        <article class="flex flex-col group">
+          <a href="/gaming/article/playstation-plus-november-2026" onclick="event.preventDefault(); openArticleView('playstation-plus-november-2026')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/playstation-plus.jpg?v=bit1" alt="Minimalist white and black game controller beside a modern console on a bright oak media stand" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <h3 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">PlayStation Plus November 2026 lineup adds Death Stranding 2, Atomfall, and Dragon Quest III HD-2D</h3>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>Samira Patel</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>9 hours ago</span>
+            </div>
+          </a>
+        </article>
+        <article class="flex flex-col group">
+          <a href="/business/article/salesforce-copilotforce-layoffs-november-2026" onclick="event.preventDefault(); openArticleView('salesforce-copilotforce-layoffs-november-2026')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/salesforce.jpg?v=bit1" alt="Downtown San Francisco glass skyscraper skyline glowing at blue hour twilight" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <h3 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">Salesforce unveils Microsoft Copilotforce partnership amid fresh job cuts and internal AI budgets</h3>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>David Lindholm</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>10 hours ago</span>
+            </div>
+          </a>
+        </article>
+        <article class="flex flex-col group">
+          <a href="/gaming/article/xbox-game-pass-november-2026-wave-2" onclick="event.preventDefault(); openArticleView('xbox-game-pass-november-2026-wave-2')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/xbox-game-pass.jpg?v=bit1" alt="Cozy modern living room with a glowing OLED television and wireless controller on a wooden coffee table" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <h3 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">Xbox Game Pass late November lineup brings The Outlast Trials, Hela, and Arkheron</h3>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>Jordan Kim</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>12 hours ago</span>
+            </div>
+          </a>
+        </article>
+      </div>
+
+      <div id="load-more-wrap" class="mt-10 text-center">
+        <button id="load-more-btn" type="button" onclick="loadMoreRecent()" class="inline-flex items-center justify-center px-6 py-2.5 text-xs font-semibold uppercase tracking-wider text-neutral-900 dark:text-neutral-100 bg-white dark:bg-[#161a20] border border-neutral-300 dark:border-neutral-700 hover:border-black dark:hover:border-neutral-400 hover:bg-neutral-50 dark:hover:bg-[#1e232b] rounded-md transition-colors cursor-pointer">
+          Load more stories (67 remaining)
+        </button>
+      </div>
+    </section>
+
+    <!-- SEO EDITORIAL GUIDE & FAQ SECTION (Cleanly styled below the main feed) -->
+    <section id="editorial-guide" aria-label="About Bugwrite News Platform and Reader Guide" class="mt-14 pt-10 border-t border-neutral-200/90 dark:border-neutral-800">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-7 space-y-5">
+          <p class="text-[11px] font-bold uppercase tracking-[0.09em] text-neutral-500 dark:text-neutral-400">Editorial Guide</p>
+          <h2 class="text-2xl sm:text-[26px] font-bold text-neutral-950 dark:text-white tracking-[-0.025em] leading-tight">
+            Bugwrite: Independent Tech, Gaming, Cybersecurity, and AI Business News
+          </h2>
+          <p class="text-sm sm:text-[15px] leading-relaxed text-neutral-600 dark:text-neutral-400">
+            Bugwrite is a free, fast-loading technology and gaming news publication built for readers who want verified facts without clickbait padding. Whether a global cloud outage knocks out workplace email, a critical software vulnerability forces emergency server patching, or a generational console release approaches midnight unlock, Bugwrite brings the essential context onto one uncluttered page.
+          </p>
+
+          <h3 class="text-base font-bold text-neutral-900 dark:text-neutral-100 pt-1">How to Use Bugwrite to Track Breaking Tech and Gaming Coverage</h3>
+          <p class="text-sm sm:text-[15px] leading-relaxed text-neutral-600 dark:text-neutral-400">
+            Start at the top of the homepage for our lead breaking story and four sub-featured reports covering the day's highest-impact technology, security, and gaming developments. Right below the main headlines, our launch-week GTA VI hub gathers release times, storage guides, Metacritic tracking, and gameplay explainers in one place. Scroll beneath the divider to browse our recently uploaded articles in a four-column feed, or click Load more stories to expand additional rows.
+          </p>
+          <p class="text-sm sm:text-[15px] leading-relaxed text-neutral-600 dark:text-neutral-400">
+            To jump straight to a specific beat, use the top navigation bar to switch between Gaming, Big Tech, Security, and Business. You can also open the instant search bar in the header to filter across all published articles by keyword, CVE identifier, company name, or game title, and switch between light and dark reading modes at any time using the header toggle.
+          </p>
+
+          <h3 class="text-base font-bold text-neutral-900 dark:text-neutral-100 pt-1">Key Coverage Desks and Editorial Standards</h3>
+          <p class="text-sm sm:text-[15px] leading-relaxed text-neutral-600 dark:text-neutral-400">
+            Every story published on Bugwrite follows a strict verification workflow. Our Security desk tracks real-world flaws like OpenJDK's Java4Shell vulnerability, autonomous AI intrusion tools flagged by the FBI, and practical defense guides for everyday users and IT administrators. Our Big Tech desk separates genuine platform failures at Apple, Microsoft, Amazon, and Google from social-media outage rumors while explaining major operating system updates like Android 17 and iOS 27.
+          </p>
+          <p class="text-sm sm:text-[15px] leading-relaxed text-neutral-600 dark:text-neutral-400">
+            On the Gaming desk, reporters combine verified publisher announcements, patch notes, and hardware market tracking across PlayStation 5, Xbox Series X|S, Nintendo Switch 2, and Windows PC. Meanwhile, our Business desk examines the economics behind artificial intelligence, from Nvidia earnings and Anthropic's public listing to data center power demand, semiconductor export rules, and startup infrastructure costs. Every article is designed to deliver clear answers, accurate citations, and fast reading on every screen.
+          </p>
+
+          <h3 class="text-base font-bold text-neutral-900 dark:text-neutral-100 pt-1">Built for Fast Reading, Clean Navigation, and Daily Use</h3>
+          <p class="text-sm sm:text-[15px] leading-relaxed text-neutral-600 dark:text-neutral-400">
+            Whether you are an IT administrator checking live cloud health during a workday outage, an investor tracking semiconductor policy and quarterly earnings, or a player comparing console editions before a midnight launch, Bugwrite keeps navigation straightforward. Clean category URLs, lightweight custom bit-graphics illustrations, persistent dark mode, and full-text keyword search let you move from breaking headlines to in-depth explainers in seconds without pop-up walls or distracting clutter.
+          </p>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="rounded-lg border border-neutral-200 dark:border-neutral-800 bg-neutral-50/70 dark:bg-[#12151b] p-6">
+            <p class="text-[11px] font-bold uppercase tracking-[0.09em] text-neutral-500 dark:text-neutral-400 mb-1">Frequently Asked Questions</p>
+            <h2 class="text-lg font-bold text-neutral-950 dark:text-white tracking-tight mb-5">Quick Answers for Readers</h2>
+            <div class="divide-y divide-neutral-200 dark:divide-neutral-800">
+              <div class="py-4 first:pt-0 last:pb-0">
+                <h3 class="text-sm font-bold text-neutral-900 dark:text-neutral-100 mb-1.5">What topics does Bugwrite cover every day?</h3>
+                <p class="text-xs sm:text-[13px] leading-relaxed text-neutral-600 dark:text-neutral-400">Bugwrite publishes daily reporting, explainers, and buyer guides across four primary desks: Gaming, Big Tech, Security, and Business. Coverage spans major video game launches like Grand Theft Auto VI, live platform outages across Apple, Microsoft, Google, and Amazon, critical CVE advisories, and semiconductor and AI market developments.</p>
+              </div>
+              <div class="py-4 first:pt-0 last:pb-0">
+                <h3 class="text-sm font-bold text-neutral-900 dark:text-neutral-100 mb-1.5">How does Bugwrite verify breaking outages and cybersecurity alerts?</h3>
+                <p class="text-xs sm:text-[13px] leading-relaxed text-neutral-600 dark:text-neutral-400">Before publishing any outage or security story, our editors cross-check primary status dashboards, official vendor advisories, CVE databases such as Red Hat and NVD, and federal alerts from agencies like the FBI and CISA. Whenever user-reported outage spikes turn out to be localized or unrelated false alarms, we clearly separate confirmed disruptions from speculation.</p>
+              </div>
+              <div class="py-4 first:pt-0 last:pb-0">
+                <h3 class="text-sm font-bold text-neutral-900 dark:text-neutral-100 mb-1.5">Where can readers find GTA 6 release times, guides, and updates?</h3>
+                <p class="text-xs sm:text-[13px] leading-relaxed text-neutral-600 dark:text-neutral-400">Every GTA 6 launch guide, including local midnight unlock schedules, preload storage requirements, Metacritic review tracking, campaign length estimates, Leonida map breakdowns, and edition comparisons, is organized inside the dedicated GTA VI section on our homepage and under the Gaming desk at bugwrite.com/gaming.</p>
+              </div>
+              <div class="py-4 first:pt-0 last:pb-0">
+                <h3 class="text-sm font-bold text-neutral-900 dark:text-neutral-100 mb-1.5">Is Bugwrite free to read without a paid subscription?</h3>
+                <p class="text-xs sm:text-[13px] leading-relaxed text-neutral-600 dark:text-neutral-400">Yes. Every news article, security explainer, launch countdown tool, and buying guide on Bugwrite is completely free to access on desktop and mobile with no paywall or account registration required.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CLIENT-SIDE INSTANT ARTICLE READER VIEW (Strictly H2 while hidden so raw HTML keeps one H1) -->
+  <article id="article-view" class="hidden max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+    <div class="max-w-[760px] mx-auto">
+      <div class="mb-6 flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400">
+        <button type="button" onclick="closeArticleView()" class="inline-flex items-center gap-1.5 font-semibold text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors cursor-pointer">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+          Back to Bugwrite
+        </button>
+        <span id="reader-category" class="font-bold uppercase tracking-wider text-blue-700 dark:text-blue-400"></span>
+      </div>
+
+      <p id="reader-title" role="heading" aria-level="1" class="text-3xl sm:text-4xl lg:text-[40px] font-bold text-neutral-950 dark:text-white leading-[1.15] tracking-[-0.03em] mb-4"></p>
+      <p id="reader-dek" class="text-lg sm:text-[19px] text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6"></p>
+
+      <div class="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-neutral-200 dark:border-neutral-800 mb-7 text-xs text-neutral-500 dark:text-neutral-400">
+        <div class="flex items-center gap-2.5">
+          <div id="reader-avatar" class="w-8 h-8 rounded-full bg-neutral-900 dark:bg-neutral-200 text-white dark:text-neutral-900 font-bold flex items-center justify-center text-xs"></div>
+          <div>
+            <div class="text-neutral-900 dark:text-neutral-100 font-semibold text-[13px]" id="reader-author"></div>
+            <div class="text-neutral-500 dark:text-neutral-400" id="reader-role"></div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 text-neutral-500 dark:text-neutral-400">
+          <span id="reader-date"></span>
+          <span>&bull;</span>
+          <span id="reader-readtime"></span>
+        </div>
+      </div>
+
+      <figure class="mb-8">
+        <div class="overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+          <img id="reader-image" src="/blog/articles/gta6-release-time.jpg?v=bit1" alt="Featured article illustration" width="1280" height="720" class="w-full h-full object-cover" />
+        </div>
+        <figcaption id="reader-caption" class="mt-2.5 text-xs text-neutral-500 dark:text-neutral-400"></figcaption>
+      </figure>
+
+      <div id="reader-body" class="article-prose"></div>
+      <div id="reader-tags" class="mt-10 pt-6 border-t border-neutral-200 dark:border-neutral-800 flex flex-wrap items-center gap-2"></div>
+    </div>
+
+    <div class="mt-14 pt-10 border-t border-neutral-200 dark:border-neutral-800">
+      <h2 class="text-xs font-bold uppercase tracking-[0.08em] text-neutral-500 dark:text-neutral-400 mb-6">More from Bugwrite</h2>
+      <div id="related-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-8"></div>
+    </div>
+  </article>
+
+  <!-- EDITORIAL FOOTER -->
+  <footer class="border-t border-neutral-200 dark:border-neutral-800 mt-16 bg-neutral-50/70 dark:bg-[#12151a] text-neutral-600 dark:text-neutral-400 text-xs py-12">
+    <div class="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-neutral-200/80 dark:border-neutral-800">
+        <div class="md:col-span-5">
+          <a href="/" class="inline-block text-xl font-black tracking-[-0.055em] text-black dark:text-white lowercase mb-2">bugwrite</a>
+          <p class="text-xs leading-relaxed text-neutral-500 dark:text-neutral-400 max-w-sm">
+            Independent technology, gaming, cybersecurity, and AI business journalism. Fact-checked daily reporting, outage status coverage, and launch guides.
+          </p>
+        </div>
+        <div class="md:col-span-3">
+          <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-neutral-900 dark:text-neutral-200 mb-3">Desks</h3>
+          <div class="flex flex-col gap-2">
+            <a href="/gaming" class="hover:text-black dark:hover:text-white transition-colors">Gaming</a>
+            <a href="/big-tech" class="hover:text-black dark:hover:text-white transition-colors">Big Tech</a>
+            <a href="/security" class="hover:text-black dark:hover:text-white transition-colors">Security</a>
+            <a href="/business" class="hover:text-black dark:hover:text-white transition-colors">Business</a>
+          </div>
+        </div>
+        <div class="md:col-span-4">
+          <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-neutral-900 dark:text-neutral-200 mb-3">Company &amp; Policies</h3>
+          <div class="flex flex-col gap-2">
+            <a href="/about" class="hover:text-black dark:hover:text-white transition-colors">About Bugwrite</a>
+            <a href="/contact" class="hover:text-black dark:hover:text-white transition-colors">Contact &amp; News Tips</a>
+            <a href="/privacy-policy" class="hover:text-black dark:hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/terms-of-service" class="hover:text-black dark:hover:text-white transition-colors">Terms of Service</a>
+            <a href="/sitemap.xml" class="hover:text-black dark:hover:text-white transition-colors">XML Sitemap</a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-neutral-500 dark:text-neutral-500">
+        <span>&copy; 2026 Bugwrite Media. All rights reserved.</span>
+        <span>Published at bugwrite.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/blog/articles-data.js"></script>
+  <script>
+    const ALL_ARTICLES = window.BUGWRITE_ARTICLES || [];
+    const SITE_DOMAIN = 'https://bugwrite.com';
+    let activeCategory = 'All';
+    let activeSearch = '';
+    let visibleRecentCount = 8;
+
+    function escapeHtml(str) {
+      return String(str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function getCategorySlug(category) {
+      if (category === 'Gaming' || category === 'Deals') return 'gaming';
+      if (category === 'Security' || category === 'Cybersecurity') return 'security';
+      if (category === 'Business' || category === 'Enterprise') return 'business';
+      if (category === 'Big Tech' || category === 'Tech News' || category === 'Cloud' || category === 'Social Media') return 'big-tech';
+      return String(category || 'news').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    }
+
+    function getCategoryFromSlug(slug) {
+      return ({ 'gaming': 'Gaming', 'security': 'Security', 'business': 'Business', 'big-tech': 'Big Tech' })[slug] || null;
+    }
+
+    function getArticleUrl(article) {
+      return `/${getCategorySlug(article.category)}/article/${article.id}`;
+    }
+
+    function updateCanonical(path) {
+      const link = document.querySelector('link[rel="canonical"]');
+      if (link) link.setAttribute('href', `${SITE_DOMAIN}${path === '/' ? '/' : path}`);
+    }
+
+    function safePushUrl(path, state = {}) {
+      if (window.location.protocol === 'file:') return;
+      if (window.location.pathname !== path || window.location.hash) {
+        history.pushState(state, '', path);
+      }
+      updateCanonical(path);
+    }
+
+    function renderFeaturedCard(article) {
+      const companions = ALL_ARTICLES.filter(a => a.slot === 'gta6-hub').slice(0, 2);
+      const href = getArticleUrl(article);
+      const companionHtml = companions.length
+        ? `<div class="mt-auto pt-4 border-t border-neutral-200/75 dark:border-neutral-800/90 space-y-2">${companions.map(c => `<a href="${getArticleUrl(c)}" onclick="event.preventDefault(); openArticleView('${c.id}')" class="w-full text-left flex items-baseline justify-between gap-3 text-[13px] text-neutral-700 dark:text-neutral-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors group/sub"><span class="font-medium leading-snug line-clamp-1">${escapeHtml(c.title)}</span><span class="text-neutral-400 dark:text-neutral-500 group-hover/sub:text-blue-700 dark:group-hover/sub:text-blue-400 shrink-0">&rarr;</span></a>`).join('')}</div>`
+        : '';
+
+      return `
+        <article class="flex flex-col h-full group">
+          <a href="${href}" onclick="event.preventDefault(); openArticleView('${article.id}')" class="block">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="${article.image}?v=bit1" alt="${escapeHtml(article.imageAlt)}" width="1280" height="720" loading="eager" fetchpriority="high" class="w-full h-full object-cover group-hover:scale-[1.015] transition-transform duration-300" />
+            </div>
+            <div class="mt-4 mb-1.5 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.09em]">
+              <span class="text-blue-700 dark:text-blue-400">${escapeHtml(article.category)}</span>
+              <span class="text-neutral-300 dark:text-neutral-700">/</span>
+              <span class="text-neutral-500 dark:text-neutral-400 font-semibold">${escapeHtml(article.publishedDate)}</span>
+            </div>
+            <h1 class="text-2xl sm:text-[30px] lg:text-[32px] font-bold text-neutral-950 dark:text-white leading-[1.15] tracking-[-0.03em] mb-3 article-headline">${escapeHtml(article.title)}</h1>
+            <p class="text-[15px] sm:text-base text-neutral-600 dark:text-neutral-400 font-normal leading-[1.6] mb-5">${escapeHtml(article.dek)}</p>
+          </a>
+          ${companionHtml}
+          <a href="${href}" onclick="event.preventDefault(); openArticleView('${article.id}')" class="mt-4 pt-3.5 border-t border-neutral-200 dark:border-neutral-800 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center text-xs text-neutral-500 dark:text-neutral-400">
+              <span class="font-semibold text-neutral-900 dark:text-neutral-100">${escapeHtml(article.author)}</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>${escapeHtml(article.publishedAgo)}</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>${escapeHtml(article.readTime)}</span>
+            </div>
+            <span class="inline-flex items-center gap-1 text-[13px] font-bold text-neutral-950 dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">
+              Read Story <span class="inline-block transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+            </span>
+          </a>
+        </article>
+      `;
+    }
+
+    function renderGridCard(article, tag = 'h3') {
+      const href = getArticleUrl(article);
+      return `
+        <article class="flex flex-col group">
+          <a href="${href}" onclick="event.preventDefault(); openArticleView('${article.id}')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="${article.image}?v=bit1" alt="${escapeHtml(article.imageAlt)}" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <${tag} class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">${escapeHtml(article.title)}</${tag}>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>${escapeHtml(article.author)}</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>${escapeHtml(article.publishedAgo)}</span>
+            </div>
+          </a>
+        </article>
+      `;
+    }
+
+    function matchesCategory(article, cat) {
+      if (cat === 'All') return true;
+      if (cat === 'Gaming') return article.category === 'Gaming' || article.category === 'Deals';
+      if (cat === 'Security') return article.category === 'Security' || article.category === 'Cybersecurity';
+      if (cat === 'Business') return article.category === 'Business' || article.category === 'Enterprise';
+      if (cat === 'Big Tech') return article.category === 'Big Tech' || article.category === 'Tech News' || article.category === 'Cloud' || article.category === 'Social Media';
+      return article.category === cat;
+    }
+
+    function renderHomeFeed() {
+      const featuredSection = document.getElementById('featured-section');
+      const featuredSlot = document.getElementById('featured-slot');
+      const subfeaturedSlot = document.getElementById('subfeatured-slot');
+      const gtaHubSection = document.getElementById('gta6-hub');
+      const gtaHubGrid = document.getElementById('gta6-hub-grid');
+      const recentSection = document.getElementById('recent-section');
+      const recentGrid = document.getElementById('recent-grid');
+      const recentHeading = document.getElementById('recent-heading');
+      const recentCounter = document.getElementById('recent-counter');
+      const loadMoreWrap = document.getElementById('load-more-wrap');
+      const filterBar = document.getElementById('filter-status-bar');
+      const filterLabel = document.getElementById('filter-label');
+      const filterCount = document.getElementById('filter-count');
+      const guideSection = document.getElementById('editorial-guide');
+
+      const isFiltered = activeCategory !== 'All' || activeSearch.trim() !== '';
+
+      if (!isFiltered) {
+        filterBar.classList.add('hidden');
+        featuredSection.classList.remove('hidden');
+        gtaHubSection.classList.remove('hidden');
+        if (guideSection) guideSection.classList.remove('hidden');
+        recentSection.classList.add('mt-9', 'pt-8', 'border-t', 'border-neutral-200/90', 'dark:border-neutral-800');
+
+        const featured = ALL_ARTICLES.find(a => a.slot === 'featured') || ALL_ARTICLES[0];
+        const subfeatured = ALL_ARTICLES.filter(a => a.slot === 'subfeatured').slice(0, 4);
+        const gtaHub = ALL_ARTICLES.filter(a => a.slot === 'gta6-hub').slice(0, 4);
+        const usedIds = new Set([featured.id, ...subfeatured.map(s => s.id), ...gtaHub.map(g => g.id)]);
+        const recentAll = ALL_ARTICLES.filter(a => !usedIds.has(a.id));
+        const recentVisible = recentAll.slice(0, visibleRecentCount);
+
+        featuredSlot.innerHTML = featured ? renderFeaturedCard(featured) : '';
+        subfeaturedSlot.innerHTML = subfeatured.map(a => renderGridCard(a, 'h2')).join('');
+        gtaHubGrid.innerHTML = gtaHub.map(a => renderGridCard(a, 'h3')).join('');
+        recentHeading.textContent = 'Recently Uploaded';
+        recentCounter.textContent = `${recentVisible.length} of ${recentAll.length} stories`;
+        recentGrid.innerHTML = recentVisible.map(a => renderGridCard(a, 'h3')).join('');
+
+        if (recentAll.length > visibleRecentCount) {
+          document.getElementById('load-more-btn').textContent = `Load more stories (${recentAll.length - visibleRecentCount} remaining)`;
+          loadMoreWrap.classList.remove('hidden');
+        } else {
+          loadMoreWrap.classList.add('hidden');
+        }
+      } else {
+        featuredSection.classList.add('hidden');
+        gtaHubSection.classList.add('hidden');
+        if (guideSection) guideSection.classList.add('hidden');
+        recentSection.classList.remove('mt-9', 'pt-8', 'border-t', 'border-neutral-200/90', 'dark:border-neutral-800');
+        loadMoreWrap.classList.add('hidden');
+
+        const query = activeSearch.trim().toLowerCase();
+        const filtered = ALL_ARTICLES.filter(a => {
+          const catOk = matchesCategory(a, activeCategory);
+          const searchOk = !query ||
+            a.title.toLowerCase().includes(query) ||
+            a.dek.toLowerCase().includes(query) ||
+            a.category.toLowerCase().includes(query) ||
+            (a.keywords && a.keywords.some(k => k.toLowerCase().includes(query)));
+          return catOk && searchOk;
+        });
+
+        filterBar.classList.remove('hidden');
+        filterLabel.textContent = query ? `"${activeSearch.trim()}"` : activeCategory;
+        filterCount.textContent = `(${filtered.length} ${filtered.length === 1 ? 'article' : 'articles'})`;
+        recentHeading.textContent = query ? 'Search Results' : activeCategory;
+        recentCounter.textContent = '';
+
+        recentGrid.innerHTML = filtered.length === 0
+          ? `<div class="col-span-full py-16 text-center text-neutral-500 dark:text-neutral-400"><p class="text-base font-medium text-neutral-800 dark:text-neutral-200 mb-1">No matching stories found</p><p class="text-xs">Try searching for GTA 6, Apple, ARTEX, Java4Shell, Nvidia, Xbox, PlayStation, or Anthropic.</p></div>`
+          : filtered.map(a => renderGridCard(a, 'h2')).join('');
+      }
+
+      document.querySelectorAll('.nav-cat').forEach(btn => {
+        if (btn.dataset.cat === activeCategory) {
+          btn.classList.add('text-black', 'dark:text-white', 'font-semibold');
+        } else {
+          btn.classList.remove('text-black', 'dark:text-white', 'font-semibold');
+        }
+      });
+    }
+
+    function jumpToGtaHub() {
+      activeCategory = 'All';
+      activeSearch = '';
+      const searchInput = document.getElementById('search-input');
+      if (searchInput) searchInput.value = '';
+      closeArticleView(true);
+      renderHomeFeed();
+      const hub = document.getElementById('gta6-hub');
+      if (hub) hub.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function quickSearch(term) {
+      closeArticleView(false);
+      activeCategory = 'All';
+      activeSearch = term;
+      const searchInput = document.getElementById('search-input');
+      if (searchInput) searchInput.value = term;
+      renderHomeFeed();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function loadMoreRecent() {
+      visibleRecentCount += 8;
+      renderHomeFeed();
+    }
+
+    function filterCategory(cat, pushUrl = true) {
+      closeArticleView(false);
+      activeCategory = cat;
+      activeSearch = '';
+      visibleRecentCount = 8;
+      const searchInput = document.getElementById('search-input');
+      if (searchInput) searchInput.value = '';
+      if (pushUrl) safePushUrl(cat === 'All' ? '/' : `/${getCategorySlug(cat)}`, { category: cat });
+      renderHomeFeed();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function resetHome(e) {
+      if (e) e.preventDefault();
+      activeCategory = 'All';
+      activeSearch = '';
+      visibleRecentCount = 8;
+      const searchInput = document.getElementById('search-input');
+      if (searchInput) searchInput.value = '';
+      closeArticleView(true);
+      renderHomeFeed();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function openArticleView(id, pushUrl = true) {
+      const article = ALL_ARTICLES.find(a => a.id === id);
+      if (!article) return;
+
+      document.getElementById('home-view').classList.add('hidden');
+      document.getElementById('article-view').classList.remove('hidden');
+
+      document.title = article.seoTitle || `${article.title} | Bugwrite`;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc && article.metaDescription) metaDesc.setAttribute('content', article.metaDescription);
+
+      document.getElementById('reader-category').textContent = article.category;
+      document.getElementById('reader-title').textContent = article.title;
+      document.getElementById('reader-dek').textContent = article.dek;
+      document.getElementById('reader-author').textContent = article.author;
+      document.getElementById('reader-role').textContent = article.authorRole;
+      document.getElementById('reader-date').textContent = article.publishedDate;
+      document.getElementById('reader-readtime').textContent = article.readTime;
+      document.getElementById('reader-image').src = `${article.image}?v=bit1`;
+      document.getElementById('reader-image').alt = article.imageAlt;
+      document.getElementById('reader-caption').textContent = article.imageAlt;
+      document.getElementById('reader-body').innerHTML = article.body;
+      document.getElementById('reader-avatar').textContent = article.author.split(' ').map(p => p[0]).join('').slice(0, 2).toUpperCase();
+      document.getElementById('reader-tags').innerHTML = (article.keywords || []).map(k => `<span class="px-2.5 py-1 text-[11px] font-medium bg-neutral-100 dark:bg-[#1a1e26] text-neutral-700 dark:text-neutral-300 rounded">${escapeHtml(k)}</span>`).join('');
+
+      const related = ALL_ARTICLES.filter(a => a.id !== article.id).slice(0, 4);
+      document.getElementById('related-grid').innerHTML = related.map(a => renderGridCard(a, 'h3')).join('');
+
+      if (pushUrl) safePushUrl(getArticleUrl(article), { articleId: id });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function closeArticleView(updateUrl = true) {
+      document.getElementById('article-view').classList.add('hidden');
+      document.getElementById('home-view').classList.remove('hidden');
+      document.title = 'Bugwrite: Tech, Gaming, Cybersecurity & Business News';
+      if (updateUrl) safePushUrl(activeCategory === 'All' ? '/' : `/${getCategorySlug(activeCategory)}`, { category: activeCategory });
+    }
+
+    function syncFromUrl() {
+      const path = window.location.pathname;
+      const params = new URLSearchParams(window.location.search);
+      const qParam = params.get('q');
+      if (qParam) {
+        activeSearch = qParam;
+        const si = document.getElementById('search-input');
+        if (si) si.value = qParam;
+        document.getElementById('search-drawer')?.classList.remove('hidden');
+      } else if (params.get('search') === '1') {
+        document.getElementById('search-drawer')?.classList.remove('hidden');
+        document.getElementById('search-input')?.focus();
+      }
+
+      const articleMatch = path.match(/^\/([^/]+)\/article\/([^/]+)\/?$/);
+      if (articleMatch) {
+        const id = decodeURIComponent(articleMatch[2]);
+        if (ALL_ARTICLES.some(a => a.id === id)) {
+          openArticleView(id, false);
+          return;
+        }
+      }
+
+      const catMatch = path.match(/^\/([^/]+)\/?$/);
+      if (catMatch) {
+        const matchedCat = getCategoryFromSlug(catMatch[1].toLowerCase());
+        if (matchedCat) {
+          activeCategory = matchedCat;
+          closeArticleView(false);
+          renderHomeFeed();
+          return;
+        }
+      }
+
+      const hash = window.location.hash;
+      if (hash.startsWith('#article/')) {
+        const id = hash.replace('#article/', '');
+        const art = ALL_ARTICLES.find(a => a.id === id);
+        if (art) {
+          if (window.location.protocol !== 'file:') history.replaceState({ articleId: id }, '', getArticleUrl(art));
+          openArticleView(id, false);
+          return;
+        }
+      }
+
+      activeCategory = 'All';
+      closeArticleView(false);
+      renderHomeFeed();
+    }
+
+    window.addEventListener('hashchange', syncFromUrl);
+    window.addEventListener('popstate', syncFromUrl);
+
+    const searchDrawer = document.getElementById('search-drawer');
+    const searchInput = document.getElementById('search-input');
+    document.getElementById('search-toggle-btn').addEventListener('click', () => {
+      searchDrawer.classList.toggle('hidden');
+      if (!searchDrawer.classList.contains('hidden')) searchInput.focus();
+    });
+    document.getElementById('clear-search-btn').addEventListener('click', () => {
+      searchDrawer.classList.add('hidden');
+      if (activeSearch) {
+        activeSearch = '';
+        searchInput.value = '';
+        renderHomeFeed();
+      }
+    });
+    searchInput.addEventListener('input', (e) => {
+      closeArticleView(false);
+      activeSearch = e.target.value;
+      renderHomeFeed();
+    });
+
+    syncFromUrl();
+  </script>
+  <script>
+    (function () {
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileDrawer = document.getElementById('mobile-nav-drawer');
+      if (mobileBtn && mobileDrawer) {
+        mobileBtn.addEventListener('click', () => mobileDrawer.classList.toggle('hidden'));
+      }
+
+      const themeBtn = document.getElementById('theme-toggle-btn');
+      const moon = document.getElementById('theme-icon-moon');
+      const sun = document.getElementById('theme-icon-sun');
+      const label = document.getElementById('theme-toggle-label');
+      function syncTheme() {
+        const isDark = document.documentElement.classList.contains('dark');
+        if (moon && sun && label) {
+          moon.classList.toggle('hidden', isDark);
+          sun.classList.toggle('hidden', !isDark);
+          label.textContent = isDark ? 'Light' : 'Dark';
+        }
+      }
+      if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+          const isDark = document.documentElement.classList.toggle('dark');
+          localStorage.setItem('bugwrite-theme', isDark ? 'dark' : 'light');
+          syncTheme();
+        });
+      }
+      syncTheme();
+
+      const bar = document.getElementById('gta-announcement-bar');
+      const timerEl = document.getElementById('gta-countdown-timer');
+      const textEl = document.getElementById('gta-countdown-text');
+      const dismissBtn = document.getElementById('dismiss-announcement-btn');
+      if (bar && timerEl) {
+        const target = new Date(2026, 10, 19, 0, 0, 0).getTime();
+        const pad = (n) => String(n).padStart(2, '0');
+        function tick() {
+          const diff = target - Date.now();
+          if (diff <= 0) {
+            textEl.textContent = 'Grand Theft Auto VI is live now on PS5 and Xbox Series X|S.';
+            timerEl.textContent = '';
+            timerEl.classList.add('hidden');
+            return;
+          }
+          const days = Math.floor(diff / 86400000);
+          const hours = Math.floor((diff % 86400000) / 3600000);
+          const mins = Math.floor((diff % 3600000) / 60000);
+          const secs = Math.floor((diff % 60000) / 1000);
+          timerEl.textContent = days > 0
+            ? `${pad(days)}d ${pad(hours)}h ${pad(mins)}m ${pad(secs)}s`
+            : `${pad(hours)}h ${pad(mins)}m ${pad(secs)}s`;
+        }
+        tick();
+        setInterval(tick, 1000);
+        if (dismissBtn) {
+          dismissBtn.addEventListener('click', () => bar.classList.add('hidden'));
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "bugwrite-corp",
+  "version": "1.0.0",
+  "description": "Enterprise Verification Infrastructure",
+  "scripts": {
+    "dev": "vite",
+    "seo": "python scripts/build_seo.py",
+    "build": "python scripts/build_seo.py && vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^8.3.4"
+  }
+}
