@@ -1,561 +1,981 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://bugwrite.com/</loc>
+    <loc>https://www.bugwrite.com/</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming</loc>
+    <loc>https://www.bugwrite.com/gaming</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech</loc>
+    <loc>https://www.bugwrite.com/big-tech</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://bugwrite.com/security</loc>
+    <loc>https://www.bugwrite.com/security</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://bugwrite.com/business</loc>
+    <loc>https://www.bugwrite.com/business</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://bugwrite.com/about</loc>
+    <loc>https://www.bugwrite.com/about</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://bugwrite.com/contact</loc>
+    <loc>https://www.bugwrite.com/contact</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://bugwrite.com/privacy-policy</loc>
+    <loc>https://www.bugwrite.com/privacy-policy</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://bugwrite.com/terms-of-service</loc>
+    <loc>https://www.bugwrite.com/terms-of-service</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech/article/apple-outage</loc>
+    <loc>https://www.bugwrite.com/big-tech/article/apple-outage</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/apple-outage.jpg</image:loc>
+      <image:title>Apple confirms internal software update triggered widespread iCloud, Apple Pay, and App Store outage</image:title>
+      <image:caption>An aluminum laptop and dark glass smartphone resting side by side on an oak desk in morning light</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/security/article/artex-ai-cyber-framework</loc>
+    <loc>https://www.bugwrite.com/security/article/artex-ai-cyber-framework</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/artex.jpg</image:loc>
+      <image:title>FBI issues urgent warning over ARTEX, an AI framework turning novice hackers into machine-speed intruders</image:title>
+      <image:caption>Cybersecurity analyst workstation with dual monitors and a mechanical keyboard in a dim operations room</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/security/article/java4shell-cve-2026-114938</loc>
+    <loc>https://www.bugwrite.com/security/article/java4shell-cve-2026-114938</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/java4shell.jpg</image:loc>
+      <image:title>Java4Shell: Red Hat urges immediate patching for critical OpenJDK remote code execution flaw</image:title>
+      <image:caption>Row of matte black enterprise data center server blades with subtle blue and amber indicator lights</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/harvey-jones-nvidia-chair</loc>
+    <loc>https://www.bugwrite.com/business/article/harvey-jones-nvidia-chair</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/harvey-jones.jpg</image:loc>
+      <image:title>Nvidia&#x27;s first board chair Harvey Jones rules out Jensen Huang&#x27;s return as CEO</image:title>
+      <image:caption>Modern Silicon Valley glass and brushed steel corporate headquarters exterior in late afternoon sunlight</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/ocarina-of-time-remake-pc-port</loc>
+    <loc>https://www.bugwrite.com/gaming/article/ocarina-of-time-remake-pc-port</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/ocarina-pc-port.jpg</image:loc>
+      <image:title>Players already have the Ocarina of Time Switch 2 remake running natively on PC</image:title>
+      <image:caption>Modern PC gaming desk setup with an ultrawide monitor showing a sunlit fantasy meadow and temple ruins</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/when-is-gta-6-playable-release-times</loc>
+    <loc>https://www.bugwrite.com/gaming/article/when-is-gta-6-playable-release-times</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/gta6-release-time.jpg</image:loc>
+      <image:title>When is GTA 6 playable? Global unlock schedule, preload size, and midnight rollout details</image:title>
+      <image:caption>Midnight Black PlayStation 5 DualSense wireless controller photographed cleanly from the front</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/new-zealand-gta-6-trick</loc>
+    <loc>https://www.bugwrite.com/gaming/article/new-zealand-gta-6-trick</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/gta6-new-zealand.jpg</image:loc>
+      <image:title>The New Zealand GTA 6 trick explained: How Xbox and PS5 players try to unlock early and the risks involved</image:title>
+      <image:caption>Auckland, New Zealand city skyline illuminated at night across the harbor</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/gta-6-metacritic-score-review-embargo</loc>
+    <loc>https://www.bugwrite.com/gaming/article/gta-6-metacritic-score-review-embargo</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/gta6-metacritic.jpg</image:loc>
+      <image:title>GTA 6 Metacritic watch: When the review embargo lifts and the historic bar Rockstar is chasing</image:title>
+      <image:caption>Journalist workstation with a laptop, paper notebook, and cup of coffee in morning light</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/how-long-is-gta-6-story-mode</loc>
+    <loc>https://www.bugwrite.com/gaming/article/how-long-is-gta-6-story-mode</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/gta6-story-length.jpg</image:loc>
+      <image:title>How long is GTA 6 story mode? Campaign hours, chapter structure, and 100 percent completion estimates</image:title>
+      <image:caption>Aerial view of the Seven Mile Bridge highway stretching across turquoise waters of the Florida Keys</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/gta-6-screenshots-gallery-weather</loc>
+    <loc>https://www.bugwrite.com/gaming/article/gta-6-screenshots-gallery-weather</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/gta6-screenshots.jpg</image:loc>
+      <image:title>New GTA 6 screenshots show off Vice City nightlife and torrential Leonida storms ahead of launch</image:title>
+      <image:caption>Neon-lit Ocean Drive in South Beach Miami at night lined with art-deco buildings and palm trees</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/the-game-awards-2026-nominees</loc>
+    <loc>https://www.bugwrite.com/gaming/article/the-game-awards-2026-nominees</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/game-awards-2026.jpg</image:loc>
+      <image:title>The Game Awards 2026 nominees: GTA 6 leads with 8 nods alongside Ocarina of Time and Resident Evil Requiem</image:title>
+      <image:caption>Interior auditorium and stage of the Peacock Theater in Los Angeles before a live awards ceremony</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/mega-millions-drawing-november-17-2026</loc>
+    <loc>https://www.bugwrite.com/business/article/mega-millions-drawing-november-17-2026</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/mega-millions-nov17.jpg</image:loc>
+      <image:title>Mega Millions drawing November 17, 2026: Winning numbers and why the jackpot climbed to $629 million</image:title>
+      <image:caption>Printed Mega Millions lottery tickets photographed cleanly on a flat surface</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/security/article/fbi-warning-today-facestealer-artex</loc>
+    <loc>https://www.bugwrite.com/security/article/fbi-warning-today-facestealer-artex</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/fbi-warning.jpg</image:loc>
+      <image:title>FBI warning today: Automated AI intrusions and deepfake video scams put companies on high alert</image:title>
+      <image:caption>Stately limestone federal government building columns in Washington D.C. under overcast morning sky</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/xbox-black-friday-sale-2026</loc>
+    <loc>https://www.bugwrite.com/gaming/article/xbox-black-friday-sale-2026</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/xbox-black-friday.jpg</image:loc>
+      <image:title>Xbox Black Friday Sale 2026 starts November 19 with up to 80 percent off over 2,000 games</image:title>
+      <image:caption>Matte black and matte white wireless gaming controllers resting on a dark slate studio surface</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/playstation-plus-november-2026</loc>
+    <loc>https://www.bugwrite.com/gaming/article/playstation-plus-november-2026</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/playstation-plus.jpg</image:loc>
+      <image:title>PlayStation Plus November 2026 lineup adds Death Stranding 2, Atomfall, and Dragon Quest III HD-2D</image:title>
+      <image:caption>Minimalist white and black game controller beside a modern console on a bright oak media stand</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/salesforce-copilotforce-layoffs-november-2026</loc>
+    <loc>https://www.bugwrite.com/business/article/salesforce-copilotforce-layoffs-november-2026</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/salesforce.jpg</image:loc>
+      <image:title>Salesforce unveils Microsoft Copilotforce partnership amid fresh job cuts and internal AI budgets</image:title>
+      <image:caption>Downtown San Francisco glass skyscraper skyline glowing at blue hour twilight</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/xbox-game-pass-november-2026-wave-2</loc>
+    <loc>https://www.bugwrite.com/gaming/article/xbox-game-pass-november-2026-wave-2</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/xbox-game-pass.jpg</image:loc>
+      <image:title>Xbox Game Pass late November lineup brings The Outlast Trials, Hela, and Arkheron</image:title>
+      <image:caption>Cozy modern living room with a glowing OLED television and wireless controller on a wooden coffee table</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech/article/gmail-outage-rumors-apple-disruption</loc>
+    <loc>https://www.bugwrite.com/big-tech/article/gmail-outage-rumors-apple-disruption</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/gmail-outage.jpg</image:loc>
+      <image:title>Is Gmail down? Why Google Workspace stayed green during a sudden surge in outage reports</image:title>
+      <image:caption>Hands near a slim silver laptop and smartphone beside a coffee cup on a sunlit cafe table</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech/article/amazon-down-aws-us-east-1-friction</loc>
+    <loc>https://www.bugwrite.com/big-tech/article/amazon-down-aws-us-east-1-friction</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/amazon-down.jpg</image:loc>
+      <image:title>Amazon down reports spike as shoppers face checkout glitches after US-EAST-1 cloud hiccup</image:title>
+      <image:caption>Bright modern e-commerce logistics warehouse corridor with stacked unbranded cardboard boxes on rollers</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech/article/facebook-italy-privacy-fine-multiple-profiles</loc>
+    <loc>https://www.bugwrite.com/big-tech/article/facebook-italy-privacy-fine-multiple-profiles</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/facebook-meta.jpg</image:loc>
+      <image:title>Meta hit with $887 million fine in Italy over Facebook Android photo access as secondary profiles wind down</image:title>
+      <image:caption>Modern glass smartphone resting on a smooth marble table in sunlit European courtyard architecture</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/nvidia-q3-fy27-earnings-115-billion</loc>
+    <loc>https://www.bugwrite.com/business/article/nvidia-q3-fy27-earnings-115-billion</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/nvidia-q3-fy27-earnings-115-billion.jpg</image:loc>
+      <image:title>Nvidia Earnings 2026: Revenue, AI Demand and What Investors Need to Know</image:title>
+      <image:caption>Rows of high-density GPU server racks glowing softly inside a modern enterprise data center</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech/article/microsoft-outlook-teams-copilot-outage</loc>
+    <loc>https://www.bugwrite.com/big-tech/article/microsoft-outlook-teams-copilot-outage</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/microsoft-outlook-teams-copilot-outage.jpg</image:loc>
+      <image:title>Microsoft Outlook Down: Why Outlook, Teams and Copilot Stopped Working</image:title>
+      <image:caption>An open laptop showing a blank email inbox on a cluttered office desk during a morning workday</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/gta-6-eight-game-awards-nominations</loc>
+    <loc>https://www.bugwrite.com/gaming/article/gta-6-eight-game-awards-nominations</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/gta-6-eight-game-awards-nominations.jpg</image:loc>
+      <image:title>GTA 6: All Eight Game Awards 2026 Nominations Explained</image:title>
+      <image:caption>Neon palm trees glowing pink and cyan over a coastal boulevard at dusk</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/anthropic-ipo-nasdaq-ant-2026</loc>
+    <loc>https://www.bugwrite.com/business/article/anthropic-ipo-nasdaq-ant-2026</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/anthropic-ipo-nasdaq-ant-2026.jpg</image:loc>
+      <image:title>Anthropic IPO: What Investors Should Know About the Company&#x27;s Public Listing Plans</image:title>
+      <image:caption>Glass facade of a financial exchange tower reflecting morning clouds in Manhattan</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech/article/why-so-many-internet-outages-2026</loc>
+    <loc>https://www.bugwrite.com/big-tech/article/why-so-many-internet-outages-2026</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/why-so-many-internet-outages-2026.jpg</image:loc>
+      <image:title>Why Are So Many Websites and Online Services Experiencing Outages?</image:title>
+      <image:caption>Rows of dark server racks illuminated by blue and amber status LEDs inside a data center corridor</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/gta-6-pc-release-date-windows</loc>
+    <loc>https://www.bugwrite.com/gaming/article/gta-6-pc-release-date-windows</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/gta-6-pc-release-date-windows.jpg</image:loc>
+      <image:title>GTA 6 PC Release Date: Will It Come to Windows?</image:title>
+      <image:caption>A custom gaming PC tower with subtle warm lighting next to an ultrawide monitor on a dark desk</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/amazon-google-ai-investment-2026</loc>
+    <loc>https://www.bugwrite.com/business/article/amazon-google-ai-investment-2026</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/amazon-google-ai-investment-2026.jpg</image:loc>
+      <image:title>Why Amazon and Google Are Increasing Their Investment in AI</image:title>
+      <image:caption>Aerial view of a sprawling cloud data center campus surrounded by cooling units and electrical substations</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/security/article/ai-finding-software-vulnerabilities-faster</loc>
+    <loc>https://www.bugwrite.com/security/article/ai-finding-software-vulnerabilities-faster</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/ai-finding-software-vulnerabilities-faster.jpg</image:loc>
+      <image:title>Can AI Find Software Vulnerabilities Faster Than Human Hackers?</image:title>
+      <image:caption>Close-up of source code and vulnerability analysis graphs displayed on a dark monitor</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/gta-6-standard-vs-ultimate-edition</loc>
+    <loc>https://www.bugwrite.com/gaming/article/gta-6-standard-vs-ultimate-edition</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/gta-6-standard-vs-ultimate-edition.jpg</image:loc>
+      <image:title>GTA 6 Standard vs Ultimate Edition: Which Version Should You Choose?</image:title>
+      <image:caption>A classic red sports car parked outside a tropical art deco garage at sunset</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/us-ai-chip-export-restrictions-2026</loc>
+    <loc>https://www.bugwrite.com/business/article/us-ai-chip-export-restrictions-2026</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/us-ai-chip-export-restrictions-2026.jpg</image:loc>
+      <image:title>US AI Chip Export Restrictions: What the New Rules Mean for Technology Companies</image:title>
+      <image:caption>Close-up of a silicon semiconductor wafer resting on an inspection stage in a cleanroom</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech/article/openai-gpt-6-2-astra-sol-cyber-2026</loc>
+    <loc>https://www.bugwrite.com/big-tech/article/openai-gpt-6-2-astra-sol-cyber-2026</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/openai-gpt-6-2-astra-sol-cyber-2026.jpg</image:loc>
+      <image:title>OpenAI&#x27;s Latest AI Developments: What Has Changed in 2026?</image:title>
+      <image:caption>Minimalist modern tech office lobby with subtle architectural lighting and glass panels</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/gta-6-download-size-storage-guide</loc>
+    <loc>https://www.bugwrite.com/gaming/article/gta-6-download-size-storage-guide</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/gta-6-download-size-storage-guide.jpg</image:loc>
+      <image:title>GTA 6 Download Size: How Much Storage Will You Need?</image:title>
+      <image:caption>A sleek NVMe SSD heatsink resting beside a modern game console controller on a matte surface</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/is-ai-boom-becoming-a-bubble-2026</loc>
+    <loc>https://www.bugwrite.com/business/article/is-ai-boom-becoming-a-bubble-2026</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/is-ai-boom-becoming-a-bubble-2026.jpg</image:loc>
+      <image:title>Is the AI Boom Becoming a Bubble? What the Latest Market Developments Show</image:title>
+      <image:caption>Stock market candlestick chart glowing on a glass financial terminal in a dimly lit trading room</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech/article/best-ai-coding-tools-2026</loc>
+    <loc>https://www.bugwrite.com/big-tech/article/best-ai-coding-tools-2026</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/best-ai-coding-tools-2026.jpg</image:loc>
+      <image:title>Best AI Coding Tools for Developers in 2026</image:title>
+      <image:caption>Software developer typing on a laptop beside a widescreen monitor displaying code diffs and terminal logs</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/gta-6-map-vice-city-leonida-regions</loc>
+    <loc>https://www.bugwrite.com/gaming/article/gta-6-map-vice-city-leonida-regions</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/gta-6-map-vice-city-leonida-regions.jpg</image:loc>
+      <image:title>GTA 6 Map: Everything We Know About Vice City and Leonida</image:title>
+      <image:caption>Aerial view of a bright turquoise coastal highway linking tropical islands and wetlands</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/why-tech-stocks-falling-november-2026</loc>
+    <loc>https://www.bugwrite.com/business/article/why-tech-stocks-falling-november-2026</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/why-tech-stocks-falling-november-2026.jpg</image:loc>
+      <image:title>Why Are Technology Stocks Falling? Understanding the Latest Market Sell-Off</image:title>
+      <image:caption>Financial analyst reviewing red downward market trend lines on dual monitors at a trading desk</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech/article/ai-agents-explained-how-they-work</loc>
+    <loc>https://www.bugwrite.com/big-tech/article/ai-agents-explained-how-they-work</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/ai-agents-explained-how-they-work.jpg</image:loc>
+      <image:title>AI Agents Explained: How Autonomous AI Systems Actually Work</image:title>
+      <image:caption>Abstract network diagram rendered on a glass whiteboard inside a bright engineering studio</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/gta-6-characters-jason-lucia-cast</loc>
+    <loc>https://www.bugwrite.com/gaming/article/gta-6-characters-jason-lucia-cast</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/gta-6-characters-jason-lucia-cast.jpg</image:loc>
+      <image:title>GTA 6 Characters: Jason, Lucia and the Confirmed Cast</image:title>
+      <image:caption>Silhouette of two figures leaning against a vintage coupe beside neon motel signage at twilight</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/ai-industry-data-center-spending-2026</loc>
+    <loc>https://www.bugwrite.com/business/article/ai-industry-data-center-spending-2026</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/ai-industry-data-center-spending-2026.jpg</image:loc>
+      <image:title>How Much Is the AI Industry Spending on Data Centers?</image:title>
+      <image:caption>Technician walking past liquid-cooled server cabinets in an expansive industrial data center hall</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech/article/what-are-coding-agents-developers</loc>
+    <loc>https://www.bugwrite.com/big-tech/article/what-are-coding-agents-developers</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/what-are-coding-agents-developers.jpg</image:loc>
+      <image:title>What Are Coding Agents and Why Are Developers Using Them?</image:title>
+      <image:caption>Two software engineers reviewing pull request changes together at a standing desk</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/gta-6-gameplay-features-details</loc>
+    <loc>https://www.bugwrite.com/gaming/article/gta-6-gameplay-features-details</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/gta-6-gameplay-features-details.jpg</image:loc>
+      <image:title>GTA 6 Gameplay Features: 10 Details Players Should Know</image:title>
+      <image:caption>A customized muscle car parked inside a brightly lit urban tuning garage</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/ai-infrastructure-costs-startups-2026</loc>
+    <loc>https://www.bugwrite.com/business/article/ai-infrastructure-costs-startups-2026</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/ai-infrastructure-costs-startups-2026.jpg</image:loc>
+      <image:title>Is AI Infrastructure Becoming Too Expensive for Startups?</image:title>
+      <image:caption>Startup engineering team reviewing cloud billing charts around a laptop in a minimalist office</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech/article/how-to-check-if-website-is-down</loc>
+    <loc>https://www.bugwrite.com/big-tech/article/how-to-check-if-website-is-down</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/how-to-check-if-website-is-down.jpg</image:loc>
+      <image:title>How to Check If a Website Is Down for Everyone or Just You</image:title>
+      <image:caption>Smartphone and laptop side by side showing network connection diagnostics on a clean workspace</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/manni-l-perez-gta-6-lucia-actress</loc>
+    <loc>https://www.bugwrite.com/gaming/article/manni-l-perez-gta-6-lucia-actress</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/manni-l-perez-gta-6-lucia-actress.jpg</image:loc>
+      <image:title>Manni L. Perez: The Actress Behind GTA 6&#x27;s Lucia</image:title>
+      <image:caption>A studio condenser microphone lit by warm amber stage light inside a dark recording booth</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/isomorphic-labs-5-billion-series-c</loc>
+    <loc>https://www.bugwrite.com/business/article/isomorphic-labs-5-billion-series-c</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/isomorphic-labs-5-billion-series-c.jpg</image:loc>
+      <image:title>Isomorphic Labs Raises $5 Billion: What Its AI Drug Discovery Strategy Means</image:title>
+      <image:caption>Biomedical researcher examining molecular structures on a widescreen display inside a sleek laboratory</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech/article/cloudflare-aws-azure-internet-dependence</loc>
+    <loc>https://www.bugwrite.com/big-tech/article/cloudflare-aws-azure-internet-dependence</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/cloudflare-aws-azure-internet-dependence.jpg</image:loc>
+      <image:title>Cloudflare, AWS and Azure Outages: Why the Internet Depends on Them</image:title>
+      <image:caption>Fiber optic patch cables neatly bundled into high-density network switches inside a server room</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/gta-6-vs-gta-5-biggest-changes</loc>
+    <loc>https://www.bugwrite.com/gaming/article/gta-6-vs-gta-5-biggest-changes</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/gta-6-vs-gta-5-biggest-changes.jpg</image:loc>
+      <image:title>GTA 6 vs GTA 5: What&#x27;s Changed Between the Two Games?</image:title>
+      <image:caption>Split coastal skyline comparing sunlit city palms on one side and glowing neon night streets on the other</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/ai-startups-changing-software-model</loc>
+    <loc>https://www.bugwrite.com/business/article/ai-startups-changing-software-model</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/ai-startups-changing-software-model.jpg</image:loc>
+      <image:title>How AI Startups Are Changing the Software Business Model</image:title>
+      <image:caption>Business executives discussing pricing strategy charts across a conference table</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/security/article/what-is-a-zero-day-vulnerability</loc>
+    <loc>https://www.bugwrite.com/security/article/what-is-a-zero-day-vulnerability</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/what-is-a-zero-day-vulnerability.jpg</image:loc>
+      <image:title>What Is a Zero-Day Vulnerability? Explained With Real Examples</image:title>
+      <image:caption>Padlock icon reflected softly against dark glass over lines of security audit logs</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/can-gta-6-win-goty-before-release</loc>
+    <loc>https://www.bugwrite.com/gaming/article/can-gta-6-win-goty-before-release</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/can-gta-6-win-goty-before-release.jpg</image:loc>
+      <image:title>Can GTA 6 Win Game of the Year Before Its Release?</image:title>
+      <image:caption>A golden geometric award trophy silhouetted against dark blue stage spotlights</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/why-saas-companies-adding-ai-features</loc>
+    <loc>https://www.bugwrite.com/business/article/why-saas-companies-adding-ai-features</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/why-saas-companies-adding-ai-features.jpg</image:loc>
+      <image:title>Why SaaS Companies Are Adding AI Features to Their Products</image:title>
+      <image:caption>Product manager inspecting an enterprise software analytics dashboard on an ultrawide monitor</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/security/article/how-hackers-exploit-unpatched-software</loc>
+    <loc>https://www.bugwrite.com/security/article/how-hackers-exploit-unpatched-software</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/how-hackers-exploit-unpatched-software.jpg</image:loc>
+      <image:title>How Hackers Exploit Unpatched Software Vulnerabilities</image:title>
+      <image:caption>Security operations center desk with network topology diagrams and terminal alert windows</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/arc-raiders-update-2-6-0-cold-snap</loc>
+    <loc>https://www.bugwrite.com/gaming/article/arc-raiders-update-2-6-0-cold-snap</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/arc-raiders-update-2-6-0-cold-snap.jpg</image:loc>
+      <image:title>ARC Raiders Update 2.6.0: Cold Snap, Map Changes and Patch Notes</image:title>
+      <image:caption>A snowy retro-futuristic industrial wasteland beneath overcast winter skies</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/what-is-an-ai-agent-business</loc>
+    <loc>https://www.bugwrite.com/business/article/what-is-an-ai-agent-business</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/what-is-an-ai-agent-business.jpg</image:loc>
+      <image:title>What Is an AI Agent Business and How Does It Make Money?</image:title>
+      <image:caption>Modern glass office space where software engineers collaborate around whiteboards and laptops</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/security/article/best-password-managers-2026</loc>
+    <loc>https://www.bugwrite.com/security/article/best-password-managers-2026</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/best-password-managers-2026.jpg</image:loc>
+      <image:title>Best Password Managers in 2026: Security, Features and Pricing</image:title>
+      <image:caption>Laptop keyboard with a hardware security key plugged into the side USB-C port</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/arc-raiders-beginner-tips-survival</loc>
+    <loc>https://www.bugwrite.com/gaming/article/arc-raiders-beginner-tips-survival</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/arc-raiders-beginner-tips-survival.jpg</image:loc>
+      <image:title>ARC Raiders: Best Beginner Tips and Survival Strategies</image:title>
+      <image:caption>A lone scavenger crouching behind rusted concrete cover overlooking an arid valley</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/cloud-computing-competing-ai-customers</loc>
+    <loc>https://www.bugwrite.com/business/article/cloud-computing-competing-ai-customers</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/cloud-computing-competing-ai-customers.jpg</image:loc>
+      <image:title>Why Cloud Computing Companies Are Competing for AI Customers</image:title>
+      <image:caption>Rows of brightly lit network fiber cables connected to enterprise cloud switching racks</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/security/article/best-vpn-services-windows-2026</loc>
+    <loc>https://www.bugwrite.com/security/article/best-vpn-services-windows-2026</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/best-vpn-services-windows-2026.jpg</image:loc>
+      <image:title>Best VPN Services for Windows in 2026</image:title>
+      <image:caption>Windows laptop connected to public Wi-Fi in a quiet coffee shop near a window</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/best-ps5-games-2026</loc>
+    <loc>https://www.bugwrite.com/gaming/article/best-ps5-games-2026</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/best-ps5-games-2026.jpg</image:loc>
+      <image:title>Best PS5 Games to Play in 2026</image:title>
+      <image:caption>A white DualSense wireless controller resting on a minimalist dark media console under soft blue ambient light</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/business-impact-cloud-software-outages</loc>
+    <loc>https://www.bugwrite.com/business/article/business-impact-cloud-software-outages</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/business-impact-cloud-software-outages.jpg</image:loc>
+      <image:title>The Business Impact of Major Cloud and Software Outages</image:title>
+      <image:caption>Operations center engineers monitoring global network uptime dashboards on large wall screens</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech/article/windows-11-common-errors-fixes</loc>
+    <loc>https://www.bugwrite.com/big-tech/article/windows-11-common-errors-fixes</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/windows-11-common-errors-fixes.jpg</image:loc>
+      <image:title>Windows 11 Problems: Common Errors and How to Fix Them</image:title>
+      <image:caption>Modern desktop monitor displaying a clean Windows desktop setup on a wooden workstation</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/league-of-legends-patch-26-23-notes</loc>
+    <loc>https://www.bugwrite.com/gaming/article/league-of-legends-patch-26-23-notes</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/league-of-legends-patch-26-23-notes.jpg</image:loc>
+      <image:title>League of Legends Patch 26.23 Notes: Latest Champion and Gameplay Changes</image:title>
+      <image:caption>Snowy fantasy stone pathways glowing with icy blue runes in a forest clearing</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/cybersecurity-spending-business-priority</loc>
+    <loc>https://www.bugwrite.com/business/article/cybersecurity-spending-business-priority</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/cybersecurity-spending-business-priority.jpg</image:loc>
+      <image:title>Why Cybersecurity Spending Is Becoming a Business Priority</image:title>
+      <image:caption>Corporate boardroom table with security compliance briefing folders and a closed laptop</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech/article/android-17-features-changes-devices</loc>
+    <loc>https://www.bugwrite.com/big-tech/article/android-17-features-changes-devices</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/android-17-features-changes-devices.jpg</image:loc>
+      <image:title>Android 17: Features, Changes and Supported Devices</image:title>
+      <image:caption>Foldable Android smartphone resting partially open on a matte stone surface in soft daylight</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/best-gaming-headsets-2026</loc>
+    <loc>https://www.bugwrite.com/gaming/article/best-gaming-headsets-2026</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/best-gaming-headsets-2026.jpg</image:loc>
+      <image:title>Best Gaming Headsets in 2026: Top Picks for PC, PS5 and Xbox</image:title>
+      <image:caption>A matte black wireless gaming headset resting on a wooden stand beside a sleek console controller</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/how-data-breaches-affect-companies-financially</loc>
+    <loc>https://www.bugwrite.com/business/article/how-data-breaches-affect-companies-financially</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/how-data-breaches-affect-companies-financially.jpg</image:loc>
+      <image:title>How Data Breaches Affect Companies Financially</image:title>
+      <image:caption>Financial audit documents, a fountain pen, and a tablet displaying balance sheet figures on a wooden desk</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech/article/ios-27-features-siri-liquid-glass</loc>
+    <loc>https://www.bugwrite.com/big-tech/article/ios-27-features-siri-liquid-glass</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/ios-27-features-siri-liquid-glass.jpg</image:loc>
+      <image:title>iOS 27: Liquid Glass, Next-Gen Siri AI, and Everything That Changed</image:title>
+      <image:caption>Sleek titanium smartphone lying face up beside wireless earbuds on a minimalist desk</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/nvidia-rtx-5090-prices-shortage-2026</loc>
+    <loc>https://www.bugwrite.com/gaming/article/nvidia-rtx-5090-prices-shortage-2026</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/nvidia-rtx-5090-prices-shortage-2026.jpg</image:loc>
+      <image:title>Nvidia RTX 5090 Prices: Why Some Graphics Cards Cost Thousands</image:title>
+      <image:caption>Close-up of a high-end matte black triple-fan graphics card cooling shroud under dramatic studio lighting</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/cost-to-build-ai-saas-startup-2026</loc>
+    <loc>https://www.bugwrite.com/business/article/cost-to-build-ai-saas-startup-2026</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/cost-to-build-ai-saas-startup-2026.jpg</image:loc>
+      <image:title>How Much Does It Cost to Build an AI SaaS Startup in 2026?</image:title>
+      <image:caption>Two startup founders reviewing financial spreadsheets and architecture notes at a bright studio desk</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech/article/why-ai-data-centers-consume-electricity</loc>
+    <loc>https://www.bugwrite.com/big-tech/article/why-ai-data-centers-consume-electricity</loc>
     <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/why-ai-data-centers-consume-electricity.jpg</image:loc>
+      <image:title>Why Are AI Data Centers Consuming So Much Electricity?</image:title>
+      <image:caption>High-voltage electrical transmission towers silhouetted against an orange dusk sky near a server campus</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/half-life-3-game-awards-2026-hlx</loc>
+    <loc>https://www.bugwrite.com/gaming/article/half-life-3-game-awards-2026-hlx</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/half-life-3-game-awards-2026-hlx.jpg</image:loc>
+      <image:title>Half-Life 3 at The Game Awards 2026: What Is Rumor and What Is Confirmed?</image:title>
+      <image:caption>An orange industrial crowbar resting on a steel workbench beside dimly lit glass laboratory tubes</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/best-crm-software-small-businesses-2026</loc>
+    <loc>https://www.bugwrite.com/business/article/best-crm-software-small-businesses-2026</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/best-crm-software-small-businesses-2026.jpg</image:loc>
+      <image:title>Best CRM Software for Small Businesses in 2026</image:title>
+      <image:caption>Small business sales lead reviewing a customer pipeline board on a laptop in a sunlit workspace</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech/article/what-are-ai-chips-why-companies-fight</loc>
+    <loc>https://www.bugwrite.com/big-tech/article/what-are-ai-chips-why-companies-fight</loc>
     <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/what-are-ai-chips-why-companies-fight.jpg</image:loc>
+      <image:title>What Are AI Chips and Why Are Companies Fighting for Them?</image:title>
+      <image:caption>Macro photograph of an advanced semiconductor silicon wafer reflecting iridescent light</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/tomb-raider-legacy-of-atlantis-2027-delay</loc>
+    <loc>https://www.bugwrite.com/gaming/article/tomb-raider-legacy-of-atlantis-2027-delay</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/tomb-raider-legacy-of-atlantis-2027-delay.jpg</image:loc>
+      <image:title>Tomb Raider: Legacy of Atlantis Delayed to 2027: What We Know</image:title>
+      <image:caption>Sunbeams cutting through a mossy cavern entrance onto ancient carved stone ruins and shallow water</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/best-ai-tools-small-business-owners</loc>
+    <loc>https://www.bugwrite.com/business/article/best-ai-tools-small-business-owners</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/best-ai-tools-small-business-owners.jpg</image:loc>
+      <image:title>Best AI Tools for Small Business Owners</image:title>
+      <image:caption>Independent business owner working on a laptop beside invoices and a cup of coffee at a wooden counter</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/security/article/how-ransomware-works-business-protection</loc>
+    <loc>https://www.bugwrite.com/security/article/how-ransomware-works-business-protection</loc>
     <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/how-ransomware-works-business-protection.jpg</image:loc>
+      <image:title>How Does Ransomware Work and How Can Businesses Protect Themselves?</image:title>
+      <image:caption>IT security engineer inspecting server backup logs on a dual-screen workstation</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/gaming/article/firaxis-layoffs-civilization-xcom-2026</loc>
+    <loc>https://www.bugwrite.com/gaming/article/firaxis-layoffs-civilization-xcom-2026</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/firaxis-layoffs-civilization-xcom-2026.jpg</image:loc>
+      <image:title>Why Firaxis Is Restructuring: What the Layoffs Mean for Civilization and XCOM</image:title>
+      <image:caption>An empty strategy game studio conference room with hexagonal map sketches pinned to a glass whiteboard</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/why-tech-companies-restructuring-2026</loc>
+    <loc>https://www.bugwrite.com/business/article/why-tech-companies-restructuring-2026</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/why-tech-companies-restructuring-2026.jpg</image:loc>
+      <image:title>Why Technology Companies Are Restructuring Their Workforces</image:title>
+      <image:caption>Architectural view of a modern glass corporate campus courtyard during late afternoon</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/security/article/is-personal-data-used-to-train-ai</loc>
+    <loc>https://www.bugwrite.com/security/article/is-personal-data-used-to-train-ai</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/is-personal-data-used-to-train-ai.jpg</image:loc>
+      <image:title>Is Your Personal Data Being Used to Train AI Models?</image:title>
+      <image:caption>Close-up of a smartphone privacy settings menu resting on a dark desk</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/vc-evaluating-ai-startups-2026</loc>
+    <loc>https://www.bugwrite.com/business/article/vc-evaluating-ai-startups-2026</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/vc-evaluating-ai-startups-2026.jpg</image:loc>
+      <image:title>How Venture Capital Investors Are Evaluating AI Startups in 2026</image:title>
+      <image:caption>Venture capital partners reviewing pitch decks and financial projections in a glass conference room</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/big-tech/article/best-free-ai-tools-productivity-2026</loc>
+    <loc>https://www.bugwrite.com/big-tech/article/best-free-ai-tools-productivity-2026</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/best-free-ai-tools-productivity-2026.jpg</image:loc>
+      <image:title>Best Free AI Tools for Everyday Productivity in 2026</image:title>
+      <image:caption>Clean home office desk with a notebook, pen, coffee cup, and open laptop showing productivity apps</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/why-companies-invest-private-ai-models</loc>
+    <loc>https://www.bugwrite.com/business/article/why-companies-invest-private-ai-models</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/why-companies-invest-private-ai-models.jpg</image:loc>
+      <image:title>Why Companies Are Investing in Private AI Models</image:title>
+      <image:caption>Enterprise security architect inspecting locked private server cages inside a secure data facility</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/cost-of-running-large-ai-model</loc>
+    <loc>https://www.bugwrite.com/business/article/cost-of-running-large-ai-model</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/cost-of-running-large-ai-model.jpg</image:loc>
+      <image:title>What Is the Cost of Running a Large AI Model?</image:title>
+      <image:caption>High-voltage power distribution cables and cooling pipes lining the back of an AI server aisle</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bugwrite.com/business/article/us-export-controls-global-semiconductors</loc>
+    <loc>https://www.bugwrite.com/business/article/us-export-controls-global-semiconductors</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/us-export-controls-global-semiconductors.jpg</image:loc>
+      <image:title>How US Export Controls Are Changing the Global Semiconductor Industry</image:title>
+      <image:caption>Global shipping containers stacked near a semiconductor logistics terminal at dusk</image:caption>
+    </image:image>
   </url>
 </urlset>

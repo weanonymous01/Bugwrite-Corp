@@ -4,14 +4,16 @@
   "description": "Enterprise Verification Infrastructure",
   "scripts": {
     "dev": "vite",
-    "seo": "python scripts/build_seo.py",
-    "build": "python scripts/build_seo.py && vite build",
+    "css": "tailwindcss -i ./src/input.css -o ./public/assets/styles.css --minify",
+    "seo": "python scripts/build_seo.py && npm run css",
+    "build": "npm run css && vite build",
     "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "tailwindcss": "^3.4.19",
     "vite": "^8.3.4"
   }
 }

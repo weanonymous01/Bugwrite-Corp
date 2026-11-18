@@ -6,13 +6,28 @@ import shutil
 import subprocess
 from datetime import datetime
 
-DOMAIN = "https://bugwrite.com"
+DOMAIN = "https://www.bugwrite.com"
 LASTMOD = "2026-11-18"
+CSS_VERSION = "2"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PUBLIC = os.path.join(ROOT, "public")
 DATA_JS = os.path.join(PUBLIC, "blog", "articles-data.js")
 
-GA4_SNIPPET = """  <!-- Google Analytics 4 (Replace G-XXXXXXXXXX with your live GA4 Measurement ID) -->
+PUBLISHER_ORG = {
+    "@type": "NewsMediaOrganization",
+    "name": "Bugwrite",
+    "url": f"{DOMAIN}/",
+    "logo": {
+        "@type": "ImageObject",
+        "url": f"{DOMAIN}/blog/bugwrite-logo.png",
+        "width": 600,
+        "height": 60
+    }
+}
+
+GA4_SNIPPET = """  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="OLMBxfsU2GBJlczpGNYm1WIVHs29p9nFhHP0iYyGQ6k" />
+  <!-- Google Analytics 4: uncomment and replace G-XXXXXXXXXX with your live GA4 Measurement ID
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -20,89 +35,25 @@ GA4_SNIPPET = """  <!-- Google Analytics 4 (Replace G-XXXXXXXXXX with your live 
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
-  <!-- Google Search Console Verification (Replace content with your GSC token) -->
-  <meta name="google-site-verification" content="YOUR_GSC_VERIFICATION_CODE" />"""
+  -->"""
 
-SHARED_STYLES = """  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+SHARED_STYLES = f"""  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0d0f12" media="(prefers-color-scheme: dark)" />
+  <link rel="alternate" type="application/rss+xml" title="Bugwrite News RSS Feed" href="{DOMAIN}/rss.xml" />
+  <link rel="preload" as="style" href="/assets/styles.css?v={CSS_VERSION}" />
+  <link rel="stylesheet" href="/assets/styles.css?v={CSS_VERSION}" />
   <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Alliance No.1"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', '"Fira Sans"', '"Droid Sans"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
-          }
-        }
-      }
-    };
-  </script>
-  <style>
-    * {
-      font-family: "Alliance No.1", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
-    body {
-      background-color: #ffffff;
-      color: #111827;
-      margin: 0;
-      padding: 0;
-      -webkit-font-smoothing: antialiased;
-      transition: background-color 0.2s ease, color 0.2s ease;
-    }
-    html.dark body {
-      background-color: #0d0f12;
-      color: #f3f4f6;
-    }
-    ::-webkit-scrollbar { width: 6px; height: 6px; }
-    ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
-    html.dark ::-webkit-scrollbar-thumb { background: #374151; }
-    .article-headline { transition: color 0.15s ease-in-out; }
-    .group:hover .article-headline { color: #0057b8; }
-    html.dark .group:hover .article-headline { color: #60a5fa; }
-    .article-prose p {
-      margin-bottom: 1.35rem;
-      line-height: 1.75;
-      color: #262626;
-      font-size: 1.0625rem;
-    }
-    html.dark .article-prose p { color: #d4d4d8; }
-    .article-prose h2 {
-      margin-top: 2.15rem;
-      margin-bottom: 0.85rem;
-      font-size: 1.375rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.3;
-      color: #0a0a0a;
-    }
-    html.dark .article-prose h2 { color: #fafafa; }
-    .article-prose h3 {
-      margin-top: 1.5rem;
-      margin-bottom: 0.6rem;
-      font-size: 1.125rem;
-      font-weight: 700;
-      color: #171717;
-    }
-    html.dark .article-prose h3 { color: #f4f4f5; }
-    .article-prose code {
-      background-color: #f3f4f6;
-      color: #111827;
-      padding: 0.15rem 0.35rem;
-      border-radius: 4px;
-      font-size: 0.9em;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
-    }
-    html.dark .article-prose code { background-color: #1f242d; color: #e5e7eb; }
-    .article-prose em { font-style: italic; }
-  </style>
-  <script>
-    (function () {
-      if (localStorage.getItem('bugwrite-theme') === 'dark') {
+    (function () {{
+      if (localStorage.getItem('bugwrite-theme') === 'dark') {{
         document.documentElement.classList.add('dark');
-      }
-    })();
+      }}
+    }})();
   </script>"""
 
 
@@ -303,13 +254,14 @@ def build_footer():
             <a href="/contact" class="hover:text-black dark:hover:text-white transition-colors">Contact &amp; News Tips</a>
             <a href="/privacy-policy" class="hover:text-black dark:hover:text-white transition-colors">Privacy Policy</a>
             <a href="/terms-of-service" class="hover:text-black dark:hover:text-white transition-colors">Terms of Service</a>
+            <a href="/rss.xml" class="hover:text-black dark:hover:text-white transition-colors">RSS Feed</a>
             <a href="/sitemap.xml" class="hover:text-black dark:hover:text-white transition-colors">XML Sitemap</a>
           </div>
         </div>
       </div>
       <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-neutral-500 dark:text-neutral-500">
         <span>&copy; 2026 Bugwrite Media. All rights reserved.</span>
-        <span>Published at bugwrite.com</span>
+        <span>Published at www.bugwrite.com</span>
       </div>
     </div>
   </footer>"""
@@ -530,7 +482,18 @@ def write_file(rel_path, content):
         f.write(content)
 
 
-def build_head(title, desc, canonical, og_type="website", og_image=f"{DOMAIN}/blog/articles/gta6-release-time.jpg", schemas=None, robots="index, follow"):
+def build_head(
+    title,
+    desc,
+    canonical,
+    og_type="website",
+    og_image=f"{DOMAIN}/blog/articles/gta6-release-time.jpg",
+    schemas=None,
+    robots="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    og_image_alt="Bugwrite editorial illustration",
+    preload_image=None,
+    extra_meta="",
+):
     schema_tags = []
     for sc in (schemas or []):
         schema_tags.append(
@@ -539,6 +502,8 @@ def build_head(title, desc, canonical, og_type="website", og_image=f"{DOMAIN}/bl
             + "\n  </script>"
         )
     schema_html = "\n".join(schema_tags)
+    preload_tag = f'  <link rel="preload" as="image" href="{esc(preload_image)}" fetchpriority="high" />\n' if preload_image else ""
+    extra_block = f"{extra_meta}\n" if extra_meta else ""
     return f"""<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -547,10 +512,12 @@ def build_head(title, desc, canonical, og_type="website", og_image=f"{DOMAIN}/bl
   <title>{esc(title)}</title>
   <meta name="description" content="{esc(desc)}" />
   <meta name="robots" content="{robots}" />
+  <meta name="googlebot" content="{robots}" />
   <link rel="canonical" href="{esc(canonical)}" />
-
+{preload_tag}
   <!-- Open Graph Metadata -->
   <meta property="og:site_name" content="Bugwrite" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="{og_type}" />
   <meta property="og:title" content="{esc(title)}" />
   <meta property="og:description" content="{esc(desc)}" />
@@ -558,12 +525,13 @@ def build_head(title, desc, canonical, og_type="website", og_image=f"{DOMAIN}/bl
   <meta property="og:image" content="{esc(og_image)}" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="720" />
-
-  <!-- Twitter Card Metadata -->
+  <meta property="og:image:alt" content="{esc(og_image_alt)}" />
+{extra_block}  <!-- Twitter Card Metadata -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{esc(title)}" />
   <meta name="twitter:description" content="{esc(desc)}" />
   <meta name="twitter:image" content="{esc(og_image)}" />
+  <meta name="twitter:image:alt" content="{esc(og_image_alt)}" />
 
 {GA4_SNIPPET}
 {SHARED_STYLES}
@@ -603,15 +571,7 @@ def generate_homepage(articles):
         },
         {
             "@context": "https://schema.org",
-            "@type": "NewsMediaOrganization",
-            "name": "Bugwrite",
-            "url": f"{DOMAIN}/",
-            "logo": {
-                "@type": "ImageObject",
-                "url": f"{DOMAIN}/blog/articles/gta6-release-time.jpg",
-                "width": 1280,
-                "height": 720
-            }
+            **PUBLISHER_ORG,
         },
         {
             "@context": "https://schema.org",
@@ -641,7 +601,16 @@ def generate_homepage(articles):
         }
     ]
 
-    head = build_head(home_title, home_desc, f"{DOMAIN}/", "website", f"{DOMAIN}{featured['image']}", schemas)
+    head = build_head(
+        home_title,
+        home_desc,
+        f"{DOMAIN}/",
+        "website",
+        f"{DOMAIN}{featured['image']}",
+        schemas,
+        og_image_alt=featured["imageAlt"],
+        preload_image=f"{featured['image']}?v=bit1",
+    )
     body = f"""<body class="bg-white dark:bg-[#0d0f12] text-neutral-900 dark:text-neutral-100 font-sans selection:bg-neutral-200 dark:selection:bg-neutral-700">
 
 {build_announcement_bar(is_spa=True)}
@@ -1150,6 +1119,15 @@ def generate_article_pages(articles):
         desc = art.get("metaDescription") or art["dek"]
         og_img = f"{DOMAIN}{art['image']}"
         initials = "".join(p[0] for p in art["author"].split())[:2].upper()
+        plain_body = re.sub(r"<[^>]+>", " ", art.get("body", ""))
+        word_count = len(plain_body.split())
+        keywords_list = art.get("keywords", [])
+
+        # Stagger publication timestamps cleanly across the day for News Sitemap & Schema clarity
+        pub_hour = 18 - (idx % 12)
+        pub_min = (idx * 7) % 60
+        pub_iso = f"{iso_date}T{pub_hour:02d}:{pub_min:02d}:00Z"
+        mod_iso = f"{LASTMOD}T14:00:00Z"
 
         schemas = [
             {
@@ -1157,20 +1135,27 @@ def generate_article_pages(articles):
                 "@type": "NewsArticle",
                 "headline": art["title"],
                 "description": desc,
-                "image": [og_img],
-                "datePublished": f"{iso_date}T09:00:00Z",
-                "dateModified": f"{LASTMOD}T12:00:00Z",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": og_img,
+                    "width": 1280,
+                    "height": 720,
+                    "caption": art["imageAlt"]
+                },
+                "datePublished": pub_iso,
+                "dateModified": mod_iso,
+                "inLanguage": "en-US",
+                "isAccessibleForFree": True,
+                "articleSection": cat_label,
+                "wordCount": word_count,
+                "keywords": keywords_list,
                 "author": {
                     "@type": "Person",
                     "name": art["author"],
-                    "jobTitle": art.get("authorRole", "Staff Writer")
+                    "jobTitle": art.get("authorRole", "Staff Writer"),
+                    "url": f"{DOMAIN}/about#newsroom"
                 },
-                "publisher": {
-                    "@type": "NewsMediaOrganization",
-                    "name": "Bugwrite",
-                    "url": f"{DOMAIN}/",
-                    "logo": {"@type": "ImageObject", "url": f"{DOMAIN}/blog/articles/gta6-release-time.jpg", "width": 1280, "height": 720}
-                },
+                "publisher": PUBLISHER_ORG,
                 "mainEntityOfPage": {"@type": "WebPage", "@id": canonical}
             },
             {
@@ -1191,10 +1176,32 @@ def generate_article_pages(articles):
         related_html = "\n".join(render_static_card(r, "h3", is_spa=False, eager=False) for r in related)
         tags_html = "\n".join(
             f'<span class="px-2.5 py-1 text-[11px] font-medium bg-neutral-100 dark:bg-[#1a1e26] text-neutral-700 dark:text-neutral-300 rounded">{esc(k)}</span>'
-            for k in art.get("keywords", [])
+            for k in keywords_list
         )
 
-        head = build_head(title, desc, canonical, "article", og_img, schemas)
+        article_meta_lines = [
+            f'  <meta name="author" content="{esc(art["author"])}" />',
+            f'  <meta property="article:published_time" content="{pub_iso}" />',
+            f'  <meta property="article:modified_time" content="{mod_iso}" />',
+            f'  <meta property="article:section" content="{esc(cat_label)}" />',
+            f'  <meta property="article:author" content="{esc(art["author"])}" />',
+        ]
+        for kw in keywords_list[:6]:
+            article_meta_lines.append(f'  <meta property="article:tag" content="{esc(kw)}" />')
+        if keywords_list:
+            article_meta_lines.append(f'  <meta name="news_keywords" content="{esc(", ".join(keywords_list[:5]))}" />')
+
+        head = build_head(
+            title,
+            desc,
+            canonical,
+            "article",
+            og_img,
+            schemas,
+            og_image_alt=art["imageAlt"],
+            preload_image=f"{art['image']}?v=bit1",
+            extra_meta="\n".join(article_meta_lines),
+        )
         page = f"""{head}
 <body class="bg-white dark:bg-[#0d0f12] text-neutral-900 dark:text-neutral-100 font-sans selection:bg-neutral-200 dark:selection:bg-neutral-700">
 {build_announcement_bar(is_spa=False)}
@@ -1276,7 +1283,20 @@ def generate_category_pages(articles):
                 "@type": "CollectionPage",
                 "name": h1_text,
                 "description": desc,
-                "url": canonical
+                "url": canonical,
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "numberOfItems": len(desk_articles),
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": idx + 1,
+                            "url": f"{DOMAIN}{get_article_path(a)}",
+                            "name": a["title"]
+                        }
+                        for idx, a in enumerate(desk_articles[:20])
+                    ]
+                }
             },
             {
                 "@context": "https://schema.org",
@@ -1287,7 +1307,16 @@ def generate_category_pages(articles):
                 ]
             }
         ]
-        head = build_head(title, desc, canonical, "website", f"{DOMAIN}{desk_articles[0]['image']}", schemas)
+        head = build_head(
+            title,
+            desc,
+            canonical,
+            "website",
+            f"{DOMAIN}{desk_articles[0]['image']}",
+            schemas,
+            og_image_alt=desk_articles[0]["imageAlt"],
+            preload_image=f"{desk_articles[0]['image']}?v=bit1",
+        )
         page = f"""{head}
 <body class="bg-white dark:bg-[#0d0f12] text-neutral-900 dark:text-neutral-100 font-sans">
 {build_announcement_bar(is_spa=False)}
@@ -1312,6 +1341,7 @@ def generate_category_pages(articles):
 
 
 def generate_legal_and_error_pages():
+    robots_index = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     pages = [
         (
             "public/about/index.html",
@@ -1319,14 +1349,15 @@ def generate_legal_and_error_pages():
             "About Bugwrite | Editorial Standards & Newsroom",
             "Learn about Bugwrite's independent technology, gaming, cybersecurity, and AI business journalism, editorial verification standards, and writers.",
             "About Bugwrite",
-            """<p>Bugwrite is an independent digital publication covering technology, video games, cybersecurity, and the business of artificial intelligence. Published daily at bugwrite.com, our goal is simple: explain complex technical events clearly, verify every claim against primary sources, and respect the reader's time.</p>
+            """<p>Bugwrite is an independent digital publication covering technology, video games, cybersecurity, and the business of artificial intelligence. Published daily at www.bugwrite.com, our goal is simple: explain complex technical events clearly, verify every claim against primary sources, and respect the reader's time.</p>
             <h2>Our Editorial Standards</h2>
             <p>Every article on Bugwrite undergoes fact verification before publication. For service outages, we cross-reference official status dashboards and vendor disclosures rather than repeating unverified social media rumors. For cybersecurity reporting, we verify CVE advisories, patch releases, and federal law enforcement bulletins directly. For gaming and hardware coverage, we clearly separate confirmed publisher announcements from industry rumors.</p>
-            <h2>Our Newsroom Desks</h2>
+            <h2 id="newsroom">Our Newsroom Desks</h2>
             <p>Bugwrite operates four core desks. Our Gaming desk, led by Samira Patel and Jordan Kim, covers major console and PC launches, patch notes, subscription catalogs, and hardware markets. Our Big Tech and Security desks, led by Elena Rostova, Marcus Vance, and Priya Nair, report on cloud reliability, software vulnerabilities, operating systems, and consumer privacy. Our Business desk, led by David Lindholm, tracks semiconductor markets, AI infrastructure spending, and public offerings.</p>
             <h2>Corrections Policy</h2>
             <p>Accuracy comes first. If you spot a factual error or outdated technical detail in any Bugwrite article, please reach out through our <a href="/contact" class="text-blue-700 dark:text-blue-400 underline">Contact page</a> so our editors can review and update the story promptly.</p>""",
-            "index, follow"
+            robots_index,
+            [{"@context": "https://schema.org", "@type": "AboutPage", "name": "About Bugwrite", "url": f"{DOMAIN}/about", "publisher": PUBLISHER_ORG}],
         ),
         (
             "public/contact/index.html",
@@ -1354,7 +1385,8 @@ def generate_legal_and_error_pages():
               <button type="submit" class="px-5 py-2.5 text-xs font-bold uppercase tracking-wider bg-neutral-900 dark:bg-white text-white dark:text-neutral-950 rounded-md hover:opacity-90 transition-opacity cursor-pointer">Send Message</button>
               <p id="contact-sent" class="hidden text-xs font-semibold text-blue-700 dark:text-blue-400">Thank you. Your message has been recorded for our editorial desk.</p>
             </form>""",
-            "index, follow"
+            robots_index,
+            [{"@context": "https://schema.org", "@type": "ContactPage", "name": "Contact Bugwrite", "url": f"{DOMAIN}/contact", "publisher": PUBLISHER_ORG}],
         ),
         (
             "public/privacy-policy/index.html",
@@ -1362,7 +1394,7 @@ def generate_legal_and_error_pages():
             "Privacy Policy | Bugwrite",
             "Read Bugwrite's Privacy Policy detailing analytics, advertising cookies including Google AdSense, local browser preferences, and your privacy rights.",
             "Privacy Policy",
-            """<p>Effective Date: November 18, 2026. Bugwrite ("we", "our", or "us") respects your privacy. This Privacy Policy explains how information is collected, used, and protected when you visit bugwrite.com.</p>
+            """<p>Effective Date: November 18, 2026. Bugwrite ("we", "our", or "us") respects your privacy. This Privacy Policy explains how information is collected, used, and protected when you visit www.bugwrite.com.</p>
             <h2>Information We Collect</h2>
             <p>Bugwrite can be read freely without creating an account. We store minimal local browser preferences, such as your light or dark display mode selection in your browser's localStorage. When you submit a message via our Contact page, we receive the name, email address, and message details you choose to provide.</p>
             <h2>Analytics and Advertising Cookies</h2>
@@ -1372,7 +1404,8 @@ def generate_legal_and_error_pages():
             <p>Depending on your location, including residents of the European Economic Area, the United Kingdom, and California, you may have the right to request access to, correction of, or deletion of personal information you have submitted to us, and the right to restrict or object to certain data processing. To exercise these rights, contact privacy@bugwrite.com.</p>
             <h2>Changes to This Policy</h2>
             <p>We may update this Privacy Policy periodically to reflect changes in legal requirements or site operations. Any updates will appear on this page with a revised effective date.</p>""",
-            "index, follow"
+            robots_index,
+            None,
         ),
         (
             "public/terms-of-service/index.html",
@@ -1380,22 +1413,23 @@ def generate_legal_and_error_pages():
             "Terms of Service | Bugwrite",
             "Review the Bugwrite Terms of Service governing editorial content usage, intellectual property, third-party links, and disclaimers on bugwrite.com.",
             "Terms of Service",
-            """<p>Effective Date: November 18, 2026. By accessing or using bugwrite.com, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please discontinue use of the website.</p>
+            """<p>Effective Date: November 18, 2026. By accessing or using www.bugwrite.com, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please discontinue use of the website.</p>
             <h2>Editorial Content and Informational Use</h2>
             <p>All articles, guides, market summaries, and technical explainers published on Bugwrite are provided strictly for general informational and journalistic purposes. Financial and market reporting does not constitute investment advice, and cybersecurity articles do not constitute formal legal or compliance counsel.</p>
             <h2>Intellectual Property</h2>
-            <p>Original text, editorial graphics, layout code, and branding published on Bugwrite are owned by Bugwrite Media unless otherwise noted. You may share links to our articles and quote brief excerpts with clear attribution and a link back to bugwrite.com. Reproducing full articles or scraping site content for commercial redistribution without written permission is prohibited.</p>
+            <p>Original text, editorial graphics, layout code, and branding published on Bugwrite are owned by Bugwrite Media unless otherwise noted. You may share links to our articles and quote brief excerpts with clear attribution and a link back to www.bugwrite.com. Reproducing full articles or scraping site content for commercial redistribution without written permission is prohibited.</p>
             <h2>External Links and Third-Party Services</h2>
             <p>Articles may reference third-party websites, vendor status dashboards, or official software stores. Bugwrite is not responsible for the content, availability, pricing, or privacy practices of external sites.</p>
             <h2>Limitation of Liability</h2>
             <p>Bugwrite is provided on an "as is" and "as available" basis without warranties of any kind. To the fullest extent permitted by law, Bugwrite Media is not liable for any direct, indirect, or incidental damages arising from your reliance on published content or temporary site unavailability.</p>""",
-            "index, follow"
+            robots_index,
+            None,
         ),
     ]
 
-    for rel_path, url_path, title, desc, h1_text, body_html, robots in pages:
+    for rel_path, url_path, title, desc, h1_text, body_html, robots, page_schemas in pages:
         canonical = f"{DOMAIN}{url_path}"
-        head = build_head(title, desc, canonical, "website", f"{DOMAIN}/blog/articles/gta6-release-time.jpg", None, robots)
+        head = build_head(title, desc, canonical, "website", f"{DOMAIN}/blog/articles/gta6-release-time.jpg", page_schemas, robots)
         page = f"""{head}
 <body class="bg-white dark:bg-[#0d0f12] text-neutral-900 dark:text-neutral-100 font-sans">
 {build_announcement_bar(is_spa=False)}
@@ -1443,29 +1477,125 @@ def generate_legal_and_error_pages():
 
 
 def generate_sitemap(articles):
-    urls = [
-        (f"{DOMAIN}/", LASTMOD, "hourly", "1.0"),
-        (f"{DOMAIN}/gaming", LASTMOD, "daily", "0.9"),
-        (f"{DOMAIN}/big-tech", LASTMOD, "daily", "0.9"),
-        (f"{DOMAIN}/security", LASTMOD, "daily", "0.9"),
-        (f"{DOMAIN}/business", LASTMOD, "daily", "0.9"),
-        (f"{DOMAIN}/about", LASTMOD, "monthly", "0.5"),
-        (f"{DOMAIN}/contact", LASTMOD, "monthly", "0.5"),
-        (f"{DOMAIN}/privacy-policy", LASTMOD, "monthly", "0.4"),
-        (f"{DOMAIN}/terms-of-service", LASTMOD, "monthly", "0.4"),
+    static_urls = [
+        (f"{DOMAIN}/", LASTMOD, "hourly", "1.0", None),
+        (f"{DOMAIN}/gaming", LASTMOD, "daily", "0.9", None),
+        (f"{DOMAIN}/big-tech", LASTMOD, "daily", "0.9", None),
+        (f"{DOMAIN}/security", LASTMOD, "daily", "0.9", None),
+        (f"{DOMAIN}/business", LASTMOD, "daily", "0.9", None),
+        (f"{DOMAIN}/about", LASTMOD, "monthly", "0.5", None),
+        (f"{DOMAIN}/contact", LASTMOD, "monthly", "0.5", None),
+        (f"{DOMAIN}/privacy-policy", LASTMOD, "monthly", "0.4", None),
+        (f"{DOMAIN}/terms-of-service", LASTMOD, "monthly", "0.4", None),
     ]
     for art in articles:
-        urls.append((f"{DOMAIN}{get_article_path(art)}", parse_iso_date(art.get("publishedDate", LASTMOD)), "weekly", "0.8"))
+        static_urls.append((
+            f"{DOMAIN}{get_article_path(art)}",
+            parse_iso_date(art.get("publishedDate", LASTMOD)),
+            "weekly",
+            "0.8",
+            (f"{DOMAIN}{art['image']}", art["title"], art["imageAlt"]),
+        ))
 
     lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
     ]
-    for loc, lm, freq, prio in urls:
-        lines.append(f"  <url>\n    <loc>{esc(loc)}</loc>\n    <lastmod>{lm}</lastmod>\n    <changefreq>{freq}</changefreq>\n    <priority>{prio}</priority>\n  </url>")
+    for loc, lm, freq, prio, img_info in static_urls:
+        img_xml = ""
+        if img_info:
+            img_loc, img_title, img_cap = img_info
+            img_xml = (
+                f"\n    <image:image>\n"
+                f"      <image:loc>{esc(img_loc)}</image:loc>\n"
+                f"      <image:title>{esc(img_title)}</image:title>\n"
+                f"      <image:caption>{esc(img_cap)}</image:caption>\n"
+                f"    </image:image>"
+            )
+        lines.append(
+            f"  <url>\n    <loc>{esc(loc)}</loc>\n    <lastmod>{lm}</lastmod>\n    <changefreq>{freq}</changefreq>\n    <priority>{prio}</priority>{img_xml}\n  </url>"
+        )
     lines.append("</urlset>\n")
     write_file("public/sitemap.xml", "\n".join(lines))
-    print(f"Generated public/sitemap.xml with {len(urls)} indexable URLs")
+    print(f"Generated public/sitemap.xml with {len(static_urls)} URLs + image sitemap tags")
+
+
+def generate_news_sitemap(articles):
+    # Google News Sitemap: covers recent 48-hour articles (Nov 17-18, 2026)
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">',
+    ]
+    count = 0
+    for idx, art in enumerate(articles):
+        iso_date = parse_iso_date(art.get("publishedDate", LASTMOD))
+        if iso_date not in ("2026-11-18", "2026-11-17"):
+            continue
+        pub_hour = 18 - (idx % 12)
+        pub_min = (idx * 7) % 60
+        pub_iso = f"{iso_date}T{pub_hour:02d}:{pub_min:02d}:00Z"
+        loc = f"{DOMAIN}{get_article_path(art)}"
+        kws = ", ".join(art.get("keywords", [])[:5])
+        kw_xml = f"\n      <news:keywords>{esc(kws)}</news:keywords>" if kws else ""
+        lines.append(
+            f"  <url>\n"
+            f"    <loc>{esc(loc)}</loc>\n"
+            f"    <news:news>\n"
+            f"      <news:publication>\n"
+            f"        <news:name>Bugwrite</news:name>\n"
+            f"        <news:language>en</news:language>\n"
+            f"      </news:publication>\n"
+            f"      <news:publication_date>{pub_iso}</news:publication_date>\n"
+            f"      <news:title>{esc(art['title'])}</news:title>{kw_xml}\n"
+            f"    </news:news>\n"
+            f"  </url>"
+        )
+        count += 1
+    lines.append("</urlset>\n")
+    write_file("public/news-sitemap.xml", "\n".join(lines))
+    print(f"Generated public/news-sitemap.xml with {count} recent news URLs")
+
+
+def generate_rss_feed(articles):
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">',
+        '  <channel>',
+        '    <title>Bugwrite: Tech, Gaming, Cybersecurity &amp; Business News</title>',
+        f'    <link>{DOMAIN}/</link>',
+        f'    <atom:link href="{DOMAIN}/rss.xml" rel="self" type="application/rss+xml" />',
+        '    <description>Independent technology, gaming, cybersecurity, and AI business journalism from Bugwrite.</description>',
+        '    <language>en-us</language>',
+        '    <lastBuildDate>Wed, 18 Nov 2026 14:00:00 GMT</lastBuildDate>',
+        '    <image>',
+        f'      <url>{DOMAIN}/blog/bugwrite-logo.png</url>',
+        '      <title>Bugwrite</title>',
+        f'      <link>{DOMAIN}/</link>',
+        '    </image>',
+    ]
+    for idx, art in enumerate(articles[:50]):
+        loc = f"{DOMAIN}{get_article_path(art)}"
+        img_url = f"{DOMAIN}{art['image']}"
+        iso_date = parse_iso_date(art.get("publishedDate", LASTMOD))
+        dt = datetime.strptime(iso_date, "%Y-%m-%d")
+        pub_hour = 18 - (idx % 12)
+        pub_min = (idx * 7) % 60
+        rfc_date = dt.strftime(f"%a, %d %b %Y {pub_hour:02d}:{pub_min:02d}:00 GMT")
+        lines.append(
+            f"    <item>\n"
+            f"      <title>{esc(art['title'])}</title>\n"
+            f"      <link>{esc(loc)}</link>\n"
+            f"      <guid isPermaLink=\"true\">{esc(loc)}</guid>\n"
+            f"      <pubDate>{rfc_date}</pubDate>\n"
+            f"      <category>{esc(art['category'])}</category>\n"
+            f"      <description>{esc(art.get('metaDescription') or art['dek'])}</description>\n"
+            f"      <media:content url=\"{esc(img_url)}\" medium=\"image\" width=\"1280\" height=\"720\" />\n"
+            f"    </item>"
+        )
+    lines.append('  </channel>')
+    lines.append('</rss>\n')
+    write_file("public/rss.xml", "\n".join(lines))
+    print("Generated public/rss.xml with 50 latest stories")
 
 
 def main():
@@ -1475,6 +1605,8 @@ def main():
     generate_category_pages(articles)
     generate_legal_and_error_pages()
     generate_sitemap(articles)
+    generate_news_sitemap(articles)
+    generate_rss_feed(articles)
 
 
 if __name__ == "__main__":

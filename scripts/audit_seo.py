@@ -5,6 +5,8 @@ import re
 import urllib.request
 import xml.etree.ElementTree as ET
 
+CANONICAL_HOST = "https://www.bugwrite.com"
+
 # 1. Homepage audit
 home = open("index.html", encoding="utf-8").read()
 title = re.search(r"<title>([^<]+)</title>", home).group(1)
@@ -17,7 +19,26 @@ print(f"SEO Guide + FAQ word count: {guide_words} words")
 assert len(title) <= 60, f"Home title too long: {len(title)}"
 assert len(desc) <= 160, f"Home desc too long: {len(desc)}"
 
-# 2. Audit ALL generated static HTML pages
+# 2. Check compiled static CSS & brand assets
+css_path = "public/assets/styles.css"
+assert os.path.exists(css_path), "Missing compiled Tailwind CSS: public/assets/styles.css"
+css_size_kb = os.path.getsize(css_path) / 1024
+print(f"Compiled Tailwind CSS: {css_size_kb:.1f} KB (replaces ~400 KB render-blocking CDN JS!)")
+assert css_size_kb < 60, f"CSS unexpectedly large: {css_size_kb:.1f} KB"
+
+for asset in [
+    "public/favicon.svg",
+    "public/favicon.ico",
+    "public/favicon-48x48.png",
+    "public/favicon-192x192.png",
+    "public/apple-touch-icon.png",
+    "public/site.webmanifest",
+    "public/blog/bugwrite-logo.png",
+    "vercel.json",
+]:
+    assert os.path.exists(asset), f"Missing required asset: {asset}"
+
+# 3. Audit ALL generated static HTML pages
 html_files = ["index.html", "public/404.html", "public/500.html"]
 html_files += sorted(glob.glob("public/*/index.html"))
 html_files += sorted(glob.glob("public/*/article/*/index.html"))
@@ -28,7 +49,16 @@ for fp in html_files:
     no_scripts = re.sub(r"<script[\s\S]*?</script>", "", txt)
     h1s = re.findall(r"<h1[\s>]", no_scripts)
     assert len(h1s) == 1, f"{fp} has {len(h1s)} <h1> tags!"
-    assert 'rel="canonical"' in txt, f"{fp} missing canonical!"
+    assert "cdn.tailwindcss.com" not in txt, f"{fp} still loads render-blocking Tailwind CDN!"
+    assert "fonts.googleapis.com" not in txt, f"{fp} still loads unused Google Fonts!"
+    assert "/assets/styles.css" in txt, f"{fp} missing local styles.css!"
+    assert 'rel="icon"' in txt, f"{fp} missing favicon!"
+    assert 'application/rss+xml' in txt, f"{fp} missing RSS link!"
+    canon_m = re.search(r'<link rel="canonical" href="([^"]+)"', txt)
+    assert canon_m, f"{fp} missing canonical!"
+    assert canon_m.group(1).startswith(CANONICAL_HOST), f"{fp} non-www canonical: {canon_m.group(1)}"
+    if not fp.endswith(("404.html", "500.html")):
+        assert "max-image-preview:large" in txt, f"{fp} missing Google Discover max-image-preview:large!"
     assert "og:title" in txt and "twitter:card" in txt, f"{fp} missing OG/Twitter!"
     assert txt.count("\u2014") == 0 and txt.count("\u2013") == 0, f"{fp} has em/en dash!"
     for m in re.findall(r'<script type="application/ld\+json">([\s\S]*?)</script>', txt):
@@ -37,17 +67,34 @@ for fp in html_files:
     for img in re.findall(r"<img\b[^>]*>", no_scripts):
         assert "alt=" in img and "width=" in img and "height=" in img, f"Bad img in {fp}: {img}"
 
-print(f"Audited {len(html_files)} HTML pages: strictly 1 H1 each, all canonicals/OG/Twitter/img attrs valid, {total_schemas} valid JSON-LD schemas, 0 em/en dashes!")
+print(f"Audited {len(html_files)} HTML pages: 0 Tailwind CDN, all www canonicals, max-image-preview:large, favicons, {total_schemas} valid JSON-LD schemas, 0 em/en dashes!")
 
-# 3. Validate sitemap.xml
+# 4. Validate sitemap.xml, news-sitemap.xml, and rss.xml
 tree = ET.parse("public/sitemap.xml")
 urls = tree.getroot().findall("{http://www.sitemaps.org/schemas/sitemap/0.9}url")
-print(f"Valid XML sitemap: {len(urls)} URLs")
-assert len(urls) == 93
+imgs = tree.getroot().findall(".//{http://www.google.com/schemas/sitemap-image/1.1}image")
+assert len(urls) == 93, f"Expected 93 sitemap URLs, got {len(urls)}"
+assert len(imgs) == 84, f"Expected 84 image sitemap entries, got {len(imgs)}"
+for u in urls:
+    loc = u.find("{http://www.sitemaps.org/schemas/sitemap/0.9}loc").text
+    assert loc.startswith(CANONICAL_HOST), f"Non-www URL in sitemap: {loc}"
+print(f"Valid sitemap.xml: {len(urls)} URLs + {len(imgs)} image entries (all {CANONICAL_HOST})")
 
-# 4. Verify live HTTP 200 on Vite
+news_tree = ET.parse("public/news-sitemap.xml")
+news_urls = news_tree.getroot().findall("{http://www.sitemaps.org/schemas/sitemap/0.9}url")
+assert len(news_urls) > 0, "news-sitemap.xml is empty!"
+print(f"Valid news-sitemap.xml: {len(news_urls)} recent news URLs")
+
+rss_tree = ET.parse("public/rss.xml")
+rss_items = rss_tree.getroot().findall("./channel/item")
+assert len(rss_items) == 50, f"Expected 50 RSS items, got {len(rss_items)}"
+print(f"Valid rss.xml: {len(rss_items)} feed items")
+
+# 5. Verify live HTTP 200 on local Vite
 live_routes = [
-    "/", "/robots.txt", "/sitemap.xml", "/ads.txt",
+    "/", "/robots.txt", "/sitemap.xml", "/news-sitemap.xml", "/rss.xml", "/ads.txt",
+    "/favicon.svg", "/favicon.ico", "/favicon-48x48.png", "/site.webmanifest",
+    "/assets/styles.css", "/blog/bugwrite-logo.png",
     "/about", "/contact", "/privacy-policy", "/terms-of-service",
     "/404.html", "/500.html",
     "/gaming", "/big-tech", "/security", "/business",
