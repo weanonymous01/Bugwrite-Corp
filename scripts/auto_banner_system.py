@@ -527,55 +527,6 @@ PINTEREST_BUSINESS_BATCH = [
         "alt": "Photo of cargo container port with cranes at sunset",
     },
 ]
-        "target_id": "cybersecurity-spending-business-priority",
-        "alt": "Pinterest photo of corporate leadership reviewing enterprise security strategy",
-    },
-    {
-        "query": "financial audit spreadsheet cyber security data breach",
-        "target_id": "how-data-breaches-affect-companies-financially",
-        "alt": "Pinterest photo of financial audit reports and cybersecurity risk metrics",
-    },
-    {
-        "query": "startup founder working desk minimal coffee laptop",
-        "target_id": "cost-to-build-ai-saas-startup-2026",
-        "alt": "Pinterest photo of startup founder workstation with planning documents",
-    },
-    {
-        "query": "modern small business coffee shop counter point of sale",
-        "target_id": "best-crm-software-small-businesses-2026",
-        "alt": "Pinterest photo of modern small business retail counter with digital POS",
-    },
-    {
-        "query": "creative entrepreneur workspace macbook air minimalist",
-        "target_id": "best-ai-tools-small-business-owners",
-        "alt": "Pinterest photo of clean creative entrepreneur desk with notebook and laptop",
-    },
-    {
-        "query": "silicon valley tech corporate campus aerial twilight",
-        "target_id": "why-tech-companies-restructuring-2026",
-        "alt": "Pinterest aerial twilight photo of major technology corporate campus",
-    },
-    {
-        "query": "venture capital partner meeting glass modern office",
-        "target_id": "vc-evaluating-ai-startups-2026",
-        "alt": "Pinterest photo of venture capital investors in modern conference room",
-    },
-    {
-        "query": "secure enterprise private cloud server infrastructure",
-        "target_id": "why-companies-invest-private-ai-models",
-        "alt": "Pinterest photo of dedicated private cloud servers in enterprise facility",
-    },
-    {
-        "query": "supercomputer liquid cooling server blades high performance",
-        "target_id": "cost-of-running-large-ai-model",
-        "alt": "Pinterest photo of advanced supercomputer cluster computing architecture",
-    },
-    {
-        "query": "semiconductor cleanroom silicon wafer manufacturing",
-        "target_id": "us-export-controls-global-semiconductors",
-        "alt": "Pinterest photo of high-tech semiconductor cleanroom manufacturing line",
-    },
-]
 
 PINTEREST_GAMING_REMAINING_BATCH = [
     {
