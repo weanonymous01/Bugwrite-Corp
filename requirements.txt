@@ -1,0 +1,3 @@
+pillow>=10.0.0
+pinterest-dl>=0.4.0
+beautifulsoup4>=4.12.0

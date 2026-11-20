@@ -1,0 +1,73 @@
+name: Autonomous 24/7 Trend Publisher
+
+on:
+  schedule:
+    # Runs every 2 hours UTC (12 times a day)
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
+    inputs:
+      max_articles:
+        description: 'Maximum articles to publish this run'
+        required: false
+        default: '2'
+
+permissions:
+  contents: write
+
+jobs:
+  publish-trends:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Node Dependencies
+        run: |
+          npm ci || npm install
+
+      - name: Run Autonomous Trend Publisher
+        env:
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY || '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' }}
+        run: |
+          MAX_ARTICLES="${{ github.event.inputs.max_articles || '2' }}"
+          python scripts/autonomous_trend_publisher.py --max-articles "$MAX_ARTICLES"
+
+      - name: Rebuild Tailwind CSS
+        run: |
+          npm run css
+
+      - name: Commit and Push New Articles to Main
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Check if there are changes
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "[+] New articles published. Committing to main..."
+            git add .
+            git commit -m "Auto-publish fresh trending articles & sitemaps [skip ci]"
+            git push origin main
+            echo "[✔] Pushed to main. Live Vercel deployment triggered."
+          else
+            echo "[✔] No new articles to commit this cycle."
+          fi
