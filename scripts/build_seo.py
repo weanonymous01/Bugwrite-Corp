@@ -356,7 +356,7 @@ def render_static_card(art, heading_tag="h2", is_spa=False, eager=False):
     return f"""        <article class="flex flex-col group">
           <a href="{href}"{onclick} class="flex flex-col flex-1">
             <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
-              <img src="{art['image']}?v=p2" alt="{esc(art['imageAlt'])}" width="1280" height="720" {load_attr} class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+              <img src="{art['image']}?v=pin1" alt="{esc(art['imageAlt'])}" width="1280" height="720" {load_attr} class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
             </div>
             <{heading_tag} class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">{esc(art['title'])}</{heading_tag}>
             <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
@@ -389,7 +389,7 @@ def render_static_featured(art, companions, is_spa=False):
     return f"""        <article class="flex flex-col h-full group">
           <a href="{href}"{onclick} class="block">
             <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
-              <img src="{art['image']}?v=p2" alt="{esc(art['imageAlt'])}" width="1280" height="720" loading="eager" fetchpriority="high" class="w-full h-full object-cover group-hover:scale-[1.015] transition-transform duration-300" />
+              <img src="{art['image']}?v=pin1" alt="{esc(art['imageAlt'])}" width="1280" height="720" loading="eager" fetchpriority="high" class="w-full h-full object-cover group-hover:scale-[1.015] transition-transform duration-300" />
             </div>
             <div class="mt-4 mb-1.5 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.09em]">
               <span class="text-blue-700 dark:text-blue-400">{esc(art['category'])}</span>
@@ -629,7 +629,7 @@ def generate_homepage(articles):
         f"{DOMAIN}{featured['image']}",
         schemas,
         og_image_alt=featured["imageAlt"],
-        preload_image=f"{featured['image']}?v=p2",
+        preload_image=f"{featured['image']}?v=pin1",
     )
     body = f"""<body class="bg-white dark:bg-[#0d0f12] text-neutral-900 dark:text-neutral-100 font-sans selection:bg-neutral-200 dark:selection:bg-neutral-700">
 
@@ -745,7 +745,7 @@ def generate_homepage(articles):
 
       <figure class="mb-8">
         <div class="overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
-          <img id="reader-image" src="/blog/articles/gta6-release-time.jpg?v=p2" alt="Featured article illustration" width="1280" height="720" class="w-full h-full object-cover" />
+          <img id="reader-image" src="/blog/articles/gta6-release-time.jpg?v=pin1" alt="Featured article illustration" width="1280" height="720" class="w-full h-full object-cover" />
         </div>
         <figcaption id="reader-caption" class="mt-2.5 text-xs text-neutral-500 dark:text-neutral-400"></figcaption>
       </figure>
@@ -814,7 +814,7 @@ def generate_homepage(articles):
         <article class="flex flex-col h-full group">
           <a href="${{href}}" onclick="event.preventDefault(); openArticleView('${{article.id}}')" class="block">
             <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
-              <img src="${{article.image}}?v=p2" alt="${{escapeHtml(article.imageAlt)}}" width="1280" height="720" loading="eager" fetchpriority="high" class="w-full h-full object-cover group-hover:scale-[1.015] transition-transform duration-300" />
+              <img src="${{article.image}}?v=pin1" alt="${{escapeHtml(article.imageAlt)}}" width="1280" height="720" loading="eager" fetchpriority="high" class="w-full h-full object-cover group-hover:scale-[1.015] transition-transform duration-300" />
             </div>
             <div class="mt-4 mb-1.5 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.09em]">
               <span class="text-blue-700 dark:text-blue-400">${{escapeHtml(article.category)}}</span>
@@ -847,7 +847,7 @@ def generate_homepage(articles):
         <article class="flex flex-col group">
           <a href="${{href}}" onclick="event.preventDefault(); openArticleView('${{article.id}}')" class="flex flex-col flex-1">
             <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
-              <img src="${{article.image}}?v=p2" alt="${{escapeHtml(article.imageAlt)}}" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+              <img src="${{article.image}}?v=pin1" alt="${{escapeHtml(article.imageAlt)}}" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
             </div>
             <${{tag}} class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">${{escapeHtml(article.title)}}</${{tag}}>
             <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
@@ -1020,7 +1020,7 @@ def generate_homepage(articles):
       document.getElementById('reader-role').textContent = article.authorRole;
       document.getElementById('reader-date').textContent = article.publishedDate;
       document.getElementById('reader-readtime').textContent = article.readTime;
-      document.getElementById('reader-image').src = `${{article.image}}?v=p2`;
+      document.getElementById('reader-image').src = `${{article.image}}?v=pin1`;
       document.getElementById('reader-image').alt = article.imageAlt;
       document.getElementById('reader-caption').textContent = article.imageAlt;
       document.getElementById('reader-body').innerHTML = article.body;
@@ -1235,7 +1235,7 @@ def generate_article_pages(articles):
             og_img,
             schemas,
             og_image_alt=art["imageAlt"],
-            preload_image=f"{art['image']}?v=p2",
+            preload_image=f"{art['image']}?v=pin1",
             extra_meta="\n".join(article_meta_lines),
         )
         page = f"""{head}
@@ -1272,7 +1272,7 @@ def generate_article_pages(articles):
 
       <figure class="mb-8">
         <div class="overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
-          <img src="{art['image']}?v=p2" alt="{esc(art['imageAlt'])}" width="1280" height="720" loading="eager" fetchpriority="high" class="w-full h-full object-cover" />
+          <img src="{art['image']}?v=pin1" alt="{esc(art['imageAlt'])}" width="1280" height="720" loading="eager" fetchpriority="high" class="w-full h-full object-cover" />
         </div>
         <figcaption class="mt-2.5 text-xs text-neutral-500 dark:text-neutral-400">{esc(art['imageAlt'])}</figcaption>
       </figure>
@@ -1351,7 +1351,7 @@ def generate_category_pages(articles):
             f"{DOMAIN}{desk_articles[0]['image']}",
             schemas,
             og_image_alt=desk_articles[0]["imageAlt"],
-            preload_image=f"{desk_articles[0]['image']}?v=p2",
+            preload_image=f"{desk_articles[0]['image']}?v=pin1",
         )
         page = f"""{head}
 <body class="bg-white dark:bg-[#0d0f12] text-neutral-900 dark:text-neutral-100 font-sans">
