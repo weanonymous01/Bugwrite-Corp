@@ -55,6 +55,17 @@
     <priority>0.4</priority>
   </url>
   <url>
+    <loc>https://www.bugwrite.com/business/article/bitcoin-price-crash-59k-market-selloff</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/bitcoin-price-crash-59k-market-selloff.jpg</image:loc>
+      <image:title>Bitcoin Price Drops to $59K Amid Tech Selloff</image:title>
+      <image:caption>A person in a modern office looking intently at a computer screen displaying fluctuating cryptocurrency price charts</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.bugwrite.com/business/article/gold-price-falling-rate-hikes-dollar-strength</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>

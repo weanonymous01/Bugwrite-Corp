@@ -411,10 +411,23 @@
     <section id="recent-section" aria-label="Recently uploaded articles" class="mt-9 pt-8 border-t border-neutral-200/90 dark:border-neutral-800">
       <div class="flex items-center justify-between mb-5">
         <h2 id="recent-heading" class="text-xs font-bold uppercase tracking-[0.08em] text-neutral-500 dark:text-neutral-400">Recently Uploaded</h2>
-        <span id="recent-counter" class="text-xs text-neutral-400 dark:text-neutral-500">8 of 85 stories</span>
+        <span id="recent-counter" class="text-xs text-neutral-400 dark:text-neutral-500">8 of 86 stories</span>
       </div>
 
       <div id="recent-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-8">
+        <article class="flex flex-col group">
+          <a href="/business/article/bitcoin-price-crash-59k-market-selloff" onclick="event.preventDefault(); openArticleView('bitcoin-price-crash-59k-market-selloff')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/bitcoin-price-crash-59k-market-selloff.jpg?v=pin6" alt="A person in a modern office looking intently at a computer screen displaying fluctuating cryptocurrency price charts" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <h3 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">Bitcoin Price Drops to $59K Amid Tech Selloff</h3>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>Priya Nair</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>Just now</span>
+            </div>
+          </a>
+        </article>
         <article class="flex flex-col group">
           <a href="/business/article/gold-price-falling-rate-hikes-dollar-strength" onclick="event.preventDefault(); openArticleView('gold-price-falling-rate-hikes-dollar-strength')" class="flex flex-col flex-1">
             <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
@@ -506,24 +519,11 @@
             </div>
           </a>
         </article>
-        <article class="flex flex-col group">
-          <a href="/gaming/article/when-is-gta-6-playable-release-times" onclick="event.preventDefault(); openArticleView('when-is-gta-6-playable-release-times')" class="flex flex-col flex-1">
-            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
-              <img src="/blog/articles/gta6-release-time.jpg?v=pin6" alt="Global midnight launch celebration outside premier electronics showcase for Grand Theft Auto 6" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
-            </div>
-            <h3 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">When is GTA 6 playable? Global unlock schedule, preload size, and midnight rollout details</h3>
-            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
-              <span>Samira Patel</span>
-              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
-              <span>25 mins ago</span>
-            </div>
-          </a>
-        </article>
       </div>
 
       <div id="load-more-wrap" class="mt-10 text-center">
         <button id="load-more-btn" type="button" onclick="loadMoreRecent()" class="inline-flex items-center justify-center px-6 py-2.5 text-xs font-semibold uppercase tracking-wider text-neutral-900 dark:text-neutral-100 bg-white dark:bg-[#161a20] border border-neutral-300 dark:border-neutral-700 hover:border-black dark:hover:border-neutral-400 hover:bg-neutral-50 dark:hover:bg-[#1e232b] rounded-md transition-colors cursor-pointer">
-          Load more stories (77 remaining)
+          Load more stories (78 remaining)
         </button>
       </div>
     </section>
