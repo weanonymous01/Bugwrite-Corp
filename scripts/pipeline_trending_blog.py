@@ -419,6 +419,24 @@ def inject_article_into_catalog(article_dict, category="Gaming"):
         content = f.read()
 
     slug = article_dict["slug"]
+
+    desk_authors = {
+        "Gaming": ("Ethan Brooks", "Senior Gaming Editor"),
+        "Business": ("Olivia Bennett", "Senior Business Editor"),
+        "Big Tech": ("Ryan Mitchell", "Senior Technology Editor"),
+        "Security": ("Sophia Carter", "Senior Cybersecurity Editor")
+    }
+    author_name, author_role = desk_authors.get(category, ("Ryan Mitchell", "Senior Technology Editor"))
+
+    # Accurate real word count and reading time (200 words per minute)
+    clean_body = re.sub(r"<[^>]+>", " ", article_dict.get("body", "")).strip()
+    words_count = len(clean_body.split())
+    real_read_mins = max(2, round(words_count / 200))
+    real_read_time = f"{real_read_mins} min read"
+
+    # Clean real human formatted date (e.g. "Nov 20, 2026")
+    formatted_date = datetime.now(timezone.utc).strftime("%b %d, %Y")
+
     new_art = {
         "id": slug,
         "slot": "latest",
@@ -428,11 +446,11 @@ def inject_article_into_catalog(article_dict, category="Gaming"):
         "metaDescription": article_dict["metaDescription"],
         "keywords": article_dict.get("keywords", []),
         "dek": article_dict["dek"],
-        "author": "Jordan Kim" if category == "Gaming" else "Elena Rostova",
-        "authorRole": "Senior Staff Writer",
+        "author": author_name,
+        "authorRole": author_role,
         "publishedAgo": "Just now",
-        "publishedDate": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-        "readTime": "5 min read",
+        "publishedDate": formatted_date,
+        "readTime": real_read_time,
         "image": article_dict["image"],
         "imageAlt": article_dict["imageAlt"],
         "faqs": article_dict.get("faqs", []),

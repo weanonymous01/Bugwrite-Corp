@@ -59,10 +59,10 @@ CATEGORY_MAPPING = {
 }
 
 AUTHORS = {
-    "Gaming": ("Jordan Kim", "Senior Staff Writer"),
-    "Big Tech": ("Elena Rostova", "Senior Technology Reporter"),
-    "Security": ("Marcus Vance", "Cybersecurity Lead"),
-    "Business": ("Priya Nair", "Financial Markets Editor")
+    "Gaming": ("Ethan Brooks", "Senior Gaming Editor"),
+    "Big Tech": ("Ryan Mitchell", "Senior Technology Editor"),
+    "Security": ("Sophia Carter", "Senior Cybersecurity Editor"),
+    "Business": ("Olivia Bennett", "Senior Business Editor")
 }
 
 
@@ -473,7 +473,16 @@ def save_article_to_catalog(art_data, category):
     articles = load_catalog_articles()
     slug = art_data["slug"]
 
-    author_name, author_role = AUTHORS.get(category, ("Jordan Kim", "Senior Staff Writer"))
+    author_name, author_role = AUTHORS.get(category, ("Ryan Mitchell", "Senior Technology Editor"))
+
+    # Accurate real word count and reading time (200 words per minute)
+    clean_body = re.sub(r"<[^>]+>", " ", art_data.get("body", "")).strip()
+    words_count = len(clean_body.split())
+    real_read_mins = max(2, round(words_count / 200))
+    real_read_time = f"{real_read_mins} min read"
+
+    # Clean real human formatted date (e.g. "Nov 20, 2026")
+    formatted_date = datetime.now(timezone.utc).strftime("%b %d, %Y")
 
     new_entry = {
         "id": slug,
@@ -487,8 +496,8 @@ def save_article_to_catalog(art_data, category):
         "author": author_name,
         "authorRole": author_role,
         "publishedAgo": "Just now",
-        "publishedDate": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-        "readTime": f"{max(3, art_data['wordCount'] // 180)} min read",
+        "publishedDate": formatted_date,
+        "readTime": real_read_time,
         "image": art_data["image"],
         "imageAlt": art_data["imageAlt"],
         "faqs": art_data["faqs"],
