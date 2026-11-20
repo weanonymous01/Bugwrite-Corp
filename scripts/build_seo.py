@@ -1191,6 +1191,20 @@ def generate_article_pages(articles):
             }
         ]
 
+        if art.get("faqs"):
+            schemas.append({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": q,
+                        "acceptedAnswer": {"@type": "Answer", "text": a}
+                    }
+                    for q, a in art["faqs"]
+                ]
+            })
+
         # Pick 4 related stories from same desk first, then others
         same_desk = [a for a in articles if a["id"] != art["id"] and get_cat_slug(a["category"]) == cat_slug]
         others = [a for a in articles if a["id"] != art["id"] and get_cat_slug(a["category"]) != cat_slug]
