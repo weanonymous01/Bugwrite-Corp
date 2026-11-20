@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://www.bugwrite.com/gaming/article/has-anyone-finished-gta-6-how-much-made-gta-flu-online</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Bugwrite</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-20T13:34:55Z</news:publication_date>
+      <news:title>GTA 6 launch guide: Has anyone finished it, how much it made, GTA flu, and Online release date</news:title>
+      <news:keywords>gta gta6, has anyone finished gta 6, has anyone completed gta 6, how much has gta 6 made, gta flu</news:keywords>
+    </news:news>
+  </url>
+  <url>
     <loc>https://www.bugwrite.com/gaming/article/is-niko-bellic-in-gta-6-easter-eggs</loc>
     <news:news>
       <news:publication>
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-20T13:28:53Z</news:publication_date>
+      <news:publication_date>2026-11-20T13:21:55Z</news:publication_date>
       <news:title>Is Niko Bellic in GTA 6? Jimmy De Santa, Jason age, Lucia actress, and full cast answers</news:title>
       <news:keywords>is niko bellic in gta 6, how old is jason in gta 6, who plays lucia in gta 6, lucia gta 6 actress, gta6 voice actors</news:keywords>
     </news:news>
@@ -19,7 +31,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-20T13:15:53Z</news:publication_date>
+      <news:publication_date>2026-11-20T13:08:55Z</news:publication_date>
       <news:title>GTA 6 endings guide: How many story conclusions exist and how choices shape the finale</news:title>
       <news:keywords>gta 6 endings, how many endings does gta 6 have, how does gta 6 end, gta 6 story finale, gta 6 ending choices</news:keywords>
     </news:news>
@@ -31,7 +43,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-20T13:02:53Z</news:publication_date>
+      <news:publication_date>2026-11-20T12:55:55Z</news:publication_date>
       <news:title>GTA 6 Chapter 1 missions list: Full prologue walkthrough and early unlocks in Vice City</news:title>
       <news:keywords>gta 6 chapter 1 missions, gta 6 mission list, gta 6 chapters, gta 6 walkthrough, gta 6 prologue missions</news:keywords>
     </news:news>
@@ -43,7 +55,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-20T12:49:53Z</news:publication_date>
+      <news:publication_date>2026-11-20T12:42:55Z</news:publication_date>
       <news:title>Brooks Boatworks safe code in GTA 6: Location, combination solution, and reward</news:title>
       <news:keywords>brooks boatworks safe code, gta 6 safe codes, brooks boatworks gta 6, kingpin bowling safe code, gta 6 port gellhorn safes</news:keywords>
     </news:news>
@@ -55,7 +67,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-20T12:36:53Z</news:publication_date>
+      <news:publication_date>2026-11-20T12:29:55Z</news:publication_date>
       <news:title>Who is Donnie in GTA 6? Early heist role, getaway connection, and mission choices</news:title>
       <news:keywords>donnie gta 6, gta 6 donnie, gta 6 characters, gta 6 walkthrough, gta 6 crew members</news:keywords>
     </news:news>
@@ -67,7 +79,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T13:35:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T12:42:00Z</news:publication_date>
       <news:title>Apple confirms internal software update triggered widespread iCloud, Apple Pay, and App Store outage</news:title>
       <news:keywords>Apple outage, iCloud down, Apple Pay outage, App Store disruption, Apple internal software update</news:keywords>
     </news:news>
@@ -79,7 +91,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T12:42:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T11:49:00Z</news:publication_date>
       <news:title>FBI issues urgent warning over ARTEX, an AI framework turning novice hackers into machine-speed intruders</news:title>
       <news:keywords>ARTEX, FBI ARTEX warning, AI cyber framework, LLM penetration testing, autonomous cyberattacks</news:keywords>
     </news:news>
@@ -91,7 +103,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T11:49:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T10:56:00Z</news:publication_date>
       <news:title>Java4Shell: Red Hat urges immediate patching for critical OpenJDK remote code execution flaw</news:title>
       <news:keywords>Java4Shell, CVE-2026-114938, Red Hat OpenJDK vulnerability, Java remote code execution, AVX-512 Base64 bug</news:keywords>
     </news:news>
@@ -103,7 +115,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T10:56:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T09:03:00Z</news:publication_date>
       <news:title>Nvidia&#x27;s first board chair Harvey Jones rules out Jensen Huang&#x27;s return as CEO</news:title>
       <news:keywords>Harvey Jones, Nvidia board chair, Jensen Huang resignation, Colette Kress interim CEO, Nvidia leadership</news:keywords>
     </news:news>
@@ -115,7 +127,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T09:03:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T08:10:00Z</news:publication_date>
       <news:title>Players already have the Ocarina of Time Switch 2 remake running natively on PC</news:title>
       <news:keywords>Ocarina of Time remake PC port, NX2navi, Switch 2 recompilation, Lichii emulator, Zelda PC mod</news:keywords>
     </news:news>
@@ -127,7 +139,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T08:10:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T07:17:00Z</news:publication_date>
       <news:title>When is GTA 6 playable? Global unlock schedule, preload size, and midnight rollout details</news:title>
       <news:keywords>when is GTA 6 playable, GTA 6 release time, GTA 6 preload size, GTA 6 November 19 unlock, GTA 6 PS5 Xbox launch</news:keywords>
     </news:news>
@@ -139,7 +151,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T07:17:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T18:24:00Z</news:publication_date>
       <news:title>The New Zealand GTA 6 trick explained: How Xbox and PS5 players try to unlock early and the risks involved</news:title>
       <news:keywords>new zealand gta 6, GTA 6 New Zealand trick, play GTA 6 early Xbox, GTA 6 PS5 region switch, midnight NZDT unlock</news:keywords>
     </news:news>
@@ -151,7 +163,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T18:24:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T17:31:00Z</news:publication_date>
       <news:title>GTA 6 Metacritic watch: When the review embargo lifts and the historic bar Rockstar is chasing</news:title>
       <news:keywords>gta 6 metacritic, GTA 6 review embargo, GTA 6 reviews November 18, Rockstar Metacritic scores, Grand Theft Auto VI score</news:keywords>
     </news:news>
@@ -163,7 +175,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T17:31:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T16:38:00Z</news:publication_date>
       <news:title>How long is GTA 6 story mode? Campaign hours, chapter structure, and 100 percent completion estimates</news:title>
       <news:keywords>how long is gta 6 story mode, GTA 6 campaign length, GTA 6 missions chapters, GTA 6 100 percent completion, Leonida animal species</news:keywords>
     </news:news>
@@ -175,7 +187,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T16:38:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T15:45:00Z</news:publication_date>
       <news:title>New GTA 6 screenshots show off Vice City nightlife and torrential Leonida storms ahead of launch</news:title>
       <news:keywords>gta 6 screenshots, GTA 6 Launch Gallery, GTA 6 Weather Channel screenshots, Vice City 4K screenshots, Leonida weather system</news:keywords>
     </news:news>
@@ -187,7 +199,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T15:45:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T14:52:00Z</news:publication_date>
       <news:title>The Game Awards 2026 nominees: GTA 6 leads with 8 nods alongside Ocarina of Time and Resident Evil Requiem</news:title>
       <news:keywords>game awards games, The Game Awards 2026 nominees, Game of the Year 2026, GTA 6 Game Awards, Resident Evil Requiem</news:keywords>
     </news:news>
@@ -199,7 +211,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T14:52:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T13:59:00Z</news:publication_date>
       <news:title>Mega Millions drawing November 17, 2026: Winning numbers and why the jackpot climbed to $629 million</news:title>
       <news:keywords>mega millions drawing november 17, Mega Millions winning numbers, Mega Millions November 17 2026, Mega Millions $629 million jackpot, Mega Millions rollover</news:keywords>
     </news:news>
@@ -211,7 +223,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T13:59:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T12:06:00Z</news:publication_date>
       <news:title>FBI warning today: Automated AI intrusions and deepfake video scams put companies on high alert</news:title>
       <news:keywords>FBI warning today, FaceStealer crypto scam, FBI cyber alert November 2026, deepfake video call malware, IC3 warning</news:keywords>
     </news:news>
@@ -223,7 +235,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T12:06:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T11:13:00Z</news:publication_date>
       <news:title>Xbox Black Friday Sale 2026 starts November 19 with up to 80 percent off over 2,000 games</news:title>
       <news:keywords>Xbox Black Friday Sale 2026, Xbox Black Friday deals, Gears of War E-Day discount, Forza Horizon 6 sale, Xbox Design Lab Black Friday</news:keywords>
     </news:news>
@@ -235,7 +247,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T11:13:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T10:20:00Z</news:publication_date>
       <news:title>PlayStation Plus November 2026 lineup adds Death Stranding 2, Atomfall, and Dragon Quest III HD-2D</news:title>
       <news:keywords>PlayStation Plus, PS Plus November 2026, Death Stranding 2 PS Plus, Atomfall, Soul Reaver 2</news:keywords>
     </news:news>
@@ -247,7 +259,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T10:20:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T09:27:00Z</news:publication_date>
       <news:title>Salesforce unveils Microsoft Copilotforce partnership amid fresh job cuts and internal AI budgets</news:title>
       <news:keywords>Salesforce, Copilotforce, Salesforce layoffs November 2026, Agentforce, Salesforce Q3 FY27 earnings</news:keywords>
     </news:news>
@@ -259,7 +271,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T14:16:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T13:23:00Z</news:publication_date>
       <news:title>Anthropic IPO: What Investors Should Know About the Company&#x27;s Public Listing Plans</news:title>
       <news:keywords>Anthropic IPO, Anthropic ANT stock, Anthropic S-1 revenue, Anthropic $1.4 trillion valuation, AI IPO 2026</news:keywords>
     </news:news>
@@ -271,7 +283,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T12:30:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T11:37:00Z</news:publication_date>
       <news:title>GTA 6 PC Release Date: Will It Come to Windows?</news:title>
       <news:keywords>GTA 6 PC release date, GTA 6 Windows, Rockstar PC launch history, GTA 6 console exclusive, Grand Theft Auto 6 Steam</news:keywords>
     </news:news>
@@ -283,7 +295,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T09:51:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T08:58:00Z</news:publication_date>
       <news:title>GTA 6 Standard vs Ultimate Edition: Which Version Should You Choose?</news:title>
       <news:keywords>GTA 6 Standard vs Ultimate Edition, GTA 6 price, GTA 6 Ultimate Edition contents, GTA 6 pre-order bonus, Vintage Vice City Pack</news:keywords>
     </news:news>
@@ -295,7 +307,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T09:15:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T08:22:00Z</news:publication_date>
       <news:title>GTA 6 Gameplay Features: 10 Details Players Should Know</news:title>
       <news:keywords>GTA 6 gameplay features, GTA 6 details, Rideout Customs GTA 6, Sara&#x27;s Unisex Salon, GTA 6 Leonida gameplay</news:keywords>
     </news:news>
@@ -307,7 +319,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-18T12:42:00Z</news:publication_date>
+      <news:publication_date>2026-11-18T11:49:00Z</news:publication_date>
       <news:title>League of Legends Patch 26.23 Notes: Latest Champion and Gameplay Changes</news:title>
       <news:keywords>League of Legends Patch 26.23, LoL 26.23 patch notes, Winter Rift League of Legends, League of Legends Team Voice Chat, Azir buff 26.23</news:keywords>
     </news:news>

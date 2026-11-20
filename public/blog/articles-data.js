@@ -1,4 +1,59 @@
 window.BUGWRITE_ARTICLES = [
+  {
+      "id": "has-anyone-finished-gta-6-how-much-made-gta-flu-online",
+      "slot": "recent",
+      "category": "Gaming",
+      "title": "GTA 6 launch guide: Has anyone finished it, how much it made, GTA flu, and Online release date",
+      "seoTitle": "GTA 6: Has Anyone Finished, Sales Record, GTA Flu & Online FAQ | Bugwrite",
+      "metaDescription": "Has anyone finished GTA 6? How much has it made? What is the GTA Flu? Get direct answers on day-one records, story length, and GTA 6 Online launch date.",
+      "keywords": [
+          "gta gta6",
+          "has anyone finished gta 6",
+          "has anyone completed gta 6",
+          "how much has gta 6 made",
+          "gta flu",
+          "gta6 online",
+          "gta6 gameplay",
+          "game gta6",
+          "grand theft auto gta vi",
+          "gta 6 wiki"
+      ],
+      "dek": "From speedrunners finishing the campaign to billion-dollar sales milestones and the viral GTA flu, we answer the biggest questions surrounding launch week.",
+      "author": "Samira Patel",
+      "authorRole": "Senior Gaming Editor",
+      "publishedAgo": "Just now",
+      "publishedDate": "Nov 20, 2026",
+      "readTime": "7 min read",
+      "image": "/blog/articles/gta6-launch-records.jpg",
+      "imageAlt": "Pixel art illustration of a digital billion-dollar sales scoreboard, gaming trophy, and calendar leave slip",
+      "faqs": [
+          [
+              "Has anyone finished GTA 6?",
+              "Yes, several dedicated marathon streamers and speedrunners completed the main storyline within twenty-eight to thirty-four hours of non-stop play following the midnight unlock. A standard casual playthrough exploring side activities typically requires sixty to eighty hours."
+          ],
+          [
+              "How much money has GTA 6 made so far?",
+              "Initial financial analytics and publisher telemetry estimate GTA 6 generated over $1.5 billion in its first twenty-four hours across worldwide digital pre-orders and physical retail sales, breaking the previous entertainment record set by GTA 5 in 2013."
+          ],
+          [
+              "What is the GTA Flu?",
+              "The GTA Flu is a viral cultural term describing the massive surge of workers and students calling in sick or using paid time off on November 19 and November 20, 2026, to play Grand Theft Auto 6 over an extended four-day weekend."
+          ],
+          [
+              "When does GTA 6 Online come out?",
+              "GTA 6 Online will not launch until mid-December 2026. Rockstar Games follows its traditional multi-week rollout strategy to ensure multiplayer server stability and allow players to experience Jason and Lucia's story campaign first."
+          ],
+          [
+              "What are the biggest new gameplay mechanics in GTA 6?",
+              "GTA 6 introduces vehicle trunk inventory management, realistic law enforcement line-of-sight awareness, dual-wielded sidearms, over seventy percent interior building access in Vice City, dynamic hurricane weather, and seamless dual-character switching."
+          ],
+          [
+              "Where can players find an ad-free GTA 6 wiki and mission database?",
+              "Bugwrite provides clean, paywall-free GTA 6 guides, safe combinations, mission lists, character breakdowns, and interactive Leonida coverage organized under the Gaming desk at bugwrite.com/gaming."
+          ]
+      ],
+      "body": "\n      <p>Grand Theft Auto 6 has officially landed, triggering the biggest entertainment launch in modern history. Millions of players are currently roaming Vice City, driving search volume around game completion times, sales milestones, online multiplayer schedules, and workplace absences to historic peaks on Google Trends. Here is our comprehensive guide answering every viral search query dominating the community right now.</p>\n\n      <h2>Has anyone finished GTA 6? (Has anyone completed GTA 6?)</h2>\n      <p>Yes. Within thirty hours of the November 19 midnight console unlock, several high-profile marathon streamers and competitive speedrunners successfully completed the primary storyline of Grand Theft Auto 6. Running on energy drinks and rotating player teams, early completionists reached the final credits in approximately twenty-eight to thirty-four hours of strictly mainline quest progression.</p>\n      <p>However, rushing the main narrative skips the vast majority of what makes Leonida special. For everyday players engaging with stranger encounters, cartel warehouse raids, Everglades wildlife hunting, vehicle customization, and heist preparations, the campaign offers between sixty and eighty hours of rich content. Reaching true one-hundred percent completion, including underwater shipwreck salvaging and hidden parcel collections, is expected to take over one hundred and twenty hours.</p>\n\n      <h2>How much money has GTA 6 made so far?</h2>\n      <p>Early retail reports and digital platform tracking indicate that Grand Theft Auto 6 generated an estimated $1.5 billion in gross revenue within its first twenty-four hours on sale. This historic milestone easily shatters the previous entertainment record held by Grand Theft Auto 5, which earned $800 million in its first day and topped $1 billion in three days back in September 2013.</p>\n      <p>With standard editions priced at $69.99 and premium collector bundles reaching up to $149.99 across PlayStation 5 and Xbox Series X|S, over twenty million copies were moved on day one alone through combined digital downloads and packed midnight retail openings across North America, Europe, and Asia. Wall Street analysts expect total first-month revenue to comfortably surpass $3 billion once holiday shopping surges begin.</p>\n\n      <h2>What is the viral \"GTA Flu\"?</h2>\n      <p>If your office, university, or local workplace felt unusually empty on Thursday, November 19 and Friday, November 20, you witnessed the cultural phenomenon known online as the GTA Flu. Human resources consulting firms and remote workplace trackers reported attendance drops between twelve and eighteen percent across technology, finance, and creative industries as millions of employees took planned annual leave or called in sick to immerse themselves in Vice City all weekend.</p>\n      <p>Social media hashtags around the GTA Flu trended alongside viral memes of employees setting automated out-of-office email replies reading \"Exploring Leonida on urgent field business.\" Major workplace management software providers even noted slight dips in morning Slack activity compared to typical mid-November averages.</p>\n\n      <h2>When does GTA 6 Online release?</h2>\n      <p>Rockstar Games deliberately withheld the standalone multiplayer mode on launch day. Grand Theft Auto 6 Online is scheduled to launch in mid-December 2026, roughly three to four weeks after the single-player release.</p>\n      <p>This phased rollout follows the exact precedent established by GTA 5 in 2013 and Red Dead Redemption 2 in 2018. Holding the multiplayer release gives Rockstar engineers time to scale up cloud server capacity, monitor network telemetry, and address day-one client patches. More importantly, it ensures players experience Jason and Lucia's single-player story campaign without the immediate distraction of competitive lobbies and microtransactions.</p>\n\n      <h2>What are the standout GTA 6 gameplay features?</h2>\n      <p>Grand Theft Auto 6 represents a massive leap forward in open-world sandbox fidelity. Core gameplay enhancements include:</p>\n      <p><strong>Physical Trunk Inventory:</strong> Heavy weaponry such as rocket launchers and high-caliber sniper rifles can no longer be hidden in your back pocket. Players must store long guns in their car trunk, forcing strategic tactical loadout choices before entering buildings.</p>\n      <p><strong>Advanced Law Enforcement AI:</strong> Police cruisers no longer spawn magically out of thin air behind the player. Patrol officers establish actual perimeter checkpoints, track vehicle license plates until you visit a chop shop, and inspect eyewitness reports based on real line-of-sight.</p>\n      <p><strong>Building Interior Density:</strong> Over seventy percent of commercial storefronts, clubs, diners, and residential apartment corridors across Vice City feature fully modeled, enterable interiors without loading screens.</p>\n      <p><strong>Dynamic Environmental Weather:</strong> Tropical storm systems and category-rated hurricanes roll off the Atlantic ocean, causing street-level storm surge flooding, tossing road debris across freeways, and altering vehicle traction in real time.</p>\n\n      <h2>Where can players find a clean GTA 6 wiki and guide?</h2>\n      <p>With thousands of community wikis bogged down by pop-up advertisements and paywalls, Bugwrite publishes fast-loading, fact-checked guides covering safe combinations, mission lists, vehicle garages, and map points of interest. Readers can navigate directly to our dedicated Gaming section at bugwrite.com/gaming for clean, reader-first coverage updated daily.</p>\n    "
+  },
       {
       "id": "is-niko-bellic-in-gta-6-easter-eggs",
       "slot": "recent",
