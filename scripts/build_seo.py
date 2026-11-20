@@ -1133,9 +1133,12 @@ def generate_article_pages(articles):
         path = get_article_path(art)
         canonical = f"{DOMAIN}{path}"
         iso_date = parse_iso_date(art.get("publishedDate", LASTMOD))
-        title = art.get("seoTitle") or f"{art['title']} | Bugwrite"
-        if len(title) > 68:
-            title = title[:65].rsplit(" ", 1)[0] + " | Bugwrite"
+        raw_title = art.get("seoTitle") or f"{art['title']} | Bugwrite"
+        clean_base = re.sub(r"\s*\|\s*Bugwrite.*$", "", raw_title).strip()
+        max_base_len = 68 - len(" | Bugwrite")
+        if len(clean_base) > max_base_len:
+            clean_base = clean_base[:max_base_len].rsplit(" ", 1)[0].rstrip(" |")
+        title = f"{clean_base} | Bugwrite"
         desc = art.get("metaDescription") or art["dek"]
         og_img = f"{DOMAIN}{art['image']}"
         initials = "".join(p[0] for p in art["author"].split())[:2].upper()
