@@ -197,6 +197,30 @@ def scan_and_ingest_artifacts():
             "filename": "xbox-game-pass.jpg",
             "alt": "Xbox Game Pass late November game lineup streaming setup and wireless controller",
         },
+        {
+            "match_patterns": ["release_time", "launch_event", "playable"],
+            "article_id": "when-is-gta-6-playable-release-times",
+            "filename": "gta6-release-time.jpg",
+            "alt": "Global midnight launch celebration outside premier electronics showcase for Grand Theft Auto 6",
+        },
+        {
+            "match_patterns": ["map_leonida", "vice_city_map", "leonida_regions"],
+            "article_id": "gta-6-map-vice-city-leonida-regions",
+            "filename": "gta-6-map-vice-city-leonida-regions.jpg",
+            "alt": "Aerial panoramic map view of Vice City skyline, Florida Keys, and Leonida wetlands in GTA 6",
+        },
+        {
+            "match_patterns": ["screenshots_weather", "screenshots_gallery", "downpour"],
+            "article_id": "gta-6-screenshots-gallery-weather",
+            "filename": "gta6-screenshots.jpg",
+            "alt": "Tropical downpour reflecting neon storefront signage and swaying palm trees on Vice City boulevard",
+        },
+        {
+            "match_patterns": ["lucia_actress", "manni_l_perez", "perez"],
+            "article_id": "manni-l-perez-gta-6-lucia-actress",
+            "filename": "manni-l-perez-gta-6-lucia-actress.jpg",
+            "alt": "Manni L Perez protagonist Lucia portrait looking out across Vice City oceanfront at sunset",
+        },
     ]
 
     # Search through all subdirectories of BRAIN_DIR for matching images

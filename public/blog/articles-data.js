@@ -1,7 +1,7 @@
 window.BUGWRITE_ARTICLES = [
   {
       "id": "lexie-shoaibi-mandy-gta-6-actress-house-location-scene",
-      "slot": "recent",
+      "slot": "gta6-hub",
       "category": "Gaming",
       "title": "Lexie Shoaibi in GTA 6: Who is Mandy, house location, viral scene, and actress details",
       "seoTitle": "Lexie Shoaibi in GTA 6: Mandy Actress, House Location & Scene FAQ | Bugwrite",
@@ -43,7 +43,7 @@ window.BUGWRITE_ARTICLES = [
   },
   {
       "id": "has-anyone-finished-gta-6-how-much-made-gta-flu-online",
-      "slot": "recent",
+      "slot": "gta6-hub",
       "category": "Gaming",
       "title": "GTA 6 launch guide: Has anyone finished it, how much it made, GTA flu, and Online release date",
       "seoTitle": "GTA 6: Has Anyone Finished, Sales Record, GTA Flu & Online FAQ | Bugwrite",
@@ -98,7 +98,7 @@ window.BUGWRITE_ARTICLES = [
   },
       {
       "id": "is-niko-bellic-in-gta-6-easter-eggs",
-      "slot": "recent",
+      "slot": "gta6-hub",
       "category": "Gaming",
       "title": "Is Niko Bellic in GTA 6? Jimmy De Santa, Jason age, Lucia actress, and full cast answers",
       "seoTitle": "Is Niko Bellic in GTA 6? Jimmy De Santa, Cast & Characters FAQ | Bugwrite",
@@ -154,7 +154,7 @@ window.BUGWRITE_ARTICLES = [
   },
     {
       "id": "gta-6-endings-how-many-choices-explained",
-      "slot": "recent",
+      "slot": "gta6-hub",
       "category": "Gaming",
       "title": "GTA 6 endings: How many endings does it have, how it ends, and good ending guide",
       "seoTitle": "GTA 6 Endings: How Many Endings, Story Finale & Good Ending | Bugwrite",
@@ -392,7 +392,7 @@ window.BUGWRITE_ARTICLES = [
   },
   {
     "id": "when-is-gta-6-playable-release-times",
-    "slot": "featured",
+    "slot": "recent",
     "category": "Gaming",
     "title": "When is GTA 6 playable? Global unlock schedule, preload size, and midnight rollout details",
     "seoTitle": "When Is GTA 6 Playable? Release Times, 212 GB Preload, and Unlock Schedule | Bugwrite",
@@ -411,12 +411,12 @@ window.BUGWRITE_ARTICLES = [
     "publishedDate": "Nov 18, 2026",
     "readTime": "4 min read",
     "image": "/blog/articles/gta6-release-time.jpg",
-    "imageAlt": "Midnight Black PlayStation 5 DualSense wireless controller photographed cleanly from the front",
+      "imageAlt": "Global midnight launch celebration outside premier electronics showcase for Grand Theft Auto 6",
     "body": "\n      <p><em>Grand Theft Auto VI</em> officially becomes playable on Thursday, November 19, 2026, on PlayStation 5 and Xbox Series X|S, and Rockstar Games is rolling the launch out on a local midnight schedule rather than a single global switch. For most digital buyers, the unlock timer hits zero right at 12:00 AM local time on November 19.</p>\n\n      <p>That regional stagger means players in Oceania and Asia step into Leonida hours before Europe and the Americas. In India, digital copies unlock right at 12:00 AM IST on November 19. In the United States, storefront clocks aligned with Eastern Time mean West Coast players typically see their digital copies go live on Wednesday evening as East Coast clocks cross midnight.</p>\n\n      <h2>Preload status and storage requirements</h2>\n      <p>Anyone planning to play the minute servers open should handle downloads well ahead of launch night. Digital preloads went live on November 10, 2026 across both PlayStation 5 and Xbox Series X|S, giving console owners plenty of runway to avoid day-one storefront congestion.</p>\n\n      <p>The download is hefty. Expect the base installation to consume roughly 212 GB of SSD storage, making <em>GTA 6</em> one of the largest console installs of the current generation. Players running base internal storage alongside other modern live-service games will likely need to clear two or three older titles before starting the preload.</p>\n\n      <h2>What about PC players?</h2>\n      <p>Following Rockstar's longtime release playbook from <em>Grand Theft Auto V</em> and <em>Red Dead Redemption 2</em>, <em>GTA 6</em> is launching exclusively on PlayStation 5 and Xbox Series X|S first. Rockstar Games has not announced a PC release date yet, leaving desktop players waiting for a separate announcement down the road.</p>\n    "
   },
   {
     "id": "new-zealand-gta-6-trick",
-    "slot": "gta6-hub",
+    "slot": "recent",
     "category": "Gaming",
     "title": "The New Zealand GTA 6 trick explained: How Xbox and PS5 players try to unlock early and the risks involved",
     "seoTitle": "New Zealand GTA 6 Trick: How Early Unlock Works on Xbox and PS5 | Bugwrite",
@@ -440,7 +440,7 @@ window.BUGWRITE_ARTICLES = [
   },
   {
     "id": "gta-6-metacritic-score-review-embargo",
-    "slot": "gta6-hub",
+    "slot": "recent",
     "category": "Gaming",
     "title": "GTA 6 Metacritic watch: When the review embargo lifts and the historic bar Rockstar is chasing",
     "seoTitle": "GTA 6 Metacritic Score and Review Embargo Timing November 2026 | Bugwrite",
@@ -464,7 +464,7 @@ window.BUGWRITE_ARTICLES = [
   },
   {
     "id": "how-long-is-gta-6-story-mode",
-    "slot": "gta6-hub",
+    "slot": "recent",
     "category": "Gaming",
     "title": "How long is GTA 6 story mode? Campaign hours, chapter structure, and 100 percent completion estimates",
     "seoTitle": "How Long Is GTA 6 Story Mode? Main Campaign and 100% Completion Hours | Bugwrite",
@@ -488,7 +488,7 @@ window.BUGWRITE_ARTICLES = [
   },
   {
     "id": "gta-6-screenshots-gallery-weather",
-    "slot": "gta6-hub",
+    "slot": "recent",
     "category": "Gaming",
     "title": "New GTA 6 screenshots show off Vice City nightlife and torrential Leonida storms ahead of launch",
     "seoTitle": "GTA 6 Screenshots: Official 4K Launch Gallery and Weather Channel Showcase | Bugwrite",
@@ -507,7 +507,7 @@ window.BUGWRITE_ARTICLES = [
     "publishedDate": "Nov 18, 2026",
     "readTime": "4 min read",
     "image": "/blog/articles/gta6-screenshots.jpg",
-    "imageAlt": "Neon-lit Ocean Drive in South Beach Miami at night lined with art-deco buildings and palm trees",
+      "imageAlt": "Tropical downpour reflecting neon storefront signage and swaying palm trees on Vice City boulevard",
     "body": "\n      <p>If your social feeds have been packed with razor-sharp stills of Vice City highways, neon clubs, and brooding coastal squalls over the past two weeks, you are not looking at shaky phone leaks. Almost all of the high-definition <em>Grand Theft Auto VI</em> screenshots circulating ahead of launch come directly from Rockstar Games' final pre-release marketing push.</p>\n\n      <p>The centerpiece dropped on November 5, 2026, when Rockstar opened an official Launch Gallery on its website featuring 39 brand-new 4K screenshots. Those frames gave fans their clearest look yet at day-to-day life across Vice City and the wider state of Leonida, capturing protagonists Jason and Lucia mid-robbery, late-night street racing, crowded beach strips, and gritty neighborhood interiors.</p>\n\n      <h2>The Weather Channel collaboration steals the spotlight</h2>\n      <p>Rockstar followed that up on November 16 with one of the cleverest promotional tie-ins of the campaign, partnering directly with <em>The Weather Channel</em> to debut an official batch of screenshots focused entirely on <em>GTA 6</em>'s dynamic weather simulation. Rather than sticking to postcard sunshine, the images showed rolling coastal fog, darkening hurricane-style anvil clouds, and torrential downpours sweeping over the Leonida Keys and downtown Vice City.</p>\n\n      <p>Additional official frames also landed alongside late-October and early-November print previews, including cover coverage from <em>Edge Magazine</em> that dug deeper into crowd density, vehicle customization, and how NPCs react to sudden shifts in rain and visibility.</p>\n\n      <h2>Separating official stills from launch-week leaks</h2>\n      <p>As physical retail shipments reach stores ahead of November 19, a handful of low-resolution backend rips and forum leaks have inevitably started popping up online. Still, players avoiding spoilers can safely browse Rockstar's official Launch Gallery and media preview stills to inspect the lighting, water physics, and world detail without stumbling into late-game story twists.</p>\n    "
   },
   {
@@ -1108,7 +1108,7 @@ window.BUGWRITE_ARTICLES = [
     "publishedDate": "Nov 17, 2026",
     "readTime": "4 min read",
     "image": "/blog/articles/gta-6-map-vice-city-leonida-regions.jpg",
-    "imageAlt": "Aerial view of a bright turquoise coastal highway linking tropical islands and wetlands",
+      "imageAlt": "Aerial panoramic map view of Vice City skyline, Florida Keys, and Leonida wetlands in GTA 6",
     "body": "<p>Grand Theft Auto 6 moves the series to the State of Leonida, a sprawling Florida-inspired playground built around six confirmed regions. While Vice City remains the unmistakable heart of the map, Rockstar has designed the surrounding counties to deliver sharp shifts in geography, pace, and local culture as players drive outward from the coast.</p><p>At the urban center sits Vice City itself, anchored by recognizable strips like Ocean Beach and major transit hubs including Vice City International Airport. After dark, the city leans heavily into nightlife and spectacle, featuring confirmed venues such as the NINE1NINE nightclub and Jack of Hearts, giving the downtown core a dense, lived-in verticality that contrasts starkly with the rural outskirts.</p><h2>Keys, wetlands, and working-class coasts</h2><p>Heading south along the water leads directly into the Leonida Keys, a chain of sun-drenched tropical islands linked by sweeping causeways and boating channels. Just inland lies the Grassrivers, Rockstar's take on the Everglades, where airboats, murky backwaters, and dense mangroves replace paved boulevards and force players to rethink high-speed escapes.</p><p>On the opposite side of the state, Port Gellhorn offers a grittier, forgotten-coast contrast to Vice City's luxury towers. Strip malls, pawn shops, and weathered motels define its silhouette, creating fertile ground for low-level heists and highway chases away from downtown skyscrapers.</p><h2>Industrial heartlands and northern wilderness</h2><p>Rounding out the six regions are Ambrosia and Mount Kalaga National Park. Ambrosia captures the industrial backbone of Leonida, blending heavy manufacturing with tight-knit local factions that operate far outside tourist postcards. Farther north, Mount Kalaga National Park breaks up the state's flat coastal profile with rugged elevation, dense pine forests, and winding wilderness trails.</p><p>Taken together, those six zones explain why GTA 6 requires roughly 212 GB of SSD space. Rather than repeating a single coastal biome across miles of highway, Leonida is built to feel like an entire state where city lights, swamp fog, industrial grit, and mountain air sit just one road trip apart.</p>"
   },
   {
@@ -1161,7 +1161,7 @@ window.BUGWRITE_ARTICLES = [
   },
   {
     "id": "gta-6-characters-jason-lucia-cast",
-    "slot": "recent",
+    "slot": "featured",
     "category": "Gaming",
     "title": "GTA 6 Characters: Jason, Lucia and the Confirmed Cast",
     "seoTitle": "GTA 6 Characters: Jason, Lucia and Confirmed Cast Details | Bugwrite",
@@ -1324,7 +1324,7 @@ window.BUGWRITE_ARTICLES = [
     "publishedDate": "Nov 17, 2026",
     "readTime": "3 min read",
     "image": "/blog/articles/manni-l-perez-gta-6-lucia-actress.jpg",
-    "imageAlt": "A studio condenser microphone lit by warm amber stage light inside a dark recording booth",
+      "imageAlt": "Manni L Perez protagonist Lucia portrait looking out across Vice City oceanfront at sunset",
     "body": "<p>For nearly three years, Grand Theft Auto fans tried to crack one of gaming's worst-kept secrets: who plays Lucia? On November 17, The Game Awards 2026 ended the guessing game for good by nominating Manni L. Perez for Best Performance in GTA 6, confirming her as the voice and performance-capture star behind Rockstar's groundbreaking co-protagonist.</p><p>Long before the nomination list went live, observant players had traced Lucia's cadence and physical resemblance back to Perez's screen work. A seasoned New York-based actor with credits across television dramas including Law and Order: Special Victims Unit, Jessica Jones, Blindspot, and Chicago P.D., Perez had also logged prior vocal work inside Rockstar's ecosystem on Grand Theft Auto Online.</p><h2>Why Rockstar stayed quiet for so long</h2><p>Anyone who followed Red Dead Redemption 2 or Grand Theft Auto 5 knows Rockstar treats NDA secrecy like a vault door. Performers often spend years inside performance-capture stages under code names, unable to acknowledge their involvement even while their face sits on billboards worldwide. Perez handled years of intense social-media scrutiny with quiet professionalism, deflecting direct questions in interviews while waiting for the official green light.</p><p>Landing a Best Performance nod before the game's November 19 public release is a remarkable payoff for that patience. Jury members who played pre-launch builds singled out her work alongside the year's biggest performances, suggesting Lucia's arc carries the emotional weight that Rockstar's writing team promised.</p><h2>Joining Rockstar's pantheon of leads</h2><p>Rockstar's greatest protagonists live or die by the actors who ground their chaos in human vulnerability, from Ned Luke, Shawn Fonteno, and Steven Ogg in GTA 5 to Roger Clark's unforgettable turn as Arthur Morgan. With December 10 approaching at the Peacock Theater in Los Angeles, Manni L. Perez steps onto that same stage as the defining face of a new Grand Theft Auto era.</p>"
   },
   {
