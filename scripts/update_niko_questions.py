@@ -99,10 +99,10 @@ def main():
     with open(DATA_JS_PATH, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Replace the existing is-niko-bellic-in-gta-6-easter-eggs object in articles-data.js
+    # Replace the existing is-niko-bellic-in-gta-6-easter-eggs object in articles-data.js safely using lambda
     pattern = r'\{\s*"id":\s*"is-niko-bellic-in-gta-6-easter-eggs"[\s\S]*?\n  \},'
     formatted = "  " + json.dumps(UPDATED_ARTICLE, indent=4).replace("\n", "\n  ") + ","
-    new_content, count = re.subn(pattern, formatted, content, count=1)
+    new_content, count = re.subn(pattern, lambda m: formatted, content, count=1)
     if count == 0:
         raise ValueError("Could not find is-niko-bellic-in-gta-6-easter-eggs in articles-data.js")
 
