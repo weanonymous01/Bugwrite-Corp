@@ -250,7 +250,11 @@ clean-kebab-case-slug
 comma, separated, search, terms
 
 === IMAGE_QUERY ===
-natural human physical scene query e.g. person playing video game living room real photo
+Search query for 100% genuine real-life photography of physical objects, buildings, or humans in daylight.
+CRITICAL ANTI-AI RULES:
+- NEVER use abstract concepts, charts, trading screens, neon lights, glowing effects, digital art, or wallpapers.
+- ALWAYS use concrete physical camera subjects (e.g. 'wall street sign financial district manhattan photography', 'person holding video game controller living room photo', 'fbi seal building stone wall real photo', 'person typing on laptop coffee shop sunlight photo').
+- MUST end with 'real photo' or 'photography'.
 
 === IMAGE_ALT ===
 Aesthetic physical description of the photograph
@@ -360,11 +364,43 @@ def normalize_image(source_path, dest_path, quality=88):
         return os.path.getsize(dest_path) / 1024
 
 
-def fetch_pinterest_banner(query, slug):
-    """Downloads widescreen real-photo Pinterest candidate and crops to 16:9."""
+def sanitize_image_query(query, category):
+    """
+    Guarantees the Pinterest search query targets 100% genuine real-life photography.
+    Replaces AI bait keywords (charts, trading screens, neon, crypto) with authentic physical anchors.
+    """
+    query_lower = query.lower()
+
+    # Words that attract Midjourney / AI art on Pinterest
+    ai_bait = [
+        "chart", "charts", "trading screen", "screens", "crypto", "bitcoin",
+        "futuristic", "cyberpunk", "concept art", "render", "3d", "vector",
+        "illustration", "neon", "digital art", "wallpaper"
+    ]
+
+    if any(w in query_lower for w in ai_bait):
+        if category == "Business":
+            return "wall street sign financial district manhattan photography"
+        elif category == "Security":
+            return "fbi seal stone building headquarters real photo"
+        elif category == "Gaming":
+            return "person holding black video game controller hands couch photo"
+        elif category == "Big Tech":
+            return "person typing on laptop keyboard modern cafe sunlight photo"
+
+    # Guarantee authentic camera suffix
+    if not any(k in query_lower for k in ["real photo", "photography", "candid photo", "street photo", "photo"]):
+        query = f"{query.strip()} real photo"
+
+    return query
+
+
+def fetch_pinterest_banner(query, slug, category="Gaming"):
+    """Downloads widescreen real camera photo candidate and crops to 16:9."""
     from pinterest_dl import ApiScraper
 
-    print(f"[Pinterest] Fetching real-photo banner: '{query}'...")
+    clean_query = sanitize_image_query(query, category)
+    print(f"[Pinterest] Fetching real-photo banner: '{clean_query}'...")
     temp_dir = os.path.join(SCRATCH_DIR, slug)
     if os.path.exists(temp_dir):
         shutil.rmtree(temp_dir)
@@ -372,7 +408,7 @@ def fetch_pinterest_banner(query, slug):
 
     scraper = ApiScraper()
     try:
-        scraper.search_and_download(query, temp_dir, num=4)
+        scraper.search_and_download(clean_query, temp_dir, num=8)
     except Exception as e:
         print(f"[!] Pinterest download warning: {e}")
 
@@ -386,12 +422,37 @@ def fetch_pinterest_banner(query, slug):
     if downloaded:
         def score(p):
             try:
+                is_png = p.lower().endswith(".png")
                 with Image.open(p) as im:
                     w, h = im.size
-                    if w < 400 or h < 300:
-                        return -100
-                    diff = abs((w / h) - TARGET_ASPECT)
-                    return (10 if w > h else 0) - (diff * 5) + (min(w, 1920) / 1000)
+                    if w < 500 or h < 400:
+                        return -999
+
+                    score_val = 0
+                    # Anti-AI Filter: Real camera photography is almost exclusively JPEG on Pinterest
+                    # Midjourney/DALL-E digital exports on Pinterest are heavily PNG and 1024x1024
+                    if is_png:
+                        score_val -= 25
+                    if w == 1024 and h == 1024:
+                        score_val -= 30
+                    if not is_png:
+                        score_val += 15
+
+                    # High resolution camera reward
+                    total_pixels = w * h
+                    if total_pixels >= 1_500_000:
+                        score_val += 20
+                    elif total_pixels >= 800_000:
+                        score_val += 10
+
+                    # Natural camera aspect ratios suitable for 35% top-weight 16:9 crop
+                    aspect = w / h
+                    if 1.35 <= aspect <= 1.85:
+                        score_val += 15  # Natural 3:2 or 16:9 camera landscape
+                    elif 0.55 <= aspect <= 0.85:
+                        score_val += 10  # Natural vertical portrait camera photo
+
+                    return score_val
             except Exception:
                 return -999
 
@@ -553,7 +614,7 @@ def run_autonomous_publisher(max_articles=2, min_volume=1000, min_growth=50):
         print(f"[✔] Generated Slug: {art_data['slug']}")
 
         # Fetch real-photo Pinterest banner
-        banner_path = fetch_pinterest_banner(art_data["imageQuery"], art_data["slug"])
+        banner_path = fetch_pinterest_banner(art_data["imageQuery"], art_data["slug"], category)
         art_data["image"] = banner_path
 
         # Save to database

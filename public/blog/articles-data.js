@@ -19,7 +19,7 @@ window.BUGWRITE_ARTICLES = [
     "publishedDate": "2026-11-20",
     "readTime": "4 min read",
     "image": "/blog/articles/bitcoin-price-crash-59k-market-selloff.jpg",
-    "imageAlt": "A person in a modern office looking intently at a computer screen displaying fluctuating cryptocurrency price charts",
+    "imageAlt": "Authentic street photography of Wall Street sign and Manhattan financial district skyscrapers",
     "faqs": [
       {
         "q": "Why is Bitcoin falling right now?",
