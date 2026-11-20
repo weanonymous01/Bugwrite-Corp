@@ -220,6 +220,34 @@ def fetch_pinterest_banner(search_query, slug):
     return f"/blog/articles/{slug}.jpg"
 
 
+def fetch_live_research(trend_query):
+    """
+    Fetches real-time news headlines, story snippets, and context from Google News RSS.
+    """
+    import xml.etree.ElementTree as ET
+    research_snippets = []
+
+    queries = [trend_query, f"{trend_query} news controversy"]
+    for q in queries:
+        try:
+            url = f"https://news.google.com/rss/search?q={urllib.parse.quote(q)}&hl=en-US&gl=US&ceid=US:en"
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=8) as resp:
+                data = resp.read().decode("utf-8")
+                root = ET.fromstring(data)
+                for it in root.findall(".//item")[:5]:
+                    title = it.find("title").text if it.find("title") is not None else ""
+                    desc = it.find("description").text if it.find("description") is not None else ""
+                    clean_desc = re.sub(r"<[^>]+>", " ", desc).strip()
+                    item_text = f"Report: {title}\nDetails: {clean_desc}"
+                    if item_text not in research_snippets:
+                        research_snippets.append(item_text)
+        except Exception as e:
+            print(f"[!] Research fetch notice for '{q}': {e}")
+
+    return "\n\n".join(research_snippets[:8])
+
+
 def clean_html_and_punctuation(text):
     """Enforces strict guidelines: NO em/en dashes, NO <li> tags."""
     # Replace em dash and en dash with comma or parentheses
@@ -238,32 +266,47 @@ def clean_html_and_punctuation(text):
 
 def generate_article_content(trend_data, category="Gaming"):
     """
-    Prompts NVIDIA NIM to write a full human-toned article answering
-    the trending questions directly.
+    Prompts NVIDIA NIM to write an in-depth, deeply researched human article (700-1000+ words)
+    answering the trending questions directly with real context and verified news facts.
     """
     trend_name = trend_data["trend"]
     questions = trend_data.get("questions", [])
     related = trend_data.get("related_searches", [])
 
+    # Fetch live real-time research context
+    print(f"[Research] Fetching live news & web data for: '{trend_name}'...")
+    research_context = fetch_live_research(trend_name)
+    if research_context:
+        print(f"[✔] Gathered live research context ({len(research_context.split())} words).")
+    else:
+        print("[!] No live news snippets returned; relying on internal knowledge base.")
+
     system_prompt = (
-        "You are an expert senior staff writer at Bugwrite. "
-        "You write in simple, engaging, direct human English. "
+        "You are an expert senior investigative editor for Bugwrite. "
+        "You write in simple, engaging, direct, and conversational human English. "
         "Rules to follow strictly:\n"
-        "1. Write like a real person explaining things clearly to a friend. No big fancy words.\n"
+        "1. Write like an experienced, thoughtful human explaining things clearly. No big or fancy words.\n"
         "2. NO AI clichés or corporate jargon (never use 'dive into', 'delve', 'testament', 'revolutionize', 'landscape', 'beacon').\n"
         "3. NEVER use em dashes ('—') or en dashes ('–'). Use commas, colons, or parentheses.\n"
         "4. NEVER output <li> or <ul> bullet tags. Use only <p>, <h2>, and <h3> HTML tags.\n"
-        "5. Under every <h2> question heading, answer the question directly in the very first sentence.\n"
-        "6. Return ONLY valid JSON in the exact specified schema."
+        "5. UNDER EVERY <h2> QUESTION HEADING, write 2 to 3 substantive, deeply informative paragraphs (minimum 150 words per section).\n"
+        "6. Answer each question directly in the very first sentence, then explain the real facts, background, quotes, community reactions from Reddit and X, and historical context.\n"
+        "7. The total article body must be between 700 and 1,000 words. Never output shallow or short summaries.\n"
+        "8. Return ONLY valid JSON in the exact specified schema."
     )
 
     user_prompt = f"""
-Write a complete, high-traffic news and explainer article for Bugwrite.
+Write a comprehensive, deeply researched 750+ word article for Bugwrite.
 Trending Topic: {trend_name}
-Questions People Want Answered:
-{json.dumps(questions[:5], indent=2)}
-Related Searches:
-{json.dumps(related[:5], indent=2)}
+
+Live Real-Time News & Research Context:
+{research_context if research_context else "Cover the full story, community reactions, facts, and context."}
+
+Questions People Are Asking:
+{json.dumps(questions[:6], indent=2)}
+
+Related Search Queries:
+{json.dumps(related[:6], indent=2)}
 
 Output a valid JSON object with these EXACT keys:
 {{
@@ -276,11 +319,12 @@ Output a valid JSON object with these EXACT keys:
   "imageQuery": "short human physical scene query for photo search e.g. 'person sitting playing video game dark room real photo'",
   "imageAlt": "Aesthetic physical description of the photograph",
   "faqs": [
-    {{"q": "Question 1", "a": "Direct 1-2 sentence answer."}},
-    {{"q": "Question 2", "a": "Direct 1-2 sentence answer."}},
-    {{"q": "Question 3", "a": "Direct 1-2 sentence answer."}}
+    {{"q": "Question 1", "a": "Direct, thorough 2-3 sentence answer explaining the fact."}},
+    {{"q": "Question 2", "a": "Direct, thorough 2-3 sentence answer explaining the fact."}},
+    {{"q": "Question 3", "a": "Direct, thorough 2-3 sentence answer explaining the fact."}},
+    {{"q": "Question 4", "a": "Direct, thorough 2-3 sentence answer explaining the fact."}}
   ],
-  "body": "<p>Intro paragraph connecting the trending search to what players are experiencing...</p><h2>Question 1 Heading</h2><p>Direct answer in first sentence...</p><h2>Question 2 Heading</h2><p>Direct answer in first sentence...</p><h2>Question 3 Heading</h2><p>Direct answer...</p><p>Concluding helpful takeaway...</p>"
+  "body": "<p>Substantial intro paragraph connecting the trend to players...</p><h2>First Question Heading</h2><p>Direct answer in first sentence...</p><p>Second detailed paragraph with background, facts, and quotes...</p><p>Third paragraph with community reactions...</p><h2>Second Question Heading</h2><p>Direct answer in first sentence...</p><p>Second detailed paragraph with real context...</p><h2>Third Question Heading</h2><p>Direct answer in first sentence...</p><p>Second detailed paragraph...</p><h2>Fourth Question Heading</h2><p>Direct answer in first sentence...</p><p>Second paragraph...</p><p>Concluding helpful takeaway for readers...</p>"
 }}
 """
 
@@ -314,13 +358,13 @@ Output a valid JSON object with these EXACT keys:
 
 
 def inject_article_into_catalog(article_dict, category="Gaming"):
-    """Inserts the new article into public/blog/articles-data.js."""
+    """Inserts or updates the article in public/blog/articles-data.js."""
     with open(DATA_JS, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Create new article object matching Bugwrite's schema
+    slug = article_dict["slug"]
     new_art = {
-        "id": article_dict["slug"],
+        "id": slug,
         "slot": "latest",
         "category": category,
         "title": article_dict["title"],
@@ -332,30 +376,32 @@ def inject_article_into_catalog(article_dict, category="Gaming"):
         "authorRole": "Senior Staff Writer",
         "publishedAgo": "Just now",
         "publishedDate": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-        "readTime": "4 min read",
+        "readTime": "5 min read",
         "image": article_dict["image"],
         "imageAlt": article_dict["imageAlt"],
         "faqs": article_dict.get("faqs", []),
         "body": article_dict["body"]
     }
 
-    # Format JSON string
-    formatted_art = json.dumps(new_art, indent=4)
-    # Indent for JS array
-    indented = "\n".join("  " + line for line in formatted_art.splitlines())
+    node_cmd = (
+        "const fs=require('fs'); const vm=require('vm'); "
+        f"const ctx={{window:{{}}}}; vm.runInNewContext(fs.readFileSync({json.dumps(DATA_JS)},'utf8'), ctx); "
+        "process.stdout.write(JSON.stringify(ctx.window.BUGWRITE_ARTICLES));"
+    )
+    res = subprocess.run(["node", "-e", node_cmd], capture_output=True, text=True, check=True)
+    articles = json.loads(res.stdout)
 
-    # Insert right after `window.BUGWRITE_ARTICLES = [`
-    insert_pattern = re.compile(r"(window\.BUGWRITE_ARTICLES\s*=\s*\[\n?)")
-    if not insert_pattern.search(content):
-        print("[!] Could not find window.BUGWRITE_ARTICLES array in articles-data.js")
-        return False
-
-    updated_content = insert_pattern.sub(f"\\1{indented},\n", content, count=1)
+    idx = next((i for i, a in enumerate(articles) if a["id"] == slug), None)
+    if idx is not None:
+        articles[idx] = new_art
+        print(f"[✔] Replaced existing article '{slug}' at index {idx}.")
+    else:
+        articles.insert(0, new_art)
+        print(f"[✔] Prepended new article '{slug}' to catalog.")
 
     with open(DATA_JS, "w", encoding="utf-8") as f:
-        f.write(updated_content)
+        f.write("window.BUGWRITE_ARTICLES = " + json.dumps(articles, indent=2) + ";\n")
 
-    print(f"[✔] Successfully injected '{article_dict['slug']}' into articles-data.js")
     return True
 
 
