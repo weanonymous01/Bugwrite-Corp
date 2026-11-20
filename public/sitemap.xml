@@ -55,6 +55,28 @@
     <priority>0.4</priority>
   </url>
   <url>
+    <loc>https://www.bugwrite.com/gaming/article/fox-news-gta-6-criticism-explained</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/fox-news-gta-6-criticism-explained.jpg</image:loc>
+      <image:title>Fox News GTA 6 Criticism Explained Simply</image:title>
+      <image:caption>A young person sitting at a desk looking at a bright computer monitor</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.bugwrite.com/gaming/article/microsoft-xbox-series-s-guide</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/microsoft-xbox-series-s-guide.jpg</image:loc>
+      <image:title>Xbox Series S Explained: Specs, Storage, and Buying Tips</image:title>
+      <image:caption>A person comfortably playing a modern video game on a console in a well lit living room</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.bugwrite.com/gaming/article/lexie-shoaibi-mandy-gta-6-actress-house-location-scene</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>

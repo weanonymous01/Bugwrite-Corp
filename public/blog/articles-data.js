@@ -1,5 +1,80 @@
 window.BUGWRITE_ARTICLES = [
   {
+      "id": "fox-news-gta-6-criticism-explained",
+      "slot": "latest",
+      "category": "Gaming",
+      "title": "Fox News GTA 6 Criticism Explained Simply",
+      "seoTitle": "Fox News GTA 6 Criticism Explained | Bugwrite",
+      "metaDescription": "Find out why Fox News faces criticism about GTA 6 coverage. We break down the real issues without the hype or jargon.",
+      "keywords": [
+          "fox news",
+          "gta 6",
+          "criticism",
+          "gaming news"
+      ],
+      "dek": "The criticism of Fox News regarding GTA 6 usually centers on political bias or selective coverage, not the game itself.",
+      "author": "Jordan Kim",
+      "authorRole": "Senior Staff Writer",
+      "publishedAgo": "Just now",
+      "publishedDate": "2026-11-20",
+      "readTime": "4 min read",
+      "image": "/blog/articles/fox-news-gta-6-criticism-explained.jpg",
+      "imageAlt": "A young person sitting at a desk looking at a bright computer monitor",
+      "faqs": [
+          {
+              "q": "Is the criticism about the game or the news coverage?",
+              "a": "The criticism is about how Fox News covers the game, not the actual content of GTA 6 itself. Players are focused on the game, not the commentary."
+          },
+          {
+              "q": "What is the main point of the criticism?",
+              "a": "The main issue is often perceived political bias or framing of the news surrounding the game. People feel the coverage is slanted rather than objective."
+          },
+          {
+              "q": "Should I trust Fox News for GTA 6 news?",
+              "a": "It is smart to check multiple sources for gaming news. Look at dedicated gaming sites and diverse outlets for a balanced view."
+          }
+      ],
+      "body": "<p>People are talking a lot about Fox News and GTA 6, but the fuss isn't usually about the game itself. It's more about how the news channel is reporting on it, which is a common discussion point online.</p><h2>Why is Fox News getting criticized about GTA 6</h2><p>The criticism comes from viewers who feel the coverage shows a political slant rather than just reporting on the video game. This is about media bias, not game quality.</p><h2>Is the criticism about the game content</h2><p>No the criticism is not about what is in GTA 6. The game itself is getting hype for its world and features.</p><h2>How can I get balanced GTA 6 news</h2><p>You should check several different types of media like dedicated gaming websites and non-partisan news sources. Don't rely on just one channel for big stories.</p><p>When you see a trending topic like this remember to look past the noise and check what multiple, varied sources are saying for the clearest picture.</p>"
+  },
+  {
+      "id": "microsoft-xbox-series-s-guide",
+      "slot": "latest",
+      "category": "Gaming",
+      "title": "Xbox Series S Explained: Specs, Storage, and Buying Tips",
+      "seoTitle": "Xbox Series S Guide: Specs, 512GB, 1TB & Refurbished",
+      "metaDescription": "Learn exactly what the Microsoft Xbox Series S is, its storage options like 512GB and 1TB, and how to find good refurbished deals for less.",
+      "keywords": [
+          "microsoft",
+          "xbox",
+          "series",
+          "s",
+          "gaming"
+      ],
+      "dek": "The Xbox Series S is a great entry point for next-gen gaming, offering solid performance in a compact package, with options for 512GB and refurbished deals.",
+      "author": "Jordan Kim",
+      "authorRole": "Senior Staff Writer",
+      "publishedAgo": "Just now",
+      "publishedDate": "2026-11-20",
+      "readTime": "4 min read",
+      "image": "/blog/articles/microsoft-xbox-series-s-guide.jpg",
+      "imageAlt": "A person comfortably playing a modern video game on a console in a well lit living room",
+      "faqs": [
+          {
+              "q": "What is the Microsoft Xbox Series S?",
+              "a": "It is a digital-only, compact next generation gaming console from Microsoft designed for great performance without the high cost of larger models."
+          },
+          {
+              "q": "Is there a 1TB version of the Series S?",
+              "a": "The standard Series S typically comes in a 512GB configuration, and a dedicated 1TB model is not a standard offering for this specific console."
+          },
+          {
+              "q": "Are refurbished Series S consoles a good buy?",
+              "a": "Yes, buying refurbished from official Microsoft or reputable sellers can save you a lot of money while still getting a reliable console."
+          }
+      ],
+      "body": "<p>If you are looking into the Xbox Series S, you are probably wondering if it fits your gaming needs without breaking the bank. This console is popular because it gives you next generation gaming power in a small, affordable package.</p><h2>What is the Microsoft Xbox Series S</h2><p>The Microsoft Xbox Series S is a smaller, digital-only console built to run modern games smoothly without needing a disc drive.</p><h2>Microsoft Xbox Series S Console</h2><p>This console is perfect for players who mostly use digital downloads and want a compact setup for their living room.</p><h2>Microsoft Xbox Series S 512GB</h2><p>The 512GB version is the standard configuration and is usually what most buyers look at for its balance of size and capacity.</p><h2>Microsoft Xbox Series S 1TB</h2><p>A dedicated 1TB model is generally not sold as a standard option for the Series S, so check retailer specs carefully.</p><h2>Microsoft Xbox Series S Refurbished</h2><p>You can find reliable refurbished units through Microsoft's official channels or trusted third party sellers for a better deal.</p><p>Think about how you plan to play games, whether digital or physical, and then check official retailer sites for the best current pricing on the 512GB or refurbished options to make your final choice.</p>"
+  },
+  {
       "id": "lexie-shoaibi-mandy-gta-6-actress-house-location-scene",
       "slot": "gta6-hub",
       "category": "Gaming",
