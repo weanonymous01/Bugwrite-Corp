@@ -25,6 +25,7 @@ import sys
 import re
 import json
 import shutil
+import hashlib
 import argparse
 import subprocess
 import urllib.request
@@ -364,42 +365,89 @@ def normalize_image(source_path, dest_path, quality=88):
         return os.path.getsize(dest_path) / 1024
 
 
-def sanitize_image_query(query, category):
+def sanitize_image_query(query, category, slug=""):
     """
     Guarantees the Pinterest search query targets 100% genuine real-life photography.
-    Replaces AI bait keywords (charts, trading screens, neon, crypto) with authentic physical anchors.
+    Dynamically routes to specific physical subjects based on the article's topic so
+    different articles never get the same search query.
     """
     query_lower = query.lower()
+    slug_lower = slug.lower()
 
-    # Words that attract Midjourney / AI art on Pinterest
+    # Dynamic topic-specific physical photography anchors
+    if any(w in slug_lower or w in query_lower for w in ["qqq", "nasdaq"]):
+        return "nasdaq tower times square new york architecture photography"
+    elif any(w in slug_lower or w in query_lower for w in ["semiconductor", "chip", "nvidia", "intel", "amd", "tsmc"]):
+        return "semiconductor silicon wafer manufacturing cleanroom photography"
+    elif any(w in slug_lower or w in query_lower for w in ["gold", "bullion", "precious metal"]):
+        return "polished gold bars dark wood surface photography"
+    elif any(w in slug_lower or w in query_lower for w in ["bitcoin", "crypto", "btc", "ethereum"]):
+        return "financial times newspaper coffee wooden desk morning light photography"
+    elif any(w in slug_lower or w in query_lower for w in ["rate", "rates", "fed", "federal reserve", "inflation"]):
+        return "federal reserve bank building stone columns architecture photo"
+    elif any(w in slug_lower or w in query_lower for w in ["stock", "stocks", "market", "dow", "s&p"]):
+        return "new york stock exchange building facade architecture real photo"
+    elif any(w in slug_lower or w in query_lower for w in ["xbox", "microsoft"]):
+        return "xbox series console living room television setup photo"
+    elif any(w in slug_lower or w in query_lower for w in ["ps5", "playstation", "sony"]):
+        return "playstation 5 console dualsense controller daylight photo"
+    elif any(w in slug_lower or w in query_lower for w in ["gta", "rockstar", "vice city"]):
+        return "vice city miami beach palm trees sunset photography"
+    elif any(w in slug_lower or w in query_lower for w in ["award", "tga", "goty"]):
+        return "gold trophy ceremony stage lights photography"
+    elif any(w in slug_lower or w in query_lower for w in ["fbi", "police", "investigation"]):
+        return "fbi seal stone building headquarters real photo"
+    elif any(w in slug_lower or w in query_lower for w in ["hack", "breach", "cve", "vulnerability"]):
+        return "person typing laptop dark office evening desk photo"
+    elif any(w in slug_lower or w in query_lower for w in ["apple", "iphone", "ios", "macbook"]):
+        return "apple store glass cube fifth avenue new york real photo"
+    elif any(w in slug_lower or w in query_lower for w in ["google", "android", "pixel"]):
+        return "googleplex mountain view campus exterior real photo"
+    elif any(w in slug_lower or w in query_lower for w in ["amazon", "aws", "cloud", "server", "outage"]):
+        return "server rack datacenter blue ethernet cables real photo"
+
+    # Clean generic AI bait words out of any other query
     ai_bait = [
         "chart", "charts", "trading screen", "screens", "crypto", "bitcoin",
         "futuristic", "cyberpunk", "concept art", "render", "3d", "vector",
         "illustration", "neon", "digital art", "wallpaper"
     ]
+    for w in ai_bait:
+        query_lower = re.sub(rf"\b{re.escape(w)}\b", "", query_lower)
 
-    if any(w in query_lower for w in ai_bait):
-        if category == "Business":
-            return "wall street sign financial district manhattan photography"
-        elif category == "Security":
-            return "fbi seal stone building headquarters real photo"
-        elif category == "Gaming":
-            return "person holding black video game controller hands couch photo"
-        elif category == "Big Tech":
-            return "person typing on laptop keyboard modern cafe sunlight photo"
+    clean = re.sub(r"\s+", " ", query_lower).strip()
+    if not clean:
+        clean = "modern city skyscraper glass office daylight photography"
 
-    # Guarantee authentic camera suffix
-    if not any(k in query_lower for k in ["real photo", "photography", "candid photo", "street photo", "photo"]):
-        query = f"{query.strip()} real photo"
+    if not any(k in clean for k in ["real photo", "photography", "candid photo", "street photo", "photo"]):
+        clean = f"{clean} real photo"
 
-    return query
+    return clean
+
+
+def get_existing_image_hashes():
+    """Builds a set of MD5 hashes and file sizes of all existing article banner images."""
+    hashes = set()
+    sizes = set()
+    if os.path.exists(ARTICLES_DIR):
+        for f in os.listdir(ARTICLES_DIR):
+            if f.lower().endswith((".jpg", ".jpeg", ".png", ".webp")):
+                p = os.path.join(ARTICLES_DIR, f)
+                try:
+                    with open(p, "rb") as fp:
+                        data = fp.read()
+                        hashes.add(hashlib.md5(data).hexdigest())
+                        sizes.add(len(data))
+                except Exception:
+                    pass
+    return hashes, sizes
 
 
 def fetch_pinterest_banner(query, slug, category="Gaming"):
-    """Downloads widescreen real camera photo candidate and crops to 16:9."""
+    """Downloads widescreen real camera photo candidate and crops to 16:9, enforcing deduplication."""
     from pinterest_dl import ApiScraper
 
-    clean_query = sanitize_image_query(query, category)
+    clean_query = sanitize_image_query(query, category, slug=slug)
     print(f"[Pinterest] Fetching real-photo banner: '{clean_query}'...")
     temp_dir = os.path.join(SCRATCH_DIR, slug)
     if os.path.exists(temp_dir):
@@ -418,10 +466,18 @@ def fetch_pinterest_banner(query, slug, category="Gaming"):
         if os.path.isfile(os.path.join(temp_dir, f)) and f.lower().endswith((".jpg", ".jpeg", ".png", ".webp"))
     ]
 
+    existing_hashes, existing_sizes = get_existing_image_hashes()
+
     dest_path = os.path.join(ARTICLES_DIR, f"{slug}.jpg")
     if downloaded:
         def score(p):
             try:
+                # 1. Strict Anti-Duplicate: Disqualify any image already used by another article
+                with open(p, "rb") as fp:
+                    cand_data = fp.read()
+                    if hashlib.md5(cand_data).hexdigest() in existing_hashes or len(cand_data) in existing_sizes:
+                        return -99999
+
                 is_png = p.lower().endswith(".png")
                 with Image.open(p) as im:
                     w, h = im.size
@@ -430,7 +486,6 @@ def fetch_pinterest_banner(query, slug, category="Gaming"):
 
                     score_val = 0
                     # Anti-AI Filter: Real camera photography is almost exclusively JPEG on Pinterest
-                    # Midjourney/DALL-E digital exports on Pinterest are heavily PNG and 1024x1024
                     if is_png:
                         score_val -= 25
                     if w == 1024 and h == 1024:
@@ -448,17 +503,22 @@ def fetch_pinterest_banner(query, slug, category="Gaming"):
                     # Natural camera aspect ratios suitable for 35% top-weight 16:9 crop
                     aspect = w / h
                     if 1.35 <= aspect <= 1.85:
-                        score_val += 15  # Natural 3:2 or 16:9 camera landscape
+                        score_val += 15
                     elif 0.55 <= aspect <= 0.85:
-                        score_val += 10  # Natural vertical portrait camera photo
+                        score_val += 10
 
                     return score_val
             except Exception:
                 return -999
 
-        best = max(downloaded, key=score)
+        valid_cands = [p for p in downloaded if score(p) > -9000]
+        if valid_cands:
+            best = max(valid_cands, key=score)
+        else:
+            best = max(downloaded, key=score)
+
         normalize_image(best, dest_path)
-        print(f"[✔] Ingested Pinterest banner: {dest_path}")
+        print(f"[✔] Ingested distinct Pinterest banner: {dest_path}")
     else:
         # Fallback to authentic photography
         fallback = os.path.join(ARTICLES_DIR, "xbox-black-friday.jpg")
