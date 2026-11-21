@@ -2,57 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.bugwrite.com/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.bugwrite.com/gaming</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.bugwrite.com/big-tech</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.bugwrite.com/security</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.bugwrite.com/business</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.bugwrite.com/about</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.bugwrite.com/contact</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.bugwrite.com/privacy-policy</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://www.bugwrite.com/terms-of-service</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.bugwrite.com/business/article/qqq-stock-drop-chip-weakness-analysis</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/qqq-stock-drop-chip-weakness-analysis.jpg</image:loc>
+      <image:title>QQQ Drops 6 Percent: What Chip Stock Weakness Means</image:title>
+      <image:caption>A clear view of a large stone sign in the financial district during daylight photography</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.bugwrite.com/business/article/why-are-stocks-down-ai-market-correction</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/why-are-stocks-down-ai-market-correction.jpg</image:loc>
+      <image:title>Why Are Stocks Down Now: AI Sell-Off Hits Markets</image:title>
+      <image:caption>A clear view of a large financial district sign on a sunny day photography</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bugwrite.com/business/article/bitcoin-price-crash-59k-market-selloff</loc>
