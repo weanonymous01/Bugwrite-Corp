@@ -2,57 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.bugwrite.com/</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.bugwrite.com/gaming</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.bugwrite.com/big-tech</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.bugwrite.com/security</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.bugwrite.com/business</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.bugwrite.com/about</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.bugwrite.com/contact</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.bugwrite.com/privacy-policy</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://www.bugwrite.com/terms-of-service</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.bugwrite.com/business/article/nvidia-2027-stock-price-forecast-analysis</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/nvidia-2027-stock-price-forecast-analysis.jpg</image:loc>
+      <image:title>Nvidia 2027 Stock Price Forecast: What Really Matters</image:title>
+      <image:caption>A person working on a laptop at a sunlit coffee shop table photography real photo</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.bugwrite.com/gaming/article/florida-powerball-jackpot-win-november-21</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.bugwrite.com/blog/articles/florida-powerball-jackpot-win-november-21.jpg</image:loc>
+      <image:title>Florida Wins Powerball Jackpot on Nov 21 Drawing</image:title>
+      <image:caption>A person carefully holding a physical lottery ticket outdoors in sunlight photography</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.bugwrite.com/business/article/qqq-stock-drop-chip-weakness-analysis</loc>
