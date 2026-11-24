@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://www.bugwrite.com/business/article/social-security-payments-november-25-eligibility</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Bugwrite</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-24T07:23:43Z</news:publication_date>
+      <news:title>Social Security Payments Arrive Nov 25 For Eligible Recipients</news:title>
+      <news:keywords>social security, payment date, november 25, ssa benefits, retirement income</news:keywords>
+    </news:news>
+  </url>
+  <url>
     <loc>https://www.bugwrite.com/business/article/spacex-funding-ai-tesla-business-update</loc>
     <news:news>
       <news:publication>
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-23T08:33:19Z</news:publication_date>
+      <news:publication_date>2026-11-23T17:07:00Z</news:publication_date>
       <news:title>SpaceX Funding, AI Bets, and Tesla Speculation</news:title>
       <news:keywords>spacex, elon musk, ai data centers, starshield, tesla</news:keywords>
     </news:news>
@@ -19,7 +31,7 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-22T17:07:00Z</news:publication_date>
+      <news:publication_date>2026-11-22T16:14:00Z</news:publication_date>
       <news:title>Nvidia 2027 Stock Price Forecast: What Really Matters</news:title>
       <news:keywords>nvidia, stock price, 2027 forecast, ai, technology stocks</news:keywords>
     </news:news>
@@ -31,33 +43,9 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-22T16:14:00Z</news:publication_date>
+      <news:publication_date>2026-11-22T15:21:00Z</news:publication_date>
       <news:title>Florida Wins Powerball Jackpot on Nov 21 Drawing</news:title>
       <news:keywords>winning powerball numbers, powerball winner, powerball jackpot, powerball jackpot winner november 21</news:keywords>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://www.bugwrite.com/business/article/qqq-stock-drop-chip-weakness-analysis</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Bugwrite</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-21T15:21:00Z</news:publication_date>
-      <news:title>QQQ Drops 6 Percent: What Chip Stock Weakness Means</news:title>
-      <news:keywords>qqq, qqq stock, Nasdaq 100, tech stocks, ETF analysis</news:keywords>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://www.bugwrite.com/business/article/why-are-stocks-down-ai-market-correction</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Bugwrite</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-21T14:28:00Z</news:publication_date>
-      <news:title>Why Are Stocks Down Now: AI Sell-Off Hits Markets</news:title>
-      <news:keywords>stock markets, s&amp;p 500, nasdaq, dow jones, ai stocks</news:keywords>
     </news:news>
   </url>
 </urlset>

@@ -411,10 +411,23 @@
     <section id="recent-section" aria-label="Recently uploaded articles" class="mt-9 pt-8 border-t border-neutral-200/90 dark:border-neutral-800">
       <div class="flex items-center justify-between mb-5">
         <h2 id="recent-heading" class="text-xs font-bold uppercase tracking-[0.08em] text-neutral-500 dark:text-neutral-400">Recently Uploaded</h2>
-        <span id="recent-counter" class="text-xs text-neutral-400 dark:text-neutral-500">8 of 91 stories</span>
+        <span id="recent-counter" class="text-xs text-neutral-400 dark:text-neutral-500">8 of 92 stories</span>
       </div>
 
       <div id="recent-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-8">
+        <article class="flex flex-col group">
+          <a href="/business/article/social-security-payments-november-25-eligibility" onclick="event.preventDefault(); openArticleView('social-security-payments-november-25-eligibility')" class="flex flex-col flex-1">
+            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
+              <img src="/blog/articles/social-security-payments-november-25-eligibility.jpg?v=pin6" alt="A close up of an older person holding a physical social security card outdoors in daylight photography" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+            </div>
+            <h3 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">Social Security Payments Arrive Nov 25 For Eligible Recipients</h3>
+            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
+              <span>Olivia Bennett</span>
+              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
+              <span>Just now</span>
+            </div>
+          </a>
+        </article>
         <article class="flex flex-col group">
           <a href="/business/article/spacex-funding-ai-tesla-business-update" onclick="event.preventDefault(); openArticleView('spacex-funding-ai-tesla-business-update')" class="flex flex-col flex-1">
             <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
@@ -506,24 +519,11 @@
             </div>
           </a>
         </article>
-        <article class="flex flex-col group">
-          <a href="/gaming/article/fox-news-gta-6-criticism-explained" onclick="event.preventDefault(); openArticleView('fox-news-gta-6-criticism-explained')" class="flex flex-col flex-1">
-            <div class="relative w-full overflow-hidden rounded-[6px] bg-neutral-100 dark:bg-neutral-800 aspect-[16/9]">
-              <img src="/blog/articles/fox-news-gta-6-criticism-explained.jpg?v=pin6" alt="Authentic photograph of a player seated before a monitor following video game news" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
-            </div>
-            <h3 class="text-[15px] font-bold text-neutral-900 dark:text-neutral-100 leading-[1.28] tracking-[-0.015em] mt-2.5 mb-1.5 article-headline">Fox News GTA 6 Criticism: What Happened, Rachel Campos-Duffy Lucia Comments, and the Weazel News Irony</h3>
-            <div class="flex items-center text-[12px] text-neutral-500 dark:text-neutral-400 font-normal mt-0.5">
-              <span>Ethan Brooks</span>
-              <span class="mx-1.5 text-neutral-400 dark:text-neutral-600">&bull;</span>
-              <span>5 hours ago</span>
-            </div>
-          </a>
-        </article>
       </div>
 
       <div id="load-more-wrap" class="mt-10 text-center">
         <button id="load-more-btn" type="button" onclick="loadMoreRecent()" class="inline-flex items-center justify-center px-6 py-2.5 text-xs font-semibold uppercase tracking-wider text-neutral-900 dark:text-neutral-100 bg-white dark:bg-[#161a20] border border-neutral-300 dark:border-neutral-700 hover:border-black dark:hover:border-neutral-400 hover:bg-neutral-50 dark:hover:bg-[#1e232b] rounded-md transition-colors cursor-pointer">
-          Load more stories (83 remaining)
+          Load more stories (84 remaining)
         </button>
       </div>
     </section>

@@ -514,18 +514,98 @@ def fetch_pinterest_banner(query, slug, category="Gaming"):
         valid_cands = [p for p in downloaded if score(p) > -9000]
         if valid_cands:
             best = max(valid_cands, key=score)
-        else:
+        elif downloaded:
             best = max(downloaded, key=score)
+        else:
+            best = None
 
-        normalize_image(best, dest_path)
-        print(f"[✔] Ingested distinct Pinterest banner: {dest_path}")
-    else:
-        # Fallback to authentic photography
-        fallback = os.path.join(ARTICLES_DIR, "xbox-black-friday.jpg")
-        shutil.copyfile(fallback, dest_path)
-        print(f"[✔] Used authentic fallback photo: {dest_path}")
+        if best and score(best) > -9000:
+            normalize_image(best, dest_path)
+            print(f"[✔] Ingested distinct Pinterest banner: {dest_path}")
+            return f"/blog/articles/{slug}.jpg"
+
+    # Secondary Real-World Engine: Wikimedia Commons API (Public Domain authentic camera photos)
+    print(f"[Wikimedia] Searching Wikimedia Commons camera photography for: '{clean_query}'...")
+    wm_success = fetch_wikimedia_photo(clean_query, dest_path, existing_hashes)
+    if wm_success:
+        return f"/blog/articles/{slug}.jpg"
+
+    # Category-Specific Non-Duplicate Fallback
+    cat_fallbacks = {
+        "Gaming": ["gta-6-gameplay-features-details.jpg", "best-ps5-games-2026.jpg", "xbox-game-pass-november-2026-wave-2.jpg"],
+        "Big Tech": ["what-are-ai-chips-why-companies-fight.jpg", "why-ai-data-centers-consume-electricity.jpg", "best-ai-coding-tools-2026.jpg"],
+        "Business": ["nvidia-2027-stock-price-forecast-analysis.jpg", "why-are-stocks-down-ai-market-correction.jpg", "bitcoin-price-crash-59k-market-selloff.jpg"],
+        "Security": ["java4shell-cve-2026-114938.jpg", "how-hackers-exploit-unpatched-software.jpg", "what-is-a-zero-day-vulnerability.jpg"]
+    }
+    pool = cat_fallbacks.get(category, ["gta-6-gameplay-features-details.jpg"])
+    chosen_fallback = pool[0]
+    for cand in pool:
+        cand_p = os.path.join(ARTICLES_DIR, cand)
+        if os.path.exists(cand_p):
+            chosen_fallback = cand
+            break
+    fallback_path = os.path.join(ARTICLES_DIR, chosen_fallback)
+    shutil.copyfile(fallback_path, dest_path)
+    print(f"[✔] Assigned authentic category photo: {dest_path}")
 
     return f"/blog/articles/{slug}.jpg"
+
+
+def fetch_wikimedia_photo(query, dest_path, existing_hashes):
+    """Searches Wikimedia Commons for authentic, high-res real-life camera photography."""
+    import urllib.request
+    import urllib.parse
+    import json
+
+    # Clean query terms
+    terms = [w for w in query.replace("real photo", "").replace("photography", "").split() if len(w) > 2]
+    search_term = " ".join(terms[:4]) if terms else query
+
+    api_url = (
+        "https://commons.wikimedia.org/w/api.php?action=query&generator=search"
+        f"&gsrsearch={urllib.parse.quote(search_term)}&gsrnamespace=6&gsrlimit=10"
+        "&prop=imageinfo&iiprop=url|size|mime&format=json"
+    )
+    headers = {"User-Agent": "BugwriteEditorialBot/1.0 (https://www.bugwrite.com; editorial@bugwrite.com)"}
+    try:
+        req = urllib.request.Request(api_url, headers=headers)
+        with urllib.request.urlopen(req, timeout=12) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+        pages = data.get("query", {}).get("pages", {})
+        candidates = []
+        for pid, pinfo in pages.items():
+            ii = pinfo.get("imageinfo", [{}])[0]
+            mime = ii.get("mime", "").lower()
+            width = ii.get("width", 0)
+            height = ii.get("height", 0)
+            url = ii.get("url", "")
+            if ("jpeg" in mime or "jpg" in mime) and width >= 800 and height >= 500:
+                candidates.append((width * height, url))
+
+        if candidates:
+            candidates.sort(key=lambda x: x[0], reverse=True)
+            for _, img_url in candidates:
+                try:
+                    img_req = urllib.request.Request(img_url, headers=headers)
+                    with urllib.request.urlopen(img_req, timeout=15) as img_resp:
+                        img_data = img_resp.read()
+                    cand_hash = hashlib.md5(img_data).hexdigest()
+                    if cand_hash in existing_hashes:
+                        continue
+
+                    temp_wm = dest_path + ".temp.jpg"
+                    with open(temp_wm, "wb") as f:
+                        f.write(img_data)
+                    normalize_image(temp_wm, dest_path)
+                    if os.path.exists(temp_wm):
+                        os.remove(temp_wm)
+                    print(f"[✔] Downloaded authentic Wikimedia Commons camera photo: {dest_path}")
+                    return True
+                except Exception:
+                    continue
+    except Exception as e:
+        print(f"[!] Wikimedia search notice: {e}")
+    return False
 
 
 def save_article_to_catalog(art_data, category):

@@ -6,17 +6,26 @@
     <atom:link href="https://www.bugwrite.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>Independent technology, gaming, cybersecurity, and AI business journalism from Bugwrite.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Nov 2026 08:48:19 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 07:38:43 GMT</lastBuildDate>
     <image>
       <url>https://www.bugwrite.com/blog/bugwrite-logo.png</url>
       <title>Bugwrite</title>
       <link>https://www.bugwrite.com/</link>
     </image>
     <item>
+      <title>Social Security Payments Arrive Nov 25 For Eligible Recipients</title>
+      <link>https://www.bugwrite.com/business/article/social-security-payments-november-25-eligibility</link>
+      <guid isPermaLink="true">https://www.bugwrite.com/business/article/social-security-payments-november-25-eligibility</guid>
+      <pubDate>Tue, 24 Nov 2026 07:23:43 GMT</pubDate>
+      <category>Business</category>
+      <description>Find out exactly who receives Social Security on November 25, understand the payment schedule, and learn how to check your status directly with the SSA.</description>
+      <media:content url="https://www.bugwrite.com/blog/articles/social-security-payments-november-25-eligibility.jpg" medium="image" width="1280" height="720" />
+    </item>
+    <item>
       <title>SpaceX Funding, AI Bets, and Tesla Speculation</title>
       <link>https://www.bugwrite.com/business/article/spacex-funding-ai-tesla-business-update</link>
       <guid isPermaLink="true">https://www.bugwrite.com/business/article/spacex-funding-ai-tesla-business-update</guid>
-      <pubDate>Mon, 23 Nov 2026 08:33:19 GMT</pubDate>
+      <pubDate>Mon, 23 Nov 2026 17:07:00 GMT</pubDate>
       <category>Business</category>
       <description>Explore SpaceX&#x27;s funding risks from political scrutiny, $74B AI bets, and potential Tesla acquisition rumors affecting investors.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/spacex-funding-ai-tesla-business-update.jpg" medium="image" width="1280" height="720" />
@@ -25,7 +34,7 @@
       <title>Nvidia 2027 Stock Price Forecast: What Really Matters</title>
       <link>https://www.bugwrite.com/business/article/nvidia-2027-stock-price-forecast-analysis</link>
       <guid isPermaLink="true">https://www.bugwrite.com/business/article/nvidia-2027-stock-price-forecast-analysis</guid>
-      <pubDate>Sun, 22 Nov 2026 17:07:00 GMT</pubDate>
+      <pubDate>Sun, 22 Nov 2026 16:14:00 GMT</pubDate>
       <category>Business</category>
       <description>Understand the real factors behind Nvidia&#x27;s 2027 stock price forecasts, balancing analyst optimism with technical caution.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/nvidia-2027-stock-price-forecast-analysis.jpg" medium="image" width="1280" height="720" />
@@ -34,7 +43,7 @@
       <title>Florida Wins Powerball Jackpot on Nov 21 Drawing</title>
       <link>https://www.bugwrite.com/gaming/article/florida-powerball-jackpot-win-november-21</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/florida-powerball-jackpot-win-november-21</guid>
-      <pubDate>Sun, 22 Nov 2026 16:14:00 GMT</pubDate>
+      <pubDate>Sun, 22 Nov 2026 15:21:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Find out the confirmed Powerball winning numbers for November 21 and learn about the Florida jackpot winner&#x27;s situation.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/florida-powerball-jackpot-win-november-21.jpg" medium="image" width="1280" height="720" />
@@ -43,7 +52,7 @@
       <title>QQQ Drops 6 Percent: What Chip Stock Weakness Means</title>
       <link>https://www.bugwrite.com/business/article/qqq-stock-drop-chip-weakness-analysis</link>
       <guid isPermaLink="true">https://www.bugwrite.com/business/article/qqq-stock-drop-chip-weakness-analysis</guid>
-      <pubDate>Sat, 21 Nov 2026 15:21:00 GMT</pubDate>
+      <pubDate>Sat, 21 Nov 2026 14:28:00 GMT</pubDate>
       <category>Business</category>
       <description>Understand why QQQ is sliding, how chip stock performance affects the ETF, and what investors should watch next for 2030 outlooks.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/qqq-stock-drop-chip-weakness-analysis.jpg" medium="image" width="1280" height="720" />
@@ -52,7 +61,7 @@
       <title>Why Are Stocks Down Now: AI Sell-Off Hits Markets</title>
       <link>https://www.bugwrite.com/business/article/why-are-stocks-down-ai-market-correction</link>
       <guid isPermaLink="true">https://www.bugwrite.com/business/article/why-are-stocks-down-ai-market-correction</guid>
-      <pubDate>Sat, 21 Nov 2026 14:28:00 GMT</pubDate>
+      <pubDate>Sat, 21 Nov 2026 13:35:00 GMT</pubDate>
       <category>Business</category>
       <description>Stocks are down because the intense AI boom is facing a sharp correction, causing major tech names to slide and erasing yearly gains on the Nasdaq.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/why-are-stocks-down-ai-market-correction.jpg" medium="image" width="1280" height="720" />
@@ -61,7 +70,7 @@
       <title>Bitcoin Price Drops to $59K Amid Tech Selloff</title>
       <link>https://www.bugwrite.com/business/article/bitcoin-price-crash-59k-market-selloff</link>
       <guid isPermaLink="true">https://www.bugwrite.com/business/article/bitcoin-price-crash-59k-market-selloff</guid>
-      <pubDate>Fri, 20 Nov 2026 13:35:00 GMT</pubDate>
+      <pubDate>Fri, 20 Nov 2026 12:42:00 GMT</pubDate>
       <category>Business</category>
       <description>Understand the recent Bitcoin price crash to $59,000, why it&#x27;s sinking with stocks, and what investors should consider moving forward.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/bitcoin-price-crash-59k-market-selloff.jpg" medium="image" width="1280" height="720" />
@@ -70,7 +79,7 @@
       <title>Why Is Gold Price Falling Now? Rate Hikes and Dollar Strength</title>
       <link>https://www.bugwrite.com/business/article/gold-price-falling-rate-hikes-dollar-strength</link>
       <guid isPermaLink="true">https://www.bugwrite.com/business/article/gold-price-falling-rate-hikes-dollar-strength</guid>
-      <pubDate>Fri, 20 Nov 2026 12:42:00 GMT</pubDate>
+      <pubDate>Fri, 20 Nov 2026 11:49:00 GMT</pubDate>
       <category>Business</category>
       <description>Find out why gold prices are dropping in late 2026, focusing on Fed rate hike fears, dollar strength, and market reactions for American investors.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gold-price-falling-rate-hikes-dollar-strength.jpg" medium="image" width="1280" height="720" />
@@ -79,7 +88,7 @@
       <title>Fox News GTA 6 Criticism: What Happened, Rachel Campos-Duffy Lucia Comments, and the Weazel News Irony</title>
       <link>https://www.bugwrite.com/gaming/article/fox-news-gta-6-criticism-explained</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/fox-news-gta-6-criticism-explained</guid>
-      <pubDate>Fri, 20 Nov 2026 11:49:00 GMT</pubDate>
+      <pubDate>Fri, 20 Nov 2026 10:56:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Why is Fox News facing massive criticism over GTA 6? Full breakdown of Rachel Campos-Duffy&#x27;s on-air Lucia comments, adult gamer insults, and Weazel News irony.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/fox-news-gta-6-criticism-explained.jpg" medium="image" width="1280" height="720" />
@@ -88,7 +97,7 @@
       <title>Xbox Series S Explained: Specs, Storage, and Buying Tips</title>
       <link>https://www.bugwrite.com/gaming/article/microsoft-xbox-series-s-guide</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/microsoft-xbox-series-s-guide</guid>
-      <pubDate>Fri, 20 Nov 2026 10:56:00 GMT</pubDate>
+      <pubDate>Fri, 20 Nov 2026 09:03:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Learn exactly what the Microsoft Xbox Series S is, its storage options like 512GB and 1TB, and how to find good refurbished deals for less.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/microsoft-xbox-series-s-guide.jpg" medium="image" width="1280" height="720" />
@@ -97,7 +106,7 @@
       <title>Lexie Shoaibi in GTA 6: Who is Mandy, house location, viral scene, and actress details</title>
       <link>https://www.bugwrite.com/gaming/article/lexie-shoaibi-mandy-gta-6-actress-house-location-scene</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/lexie-shoaibi-mandy-gta-6-actress-house-location-scene</guid>
-      <pubDate>Fri, 20 Nov 2026 09:03:00 GMT</pubDate>
+      <pubDate>Fri, 20 Nov 2026 08:10:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Who is Mandy in GTA 6? Where is Mandy&#x27;s house? Who is actress Lexie Shoaibi? Direct answers to the viral Mandy scene, house location, and actress identity.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta6-mandy-lexie-shoaibi.jpg" medium="image" width="1280" height="720" />
@@ -106,7 +115,7 @@
       <title>GTA 6 launch guide: Has anyone finished it, how much it made, GTA flu, and Online release date</title>
       <link>https://www.bugwrite.com/gaming/article/has-anyone-finished-gta-6-how-much-made-gta-flu-online</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/has-anyone-finished-gta-6-how-much-made-gta-flu-online</guid>
-      <pubDate>Fri, 20 Nov 2026 08:10:00 GMT</pubDate>
+      <pubDate>Fri, 20 Nov 2026 07:17:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Has anyone finished GTA 6? How much has it made? What is the GTA Flu? Get direct answers on day-one records, story length, and GTA 6 Online launch date.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta6-launch-records.jpg" medium="image" width="1280" height="720" />
@@ -115,7 +124,7 @@
       <title>Is Niko Bellic in GTA 6? Jimmy De Santa, Jason age, Lucia actress, and full cast answers</title>
       <link>https://www.bugwrite.com/gaming/article/is-niko-bellic-in-gta-6-easter-eggs</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/is-niko-bellic-in-gta-6-easter-eggs</guid>
-      <pubDate>Fri, 20 Nov 2026 07:17:00 GMT</pubDate>
+      <pubDate>Fri, 20 Nov 2026 18:24:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Is Niko Bellic in GTA 6? Discover answers on Niko Bellic, Jimmy De Santa cameos, how old Jason is, who plays Lucia, and the full GTA 6 voice cast.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta6-niko-bellic.jpg" medium="image" width="1280" height="720" />
@@ -124,7 +133,7 @@
       <title>GTA 6 endings: How many endings does it have, how it ends, and good ending guide</title>
       <link>https://www.bugwrite.com/gaming/article/gta-6-endings-how-many-choices-explained</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/gta-6-endings-how-many-choices-explained</guid>
-      <pubDate>Fri, 20 Nov 2026 18:24:00 GMT</pubDate>
+      <pubDate>Fri, 20 Nov 2026 17:31:00 GMT</pubDate>
       <category>Gaming</category>
       <description>How many endings does GTA 6 have? How does GTA 6 end? What happens at the end? Full guide to the good ending, story finale, and ending choices.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta6-endings.jpg" medium="image" width="1280" height="720" />
@@ -133,7 +142,7 @@
       <title>GTA 6 Chapter 1 missions list: Full prologue walkthrough and early unlocks in Vice City</title>
       <link>https://www.bugwrite.com/gaming/article/gta-6-chapter-1-missions-list-walkthrough</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/gta-6-chapter-1-missions-list-walkthrough</guid>
-      <pubDate>Fri, 20 Nov 2026 17:31:00 GMT</pubDate>
+      <pubDate>Fri, 20 Nov 2026 16:38:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Complete GTA 6 Chapter 1 mission list and walkthrough order. Learn all prologue quest objectives, unlock requirements, and cash payouts in Vice City.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta6-chapter-1.jpg" medium="image" width="1280" height="720" />
@@ -142,7 +151,7 @@
       <title>Brooks Boatworks safe code in GTA 6: Location, combination solution, and reward</title>
       <link>https://www.bugwrite.com/gaming/article/brooks-boatworks-safe-code-gta-6</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/brooks-boatworks-safe-code-gta-6</guid>
-      <pubDate>Fri, 20 Nov 2026 16:38:00 GMT</pubDate>
+      <pubDate>Fri, 20 Nov 2026 15:45:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Need the Brooks Boatworks safe code in GTA 6? Here is the exact safe location in Port Gellhorn, the desk note combination solution, and safe rewards.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta6-safe-code.jpg" medium="image" width="1280" height="720" />
@@ -151,7 +160,7 @@
       <title>Who is Donnie in GTA 6? Early heist role, getaway connection, and mission choices</title>
       <link>https://www.bugwrite.com/gaming/article/donnie-gta-6-character-role-walkthrough</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/donnie-gta-6-character-role-walkthrough</guid>
-      <pubDate>Fri, 20 Nov 2026 15:45:00 GMT</pubDate>
+      <pubDate>Fri, 20 Nov 2026 14:52:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Who is Donnie in GTA 6? Learn about the early campaign getaway driver, his role in Chapter 1 robberies, and how his decisions impact your crew.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta6-donnie.jpg" medium="image" width="1280" height="720" />
@@ -160,7 +169,7 @@
       <title>Apple confirms internal software update triggered widespread iCloud, Apple Pay, and App Store outage</title>
       <link>https://www.bugwrite.com/big-tech/article/apple-outage</link>
       <guid isPermaLink="true">https://www.bugwrite.com/big-tech/article/apple-outage</guid>
-      <pubDate>Wed, 18 Nov 2026 14:52:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 13:59:00 GMT</pubDate>
       <category>Big Tech</category>
       <description>Apple confirmed an internal software update caused widespread outages across iCloud, Apple Pay, the App Store, and Apple Music, ruling out any cyberattack.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/apple-outage.jpg" medium="image" width="1280" height="720" />
@@ -169,7 +178,7 @@
       <title>FBI issues urgent warning over ARTEX, an AI framework turning novice hackers into machine-speed intruders</title>
       <link>https://www.bugwrite.com/security/article/artex-ai-cyber-framework</link>
       <guid isPermaLink="true">https://www.bugwrite.com/security/article/artex-ai-cyber-framework</guid>
-      <pubDate>Wed, 18 Nov 2026 13:59:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 12:06:00 GMT</pubDate>
       <category>Cybersecurity</category>
       <description>The FBI warns organizations about ARTEX, an LLM-driven autonomous cyber framework capable of escalating network intrusions to domain-level access in under three hours.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/artex.jpg" medium="image" width="1280" height="720" />
@@ -178,7 +187,7 @@
       <title>Java4Shell: Red Hat urges immediate patching for critical OpenJDK remote code execution flaw</title>
       <link>https://www.bugwrite.com/security/article/java4shell-cve-2026-114938</link>
       <guid isPermaLink="true">https://www.bugwrite.com/security/article/java4shell-cve-2026-114938</guid>
-      <pubDate>Wed, 18 Nov 2026 12:06:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 11:13:00 GMT</pubDate>
       <category>Security</category>
       <description>Red Hat disclosed CVE-2026-114938, known as Java4Shell, a critical OpenJDK Base64 heap buffer overflow vulnerability affecting x86-64 AVX-512 servers.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/java4shell-cve-2026-114938.jpg" medium="image" width="1280" height="720" />
@@ -187,7 +196,7 @@
       <title>Nvidia&#x27;s first board chair Harvey Jones rules out Jensen Huang&#x27;s return as CEO</title>
       <link>https://www.bugwrite.com/business/article/harvey-jones-nvidia-chair</link>
       <guid isPermaLink="true">https://www.bugwrite.com/business/article/harvey-jones-nvidia-chair</guid>
-      <pubDate>Wed, 18 Nov 2026 11:13:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 10:20:00 GMT</pubDate>
       <category>Business</category>
       <description>Nvidia&#x27;s newly appointed board chair Harvey Jones confirmed during Q3 earnings that the board will not reinstate co-founder Jensen Huang as CEO.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/harvey-jones-nvidia-chair.jpg" medium="image" width="1280" height="720" />
@@ -196,7 +205,7 @@
       <title>Players already have the Ocarina of Time Switch 2 remake running natively on PC</title>
       <link>https://www.bugwrite.com/gaming/article/ocarina-of-time-remake-pc-port</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/ocarina-of-time-remake-pc-port</guid>
-      <pubDate>Wed, 18 Nov 2026 10:20:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 09:27:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Less than two weeks after launch, modding developers are running Nintendo&#x27;s Switch 2 Ocarina of Time remake natively on Windows PCs via static recompilation.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/ocarina-pc-port.jpg" medium="image" width="1280" height="720" />
@@ -205,7 +214,7 @@
       <title>When is GTA 6 playable? Global unlock schedule, preload size, and midnight rollout details</title>
       <link>https://www.bugwrite.com/gaming/article/when-is-gta-6-playable-release-times</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/when-is-gta-6-playable-release-times</guid>
-      <pubDate>Wed, 18 Nov 2026 09:27:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 08:34:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Grand Theft Auto VI unlocks Thursday, November 19, 2026 on PS5 and Xbox Series X|S via a rolling midnight local-time rollout. Check preload size and launch timing.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta6-release-time.jpg" medium="image" width="1280" height="720" />
@@ -214,7 +223,7 @@
       <title>The New Zealand GTA 6 trick explained: How Xbox and PS5 players try to unlock early and the risks involved</title>
       <link>https://www.bugwrite.com/gaming/article/new-zealand-gta-6-trick</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/new-zealand-gta-6-trick</guid>
-      <pubDate>Wed, 18 Nov 2026 08:34:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 07:41:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Because GTA 6 uses a rolling midnight launch on November 19, players are eyeing the New Zealand region trick on Xbox and PS5. Here is how it works and the TOS risks.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta6-new-zealand.jpg" medium="image" width="1280" height="720" />
@@ -223,7 +232,7 @@
       <title>GTA 6 Metacritic watch: When the review embargo lifts and the historic bar Rockstar is chasing</title>
       <link>https://www.bugwrite.com/gaming/article/gta-6-metacritic-score-review-embargo</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/gta-6-metacritic-score-review-embargo</guid>
-      <pubDate>Wed, 18 Nov 2026 07:41:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 18:48:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Reports point to the GTA 6 review embargo lifting November 18, 2026 ahead of launch as Metacritic expectations hover near Rockstar&#x27;s historic 97 and 98 scores.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta6-metacritic.jpg" medium="image" width="1280" height="720" />
@@ -232,7 +241,7 @@
       <title>How long is GTA 6 story mode? Campaign hours, chapter structure, and 100 percent completion estimates</title>
       <link>https://www.bugwrite.com/gaming/article/how-long-is-gta-6-story-mode</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/how-long-is-gta-6-story-mode</guid>
-      <pubDate>Wed, 18 Nov 2026 18:48:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 17:55:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Grand Theft Auto VI&#x27;s focused main story runs around 50 hours across five chapters, expanding to 80 hours with side stories and roughly 200 hours for 100% completion.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta6-story-length.jpg" medium="image" width="1280" height="720" />
@@ -241,7 +250,7 @@
       <title>New GTA 6 screenshots show off Vice City nightlife and torrential Leonida storms ahead of launch</title>
       <link>https://www.bugwrite.com/gaming/article/gta-6-screenshots-gallery-weather</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/gta-6-screenshots-gallery-weather</guid>
-      <pubDate>Wed, 18 Nov 2026 17:55:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 16:02:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Rockstar Games rolled out 39 official 4K GTA 6 screenshots in its Launch Gallery and partnered with The Weather Channel to reveal dynamic storms over Vice City.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta6-screenshots.jpg" medium="image" width="1280" height="720" />
@@ -250,7 +259,7 @@
       <title>The Game Awards 2026 nominees: GTA 6 leads with 8 nods alongside Ocarina of Time and Resident Evil Requiem</title>
       <link>https://www.bugwrite.com/gaming/article/the-game-awards-2026-nominees</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/the-game-awards-2026-nominees</guid>
-      <pubDate>Wed, 18 Nov 2026 16:02:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 15:09:00 GMT</pubDate>
       <category>Gaming</category>
       <description>The Game Awards 2026 nominees were announced November 17, led by Grand Theft Auto VI with 8 nominations ahead of the December 10 ceremony in Los Angeles.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/game-awards-2026.jpg" medium="image" width="1280" height="720" />
@@ -259,7 +268,7 @@
       <title>Mega Millions drawing November 17, 2026: Winning numbers and why the jackpot climbed to $629 million</title>
       <link>https://www.bugwrite.com/business/article/mega-millions-drawing-november-17-2026</link>
       <guid isPermaLink="true">https://www.bugwrite.com/business/article/mega-millions-drawing-november-17-2026</guid>
-      <pubDate>Wed, 18 Nov 2026 15:09:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 14:16:00 GMT</pubDate>
       <category>Business</category>
       <description>Check the Mega Millions winning numbers for Tuesday, November 17, 2026 (03, 10, 19, 28, 33 and Mega Ball 21) as the rollover pushes Friday&#x27;s jackpot to $629 million.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/mega-millions-drawing-november-17-2026.jpg" medium="image" width="1280" height="720" />
@@ -268,7 +277,7 @@
       <title>FBI warning today: Automated AI intrusions and deepfake video scams put companies on high alert</title>
       <link>https://www.bugwrite.com/security/article/fbi-warning-today-facestealer-artex</link>
       <guid isPermaLink="true">https://www.bugwrite.com/security/article/fbi-warning-today-facestealer-artex</guid>
-      <pubDate>Wed, 18 Nov 2026 14:16:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 13:23:00 GMT</pubDate>
       <category>Security</category>
       <description>Federal officials issued urgent mid-November cyber warnings covering the $400 million FaceStealer deepfake video scam and the automated ARTEX hacking framework.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/fbi-warning-today-facestealer-artex.jpg" medium="image" width="1280" height="720" />
@@ -277,7 +286,7 @@
       <title>Xbox Black Friday Sale 2026 starts November 19 with up to 80 percent off over 2,000 games</title>
       <link>https://www.bugwrite.com/gaming/article/xbox-black-friday-sale-2026</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/xbox-black-friday-sale-2026</guid>
-      <pubDate>Wed, 18 Nov 2026 13:23:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 12:30:00 GMT</pubDate>
       <category>Deals</category>
       <description>Microsoft&#x27;s Xbox Black Friday Sale 2026 launches November 19 at 9 PM PST with up to 80% off over 2,000 Xbox and PC titles, Design Lab discounts, and TV bundles.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/xbox-black-friday.jpg" medium="image" width="1280" height="720" />
@@ -286,7 +295,7 @@
       <title>PlayStation Plus November 2026 lineup adds Death Stranding 2, Atomfall, and Dragon Quest III HD-2D</title>
       <link>https://www.bugwrite.com/gaming/article/playstation-plus-november-2026</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/playstation-plus-november-2026</guid>
-      <pubDate>Wed, 18 Nov 2026 12:30:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 11:37:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Sony&#x27;s November 2026 PlayStation Plus Extra and Premium Game Catalog adds Death Stranding 2: On the Beach, Like a Dragon: Pirate Yakuza in Hawaii, Atomfall, and more.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/playstation-plus.jpg" medium="image" width="1280" height="720" />
@@ -295,7 +304,7 @@
       <title>Salesforce unveils Microsoft Copilotforce partnership amid fresh job cuts and internal AI budgets</title>
       <link>https://www.bugwrite.com/business/article/salesforce-copilotforce-layoffs-november-2026</link>
       <guid isPermaLink="true">https://www.bugwrite.com/business/article/salesforce-copilotforce-layoffs-november-2026</guid>
-      <pubDate>Wed, 18 Nov 2026 11:37:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 10:44:00 GMT</pubDate>
       <category>Enterprise</category>
       <description>Salesforce and Microsoft announced Copilotforce with Zero Copy Data 360 integration as reports reveal fresh layoffs, employee AI token caps, and Q3 earnings prep.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/salesforce-copilotforce-layoffs-november-2026.jpg" medium="image" width="1280" height="720" />
@@ -304,7 +313,7 @@
       <title>Xbox Game Pass late November lineup brings The Outlast Trials, Hela, and Arkheron</title>
       <link>https://www.bugwrite.com/gaming/article/xbox-game-pass-november-2026-wave-2</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/xbox-game-pass-november-2026-wave-2</guid>
-      <pubDate>Tue, 17 Nov 2026 10:44:00 GMT</pubDate>
+      <pubDate>Tue, 17 Nov 2026 09:51:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Microsoft announced its late-November Xbox Game Pass Wave 2 lineup, led by The Outlast Trials on December 1 alongside Hela: of Mice &amp; Magic and Arkheron.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/xbox-game-pass.jpg" medium="image" width="1280" height="720" />
@@ -313,7 +322,7 @@
       <title>Is Gmail down? Why Google Workspace stayed green during a sudden surge in outage reports</title>
       <link>https://www.bugwrite.com/big-tech/article/gmail-outage-rumors-apple-disruption</link>
       <guid isPermaLink="true">https://www.bugwrite.com/big-tech/article/gmail-outage-rumors-apple-disruption</guid>
-      <pubDate>Tue, 17 Nov 2026 09:51:00 GMT</pubDate>
+      <pubDate>Tue, 17 Nov 2026 08:58:00 GMT</pubDate>
       <category>Tech News</category>
       <description>Over 2,800 users reported Gmail issues on November 17, 2026, but Google confirmed no broad outage occurred as Apple sign-in errors fueled confusion.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gmail-outage-rumors-apple-disruption.jpg" medium="image" width="1280" height="720" />
@@ -322,7 +331,7 @@
       <title>Amazon down reports spike as shoppers face checkout glitches after US-EAST-1 cloud hiccup</title>
       <link>https://www.bugwrite.com/big-tech/article/amazon-down-aws-us-east-1-friction</link>
       <guid isPermaLink="true">https://www.bugwrite.com/big-tech/article/amazon-down-aws-us-east-1-friction</guid>
-      <pubDate>Tue, 17 Nov 2026 08:58:00 GMT</pubDate>
+      <pubDate>Tue, 17 Nov 2026 07:05:00 GMT</pubDate>
       <category>Cloud</category>
       <description>Localized Amazon app and checkout complaint spikes followed a November 15 AWS US-EAST-1 incident affecting 11 services, though no broad outage is active.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/amazon-down-aws-us-east-1-friction.jpg" medium="image" width="1280" height="720" />
@@ -331,7 +340,7 @@
       <title>Meta hit with $887 million fine in Italy over Facebook Android photo access as secondary profiles wind down</title>
       <link>https://www.bugwrite.com/big-tech/article/facebook-italy-privacy-fine-multiple-profiles</link>
       <guid isPermaLink="true">https://www.bugwrite.com/big-tech/article/facebook-italy-privacy-fine-multiple-profiles</guid>
-      <pubDate>Tue, 17 Nov 2026 07:05:00 GMT</pubDate>
+      <pubDate>Tue, 17 Nov 2026 18:12:00 GMT</pubDate>
       <category>Social Media</category>
       <description>Italy&#x27;s Garante fined Meta 805 million euros ($887M) over Facebook Android gallery access, while Meta prepares to delete supplemental Facebook profiles on December 14, 2026.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/facebook-italy-privacy-fine-multiple-profiles.jpg" medium="image" width="1280" height="720" />
@@ -340,7 +349,7 @@
       <title>Nvidia Earnings 2026: Revenue, AI Demand and What Investors Need to Know</title>
       <link>https://www.bugwrite.com/business/article/nvidia-q3-fy27-earnings-115-billion</link>
       <guid isPermaLink="true">https://www.bugwrite.com/business/article/nvidia-q3-fy27-earnings-115-billion</guid>
-      <pubDate>Tue, 17 Nov 2026 18:12:00 GMT</pubDate>
+      <pubDate>Tue, 17 Nov 2026 17:19:00 GMT</pubDate>
       <category>Business</category>
       <description>Nvidia reported $115.8 billion in Q3 FY2027 revenue and $130 billion Q4 guidance in its first earnings under interim CEO Colette Kress.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/nvidia-q3-fy27-earnings-115-billion.jpg" medium="image" width="1280" height="720" />
@@ -349,7 +358,7 @@
       <title>Microsoft Outlook Down: Why Outlook, Teams and Copilot Stopped Working</title>
       <link>https://www.bugwrite.com/big-tech/article/microsoft-outlook-teams-copilot-outage</link>
       <guid isPermaLink="true">https://www.bugwrite.com/big-tech/article/microsoft-outlook-teams-copilot-outage</guid>
-      <pubDate>Tue, 17 Nov 2026 17:19:00 GMT</pubDate>
+      <pubDate>Tue, 17 Nov 2026 16:26:00 GMT</pubDate>
       <category>Big Tech</category>
       <description>A global Microsoft 365 outage between November 12 and 14, 2026 disrupted Outlook, Teams, SharePoint, and Copilot after server-side health checks cascaded offline.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/microsoft-outlook-teams-copilot-outage.jpg" medium="image" width="1280" height="720" />
@@ -358,7 +367,7 @@
       <title>GTA 6: All Eight Game Awards 2026 Nominations Explained</title>
       <link>https://www.bugwrite.com/gaming/article/gta-6-eight-game-awards-nominations</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/gta-6-eight-game-awards-nominations</guid>
-      <pubDate>Tue, 17 Nov 2026 16:26:00 GMT</pubDate>
+      <pubDate>Tue, 17 Nov 2026 15:33:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Grand Theft Auto 6 leads The Game Awards 2026 with eight nominations, including Game of the Year and Best Performance for Manni L. Perez. Here is the full breakdown.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta-6-eight-game-awards-nominations.jpg" medium="image" width="1280" height="720" />
@@ -367,7 +376,7 @@
       <title>Anthropic IPO: What Investors Should Know About the Company&#x27;s Public Listing Plans</title>
       <link>https://www.bugwrite.com/business/article/anthropic-ipo-nasdaq-ant-2026</link>
       <guid isPermaLink="true">https://www.bugwrite.com/business/article/anthropic-ipo-nasdaq-ant-2026</guid>
-      <pubDate>Wed, 18 Nov 2026 15:33:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 14:40:00 GMT</pubDate>
       <category>Business</category>
       <description>Anthropic prepares to price its Nasdaq IPO under ticker ANT at $70 to $78 per share, pairing $17B quarterly revenue with $900.9B in compute commitments.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/anthropic-ipo-nasdaq-ant-2026.jpg" medium="image" width="1280" height="720" />
@@ -376,7 +385,7 @@
       <title>Why Are So Many Websites and Online Services Experiencing Outages?</title>
       <link>https://www.bugwrite.com/big-tech/article/why-so-many-internet-outages-2026</link>
       <guid isPermaLink="true">https://www.bugwrite.com/big-tech/article/why-so-many-internet-outages-2026</guid>
-      <pubDate>Tue, 17 Nov 2026 14:40:00 GMT</pubDate>
+      <pubDate>Tue, 17 Nov 2026 13:47:00 GMT</pubDate>
       <category>Big Tech</category>
       <description>From the November 2026 Microsoft 365 disruption to cascading CDN and DNS glitches, modern internet outages stem from tight cloud consolidation and automated rollouts.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/why-so-many-internet-outages-2026.jpg" medium="image" width="1280" height="720" />
@@ -385,7 +394,7 @@
       <title>GTA 6 PC Release Date: Will It Come to Windows?</title>
       <link>https://www.bugwrite.com/gaming/article/gta-6-pc-release-date-windows</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/gta-6-pc-release-date-windows</guid>
-      <pubDate>Wed, 18 Nov 2026 13:47:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 12:54:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Grand Theft Auto 6 launches November 19, 2026 on PS5 and Xbox Series X|S with no PC release date announced. Here is what Rockstar&#x27;s past launches tell us about Windows.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta-6-pc-release-date-windows.jpg" medium="image" width="1280" height="720" />
@@ -394,7 +403,7 @@
       <title>Why Amazon and Google Are Increasing Their Investment in AI</title>
       <link>https://www.bugwrite.com/business/article/amazon-google-ai-investment-2026</link>
       <guid isPermaLink="true">https://www.bugwrite.com/business/article/amazon-google-ai-investment-2026</guid>
-      <pubDate>Tue, 17 Nov 2026 12:54:00 GMT</pubDate>
+      <pubDate>Tue, 17 Nov 2026 11:01:00 GMT</pubDate>
       <category>Business</category>
       <description>Amazon and Google are accelerating spending on custom chips, cloud data centers, and strategic AI equity stakes to defend core businesses and win enterprise workloads.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/amazon-google-ai-investment-2026.jpg" medium="image" width="1280" height="720" />
@@ -403,7 +412,7 @@
       <title>Can AI Find Software Vulnerabilities Faster Than Human Hackers?</title>
       <link>https://www.bugwrite.com/security/article/ai-finding-software-vulnerabilities-faster</link>
       <guid isPermaLink="true">https://www.bugwrite.com/security/article/ai-finding-software-vulnerabilities-faster</guid>
-      <pubDate>Tue, 17 Nov 2026 11:01:00 GMT</pubDate>
+      <pubDate>Tue, 17 Nov 2026 10:08:00 GMT</pubDate>
       <category>Security</category>
       <description>Specialized AI models like OpenAI&#x27;s GPT-6 Cyber are uncovering dozens of real operating system bugs at machine speed, reshaping vulnerability research.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/ai-finding-software-vulnerabilities-faster.jpg" medium="image" width="1280" height="720" />
@@ -412,7 +421,7 @@
       <title>GTA 6 Standard vs Ultimate Edition: Which Version Should You Choose?</title>
       <link>https://www.bugwrite.com/gaming/article/gta-6-standard-vs-ultimate-edition</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/gta-6-standard-vs-ultimate-edition</guid>
-      <pubDate>Wed, 18 Nov 2026 10:08:00 GMT</pubDate>
+      <pubDate>Wed, 18 Nov 2026 09:15:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Compare GTA 6 Standard Edition ($79.99) and Ultimate Edition ($99.99), including the 16 exclusive story items, vehicles, and pre-order bonuses before launch.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta-6-standard-vs-ultimate-edition.jpg" medium="image" width="1280" height="720" />
@@ -421,7 +430,7 @@
       <title>US AI Chip Export Restrictions: What the New Rules Mean for Technology Companies</title>
       <link>https://www.bugwrite.com/business/article/us-ai-chip-export-restrictions-2026</link>
       <guid isPermaLink="true">https://www.bugwrite.com/business/article/us-ai-chip-export-restrictions-2026</guid>
-      <pubDate>Tue, 17 Nov 2026 09:15:00 GMT</pubDate>
+      <pubDate>Tue, 17 Nov 2026 08:22:00 GMT</pubDate>
       <category>Business</category>
       <description>The November 2026 BIS interim final rule tightens remote cloud access and adds export licenses for AI chips shipped to Singapore, Malaysia, Thailand, Indonesia, and Brazil.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/us-ai-chip-export-restrictions-2026.jpg" medium="image" width="1280" height="720" />
@@ -430,7 +439,7 @@
       <title>OpenAI&#x27;s Latest AI Developments: What Has Changed in 2026?</title>
       <link>https://www.bugwrite.com/big-tech/article/openai-gpt-6-2-astra-sol-cyber-2026</link>
       <guid isPermaLink="true">https://www.bugwrite.com/big-tech/article/openai-gpt-6-2-astra-sol-cyber-2026</guid>
-      <pubDate>Tue, 17 Nov 2026 08:22:00 GMT</pubDate>
+      <pubDate>Tue, 17 Nov 2026 07:29:00 GMT</pubDate>
       <category>Big Tech</category>
       <description>OpenAI closed November 2026 with GPT-6.2 Astra, GPT-6.2 Sol, deep API price cuts, GPT-6 Cyber for security research, and an expanded academic ChatGPT program.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/openai-gpt-6-2-astra-sol-cyber-2026.jpg" medium="image" width="1280" height="720" />
@@ -439,7 +448,7 @@
       <title>GTA 6 Download Size: How Much Storage Will You Need?</title>
       <link>https://www.bugwrite.com/gaming/article/gta-6-download-size-storage-guide</link>
       <guid isPermaLink="true">https://www.bugwrite.com/gaming/article/gta-6-download-size-storage-guide</guid>
-      <pubDate>Mon, 16 Nov 2026 07:29:00 GMT</pubDate>
+      <pubDate>Mon, 16 Nov 2026 18:36:00 GMT</pubDate>
       <category>Gaming</category>
       <description>Grand Theft Auto 6 weighs in at roughly 212 GB on PS5 and Xbox Series X|S. Here is how preload works and how to clear enough SSD space before November 19.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/gta-6-download-size-storage-guide.jpg" medium="image" width="1280" height="720" />
@@ -448,19 +457,10 @@
       <title>Is the AI Boom Becoming a Bubble? What the Latest Market Developments Show</title>
       <link>https://www.bugwrite.com/business/article/is-ai-boom-becoming-a-bubble-2026</link>
       <guid isPermaLink="true">https://www.bugwrite.com/business/article/is-ai-boom-becoming-a-bubble-2026</guid>
-      <pubDate>Tue, 17 Nov 2026 18:36:00 GMT</pubDate>
+      <pubDate>Tue, 17 Nov 2026 17:43:00 GMT</pubDate>
       <category>Business</category>
       <description>Record chip revenue and a potential $1.4 trillion Anthropic IPO collide with $900.9 billion compute obligations and Federal Reserve warnings over AI spending returns.</description>
       <media:content url="https://www.bugwrite.com/blog/articles/is-ai-boom-becoming-a-bubble-2026.jpg" medium="image" width="1280" height="720" />
-    </item>
-    <item>
-      <title>Best AI Coding Tools for Developers in 2026</title>
-      <link>https://www.bugwrite.com/big-tech/article/best-ai-coding-tools-2026</link>
-      <guid isPermaLink="true">https://www.bugwrite.com/big-tech/article/best-ai-coding-tools-2026</guid>
-      <pubDate>Mon, 16 Nov 2026 17:43:00 GMT</pubDate>
-      <category>Big Tech</category>
-      <description>A practical guide to the top AI coding tools in 2026, comparing AI-native editors, terminal coding agents, IDE copilots, and privacy-focused local setups.</description>
-      <media:content url="https://www.bugwrite.com/blog/articles/best-ai-coding-tools-2026.jpg" medium="image" width="1280" height="720" />
     </item>
   </channel>
 </rss>
