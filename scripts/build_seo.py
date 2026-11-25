@@ -11,7 +11,7 @@ DOMAIN = "https://www.bugwrite.com"
 NOW_UTC = datetime.now(timezone.utc).replace(microsecond=0)
 LASTMOD = NOW_UTC.strftime("%Y-%m-%d")
 MOD_ISO = NOW_UTC.strftime("%Y-%m-%dT%H:%M:%SZ")
-CSS_VERSION = "2"
+CSS_VERSION = "3"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PUBLIC = os.path.join(ROOT, "public")
 DATA_JS = os.path.join(PUBLIC, "blog", "articles-data.js")
@@ -1270,8 +1270,8 @@ def generate_article_pages(articles):
                 for r in inline_related
             )
             callout_html = (
-                f'\n<aside aria-label="Related coverage" class="my-6 p-4 rounded-[6px] border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-[#14171d]">'
-                f'<div class="text-[11px] font-bold uppercase tracking-[0.08em] text-neutral-500 dark:text-neutral-400 mb-1.5">Related Coverage on Bugwrite</div>'
+                f'\n<aside aria-label="Related coverage" class="ai-related-box">'
+                f'<div class="ai-related-label">Related Coverage on Bugwrite</div>'
                 f'{inline_links}</aside>\n'
             )
             parts = body_html.split("</p>", 3)
@@ -1283,9 +1283,9 @@ def generate_article_pages(articles):
         if normalized_faqs:
             quick_answer_text = normalized_faqs[0][1]
         quick_answer_html = (
-            f'<aside aria-label="Quick Answer" class="ai-quick-answer mb-7 p-4 sm:p-5 rounded-[6px] border-l-4 border-blue-600 bg-neutral-50 dark:bg-[#14171d] border-y border-r border-neutral-200 dark:border-neutral-800">'
-            f'<div class="text-[11px] font-bold uppercase tracking-[0.08em] text-blue-700 dark:text-blue-400 mb-1.5">Quick Answer &amp; Key Takeaway</div>'
-            f'<p class="text-[15px] leading-relaxed text-neutral-800 dark:text-neutral-200">{esc(quick_answer_text)}</p>'
+            f'<aside aria-label="Quick Answer" class="ai-quick-answer">'
+            f'<div class="ai-quick-answer-label">Quick Answer &amp; Key Takeaway</div>'
+            f'<p>{esc(quick_answer_text)}</p>'
             f'</aside>'
         )
 
@@ -1293,9 +1293,9 @@ def generate_article_pages(articles):
         faq_section_html = ""
         if normalized_faqs:
             faq_items_html = "\n".join(
-                f'<div class="p-4 rounded-[6px] border border-neutral-200 dark:border-neutral-800 bg-neutral-50/70 dark:bg-[#14171d]">'
-                f'<h3 class="text-[15px] font-bold text-neutral-950 dark:text-white mb-1.5">{esc(q)}</h3>'
-                f'<p class="text-[14px] leading-relaxed text-neutral-700 dark:text-neutral-300">{esc(a)}</p>'
+                f'<div class="faq-card">'
+                f'<h3>{esc(q)}</h3>'
+                f'<p>{esc(a)}</p>'
                 f'</div>'
                 for q, a in normalized_faqs
             )

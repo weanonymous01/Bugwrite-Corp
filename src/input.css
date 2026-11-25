@@ -100,3 +100,103 @@ html.dark .article-prose code {
 .article-prose em {
   font-style: italic;
 }
+
+.ai-quick-answer {
+  margin-bottom: 1.75rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #2563eb;
+}
+
+html.dark .ai-quick-answer {
+  background-color: #131720;
+  border-color: #242b38;
+  border-left-color: #3b82f6;
+}
+
+.ai-quick-answer-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1d4ed8;
+  margin-bottom: 0.4rem;
+}
+
+html.dark .ai-quick-answer-label {
+  color: #60a5fa;
+}
+
+.ai-quick-answer p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #1e293b;
+}
+
+html.dark .ai-quick-answer p {
+  color: #e2e8f0;
+}
+
+.ai-related-box {
+  margin: 1.65rem 0;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+html.dark .ai-related-box {
+  background-color: #131720;
+  border-color: #242b38;
+}
+
+.ai-related-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 0.45rem;
+}
+
+html.dark .ai-related-label {
+  color: #94a3b8;
+}
+
+.faq-card {
+  padding: 1.05rem 1.2rem;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+html.dark .faq-card {
+  background-color: #131720;
+  border-color: #242b38;
+}
+
+.faq-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #0f172a;
+  margin: 0 0 0.4rem 0;
+}
+
+html.dark .faq-card h3 {
+  color: #f8fafc;
+}
+
+.faq-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #334155;
+}
+
+html.dark .faq-card p {
+  color: #cbd5e1;
+}
