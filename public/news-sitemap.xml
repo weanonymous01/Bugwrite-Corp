@@ -1,13 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://www.bugwrite.com/gaming/article/mario-kart-world-1-9-0-patch-notes</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Bugwrite</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-25T07:41:36Z</news:publication_date>
+      <news:title>Mario Kart World Version 1.9.0 Patch Notes: 8 Courses Added</news:title>
+      <news:keywords>mario kart world, 1.9.0, patch notes, course update, nintendo</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://www.bugwrite.com/big-tech/article/microsoft-code-red-m365-outage-facts</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Bugwrite</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-25T07:28:36Z</news:publication_date>
+      <news:title>Microsoft Code Red Outage: 24-Hour M365 Failure Facts</news:title>
+      <news:keywords>microsoft code red, microsoft outage, m365, cloud, service disruption</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://www.bugwrite.com/big-tech/article/fortnite-down-v4311-server-status</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Bugwrite</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-25T07:15:36Z</news:publication_date>
+      <news:title>Fortnite Down Now? v43.11 Update Server Status</news:title>
+      <news:keywords>fortnite down, fortnite servers, v43.11, fortnite downtime, server status</news:keywords>
+    </news:news>
+  </url>
+  <url>
     <loc>https://www.bugwrite.com/business/article/social-security-payments-november-25-eligibility</loc>
     <news:news>
       <news:publication>
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-24T07:23:43Z</news:publication_date>
+      <news:publication_date>2026-11-24T15:21:00Z</news:publication_date>
       <news:title>Social Security Payments Arrive Nov 25 For Eligible Recipients</news:title>
       <news:keywords>social security, payment date, november 25, ssa benefits, retirement income</news:keywords>
     </news:news>
@@ -19,33 +55,9 @@
         <news:name>Bugwrite</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-11-23T17:07:00Z</news:publication_date>
+      <news:publication_date>2026-11-23T14:28:00Z</news:publication_date>
       <news:title>SpaceX Funding, AI Bets, and Tesla Speculation</news:title>
       <news:keywords>spacex, elon musk, ai data centers, starshield, tesla</news:keywords>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://www.bugwrite.com/business/article/nvidia-2027-stock-price-forecast-analysis</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Bugwrite</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-22T16:14:00Z</news:publication_date>
-      <news:title>Nvidia 2027 Stock Price Forecast: What Really Matters</news:title>
-      <news:keywords>nvidia, stock price, 2027 forecast, ai, technology stocks</news:keywords>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://www.bugwrite.com/gaming/article/florida-powerball-jackpot-win-november-21</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Bugwrite</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-22T15:21:00Z</news:publication_date>
-      <news:title>Florida Wins Powerball Jackpot on Nov 21 Drawing</news:title>
-      <news:keywords>winning powerball numbers, powerball winner, powerball jackpot, powerball jackpot winner november 21</news:keywords>
     </news:news>
   </url>
 </urlset>

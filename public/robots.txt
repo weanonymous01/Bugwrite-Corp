@@ -10,8 +10,33 @@ Allow: /
 User-agent: Googlebot-News
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
 User-agent: Mediapartners-Google
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# AI Knowledge & Editorial Index: https://www.bugwrite.com/llms.txt
 Sitemap: https://www.bugwrite.com/sitemap.xml
 Sitemap: https://www.bugwrite.com/news-sitemap.xml

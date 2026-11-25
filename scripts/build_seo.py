@@ -1171,6 +1171,16 @@ def generate_article_pages(articles):
                 "articleSection": cat_label,
                 "wordCount": word_count,
                 "keywords": keywords_list,
+                "speakable": {
+                    "@type": "SpeakableSpecification",
+                    "cssSelector": [
+                        "h1",
+                        ".article-dek",
+                        ".ai-quick-answer",
+                        ".article-prose h2",
+                        ".article-prose p:first-of-type"
+                    ]
+                },
                 "author": {
                     "@type": "Person",
                     "name": art["author"],
@@ -1191,7 +1201,32 @@ def generate_article_pages(articles):
             }
         ]
 
-        if art.get("faqs"):
+        # Extract normalized FAQ pairs (supports dict {q,a}, tuple [q,a], or H2+P extraction fallback)
+        normalized_faqs = []
+        raw_faqs = art.get("faqs") or []
+        for item in raw_faqs:
+            if isinstance(item, dict):
+                q_txt = str(item.get("q", "")).strip()
+                a_txt = str(item.get("a", "")).strip()
+                if q_txt and a_txt:
+                    normalized_faqs.append((q_txt, a_txt))
+            elif isinstance(item, (list, tuple)) and len(item) >= 2:
+                q_txt, a_txt = str(item[0]).strip(), str(item[1]).strip()
+                if q_txt and a_txt:
+                    normalized_faqs.append((q_txt, a_txt))
+
+        if not normalized_faqs:
+            for h2_txt, p_txt in re.findall(r"<h2[^>]*>(.*?)</h2>\s*<p[^>]*>(.*?)</p>", art.get("body", ""), re.DOTALL):
+                clean_q = re.sub(r"<[^>]+>", "", h2_txt).strip()
+                clean_a = re.sub(r"<[^>]+>", "", p_txt).strip()
+                if clean_q and clean_a and len(clean_a) > 35:
+                    if not clean_q.endswith("?"):
+                        clean_q = clean_q.rstrip(".") + "?"
+                    normalized_faqs.append((clean_q, clean_a))
+                    if len(normalized_faqs) >= 4:
+                        break
+
+        if normalized_faqs:
             schemas.append({
                 "@context": "https://schema.org",
                 "@type": "FAQPage",
@@ -1201,19 +1236,75 @@ def generate_article_pages(articles):
                         "name": q,
                         "acceptedAnswer": {"@type": "Answer", "text": a}
                     }
-                    for q, a in art["faqs"]
+                    for q, a in normalized_faqs
                 ]
             })
 
-        # Pick 4 related stories from same desk first, then others
-        same_desk = [a for a in articles if a["id"] != art["id"] and get_cat_slug(a["category"]) == cat_slug]
-        others = [a for a in articles if a["id"] != art["id"] and get_cat_slug(a["category"]) != cat_slug]
-        related = (same_desk + others)[:4]
+        # Match related stories by shared keywords/topic relevance first, then same desk
+        art_kw_set = set(w.lower() for kw in keywords_list for w in re.findall(r"[a-z0-9]+", kw) if len(w) > 2)
+        art_kw_set |= set(w for w in re.findall(r"[a-z0-9]+", art["title"].lower()) if len(w) > 3)
+
+        def rel_score(cand):
+            if cand["id"] == art["id"]:
+                return -1
+            cand_text = (cand["title"] + " " + " ".join(cand.get("keywords", []))).lower()
+            cand_words = set(re.findall(r"[a-z0-9]+", cand_text))
+            overlap = len(art_kw_set & cand_words)
+            same_cat = 2 if get_cat_slug(cand["category"]) == cat_slug else 0
+            return overlap * 5 + same_cat
+
+        ranked_related = sorted([a for a in articles if a["id"] != art["id"]], key=rel_score, reverse=True)
+        related = ranked_related[:4]
+        inline_related = ranked_related[:2]
         related_html = "\n".join(render_static_card(r, "h3", is_spa=False, eager=False) for r in related)
         tags_html = "\n".join(
             f'<span class="px-2.5 py-1 text-[11px] font-medium bg-neutral-100 dark:bg-[#1a1e26] text-neutral-700 dark:text-neutral-300 rounded">{esc(k)}</span>'
             for k in keywords_list
         )
+
+        # Inject contextual internal link callout mid-article to double pageviews per session
+        body_html = art["body"].strip()
+        if inline_related and body_html.count("</p>") >= 4:
+            inline_links = " ".join(
+                f'<a href="{get_article_path(r)}" class="block text-sm font-semibold text-blue-700 dark:text-blue-400 hover:underline py-1">{esc(r["title"])} &rarr;</a>'
+                for r in inline_related
+            )
+            callout_html = (
+                f'\n<aside aria-label="Related coverage" class="my-6 p-4 rounded-[6px] border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-[#14171d]">'
+                f'<div class="text-[11px] font-bold uppercase tracking-[0.08em] text-neutral-500 dark:text-neutral-400 mb-1.5">Related Coverage on Bugwrite</div>'
+                f'{inline_links}</aside>\n'
+            )
+            parts = body_html.split("</p>", 3)
+            if len(parts) == 4:
+                body_html = parts[0] + "</p>" + parts[1] + "</p>" + parts[2] + "</p>" + callout_html + parts[3]
+
+        # Build Quick Answer summary box for Google AI Overviews and ChatGPT citations
+        quick_answer_text = art["dek"]
+        if normalized_faqs:
+            quick_answer_text = normalized_faqs[0][1]
+        quick_answer_html = (
+            f'<aside aria-label="Quick Answer" class="ai-quick-answer mb-7 p-4 sm:p-5 rounded-[6px] border-l-4 border-blue-600 bg-neutral-50 dark:bg-[#14171d] border-y border-r border-neutral-200 dark:border-neutral-800">'
+            f'<div class="text-[11px] font-bold uppercase tracking-[0.08em] text-blue-700 dark:text-blue-400 mb-1.5">Quick Answer &amp; Key Takeaway</div>'
+            f'<p class="text-[15px] leading-relaxed text-neutral-800 dark:text-neutral-200">{esc(quick_answer_text)}</p>'
+            f'</aside>'
+        )
+
+        # Render visible FAQ block matching FAQPage JSON-LD (required for Google AI Overview & FAQ eligibility)
+        faq_section_html = ""
+        if normalized_faqs:
+            faq_items_html = "\n".join(
+                f'<div class="p-4 rounded-[6px] border border-neutral-200 dark:border-neutral-800 bg-neutral-50/70 dark:bg-[#14171d]">'
+                f'<h3 class="text-[15px] font-bold text-neutral-950 dark:text-white mb-1.5">{esc(q)}</h3>'
+                f'<p class="text-[14px] leading-relaxed text-neutral-700 dark:text-neutral-300">{esc(a)}</p>'
+                f'</div>'
+                for q, a in normalized_faqs
+            )
+            faq_section_html = (
+                f'\n      <section aria-label="Frequently Asked Questions" class="mt-10 pt-8 border-t border-neutral-200 dark:border-neutral-800">'
+                f'\n        <h2 class="text-xl font-bold text-neutral-950 dark:text-white mb-4">Frequently Asked Questions</h2>'
+                f'\n        <div class="space-y-3">\n{faq_items_html}\n        </div>'
+                f'\n      </section>'
+            )
 
         article_meta_lines = [
             f'  <meta name="author" content="{esc(art["author"])}" />',
@@ -1253,7 +1344,7 @@ def generate_article_pages(articles):
       </nav>
 
       <h1 class="text-3xl sm:text-4xl lg:text-[40px] font-bold text-neutral-950 dark:text-white leading-[1.15] tracking-[-0.03em] mb-4">{esc(art['title'])}</h1>
-      <p class="text-lg sm:text-[19px] text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">{esc(art['dek'])}</p>
+      <p class="article-dek text-lg sm:text-[19px] text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">{esc(art['dek'])}</p>
 
       <div class="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-neutral-200 dark:border-neutral-800 mb-7 text-xs text-neutral-500 dark:text-neutral-400">
         <div class="flex items-center gap-2.5">
@@ -1277,9 +1368,12 @@ def generate_article_pages(articles):
         <figcaption class="mt-2.5 text-xs text-neutral-500 dark:text-neutral-400">{esc(art['imageAlt'])}</figcaption>
       </figure>
 
+      {quick_answer_html}
+
       <div class="article-prose">
-{art['body'].strip()}
+{body_html}
       </div>
+{faq_section_html}
 
       <div class="mt-10 pt-6 border-t border-neutral-200 dark:border-neutral-800 flex flex-wrap items-center gap-2">
         {tags_html}
@@ -1641,6 +1735,42 @@ def generate_rss_feed(articles):
     print("Generated public/rss.xml with 50 latest stories")
 
 
+def generate_llms_txt(articles):
+    """Generates public/llms.txt following the llmstxt.org standard for AI Search & LLMs."""
+    lines = [
+        "# Bugwrite",
+        "",
+        "> Independent technology, gaming, cybersecurity, and AI business newsroom providing fast, direct answers to breaking developments, CVEs, outages, and gaming coverage.",
+        "",
+        f"Last Updated: {MOD_ISO}",
+        f"Total Published Articles: {len(articles)}",
+        "",
+        "## Editorial Desks",
+        f"- [Gaming News & Guides]({DOMAIN}/gaming): GTA 6 coverage, release times, Game Awards, hardware pricing, and patch analyses by Ethan Brooks.",
+        f"- [Big Tech & Outages]({DOMAIN}/big-tech): Service outage trackers, Apple, Microsoft, Google, OpenAI updates, and software coverage by Ryan Mitchell.",
+        f"- [Cybersecurity & CVEs]({DOMAIN}/security): Urgent CVE bulletins, FBI warnings, vulnerability mitigations, and ransomware defense by Sophia Carter.",
+        f"- [Business & AI Markets]({DOMAIN}/business): Tech earnings, chip supply chains, startup funding, and market analyses by Olivia Bennett.",
+        f"- [Editorial Standards & About]({DOMAIN}/about): Verification methodology, editorial team masthead, and correction policy.",
+        "",
+        "## Feeds & Sitemaps",
+        f"- [Main XML Sitemap]({DOMAIN}/sitemap.xml)",
+        f"- [Google News Sitemap]({DOMAIN}/news-sitemap.xml)",
+        f"- [RSS 2.0 Feed]({DOMAIN}/rss.xml)",
+        "",
+        "## Latest Verified Reports & Quick Answers",
+    ]
+    for art in articles[:50]:
+        loc = f"{DOMAIN}{get_article_path(art)}"
+        title_clean = str(art.get("title", "")).replace("\u2014", ", ").replace("\u2013", "-")
+        dek_clean = str(art.get("dek", "")).replace("\u2014", ", ").replace("\u2013", "-")
+        date_clean = str(art.get("publishedDate", ""))
+        cat_clean = str(art.get("category", ""))
+        lines.append(f"- [{title_clean}]({loc}) ({cat_clean}, {date_clean}): {dek_clean}")
+    lines.append("")
+    write_file("public/llms.txt", "\n".join(lines))
+    print(f"Generated public/llms.txt with {min(50, len(articles))} latest structured stories for AI crawlers")
+
+
 def main():
     articles = load_articles()
     generate_homepage(articles)
@@ -1650,6 +1780,7 @@ def main():
     generate_sitemap(articles)
     generate_news_sitemap(articles)
     generate_rss_feed(articles)
+    generate_llms_txt(articles)
 
 
 if __name__ == "__main__":

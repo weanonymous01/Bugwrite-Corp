@@ -205,15 +205,15 @@ def generate_article_content(trend_item, target_category):
 
     system_prompt = (
         "You are an expert senior investigative editor for Bugwrite. "
-        "You write in simple, engaging, direct, and conversational human English. "
+        "You write in simple, engaging, direct, and authoritative human English optimized for Google AI Overviews, ChatGPT Search citations, and high search click-through rate. "
         "Rules to follow strictly:\n"
-        "1. Write like an experienced, thoughtful human explaining things clearly. No big or fancy words.\n"
+        "1. Write like an experienced, thoughtful human journalist giving concrete facts, dates, versions, and numbers. No fluff.\n"
         "2. NO AI clichés or corporate jargon (never use 'dive into', 'delve', 'testament', 'revolutionize', 'landscape', 'beacon').\n"
         "3. NEVER use em dashes ('—') or en dashes ('–'). Use commas, colons, or parentheses.\n"
         "4. NEVER output <li> or <ul> bullet tags. Use only <p>, <h2>, and <h3> HTML tags.\n"
-        "5. UNDER EVERY <h2> QUESTION HEADING, write 2 to 3 substantive, deeply informative paragraphs (minimum 150 words per section).\n"
-        "6. Answer each question directly in the very first sentence, then explain the real facts, background, quotes, community reactions, and context.\n"
-        "7. The total article body must be between 750 and 1,000+ words. Never output shallow summaries."
+        "5. HIGH-CTR TITLES: Put the exact entity, specific number, date, error code, or clear answer promise right in TITLE and SEO_TITLE (under 60 chars).\n"
+        "6. AI CITATION FIRST SENTENCES: Under EVERY <h2> question heading, write a self-contained 35 to 55 word factual answer in the VERY FIRST sentence naming the subject, date, or verified status so Google AI Overviews and ChatGPT can quote that sentence verbatim, followed by 2 substantive paragraphs (minimum 150 words per section).\n"
+        "7. The total article body must be between 800 and 1,150 words. Never output shallow summaries."
     )
 
     user_prompt = f"""
@@ -368,44 +368,51 @@ def normalize_image(source_path, dest_path, quality=88):
 def sanitize_image_query(query, category, slug=""):
     """
     Guarantees the Pinterest search query targets 100% genuine real-life photography.
-    Dynamically routes to specific physical subjects based on the article's topic so
-    different articles never get the same search query.
+    Uses word-boundary matching and priority routing so topics like 'down' or 'microsoft outage'
+    never collide with 'dow' or 'xbox'.
     """
-    query_lower = query.lower()
-    slug_lower = slug.lower()
+    combined = f"{slug} {query}".lower()
 
-    # Dynamic topic-specific physical photography anchors
-    if any(w in slug_lower or w in query_lower for w in ["qqq", "nasdaq"]):
-        return "nasdaq tower times square new york architecture photography"
-    elif any(w in slug_lower or w in query_lower for w in ["semiconductor", "chip", "nvidia", "intel", "amd", "tsmc"]):
-        return "semiconductor silicon wafer manufacturing cleanroom photography"
-    elif any(w in slug_lower or w in query_lower for w in ["gold", "bullion", "precious metal"]):
-        return "polished gold bars dark wood surface photography"
-    elif any(w in slug_lower or w in query_lower for w in ["bitcoin", "crypto", "btc", "ethereum"]):
-        return "financial times newspaper coffee wooden desk morning light photography"
-    elif any(w in slug_lower or w in query_lower for w in ["rate", "rates", "fed", "federal reserve", "inflation"]):
-        return "federal reserve bank building stone columns architecture photo"
-    elif any(w in slug_lower or w in query_lower for w in ["stock", "stocks", "market", "dow", "s&p"]):
-        return "new york stock exchange building facade architecture real photo"
-    elif any(w in slug_lower or w in query_lower for w in ["xbox", "microsoft"]):
-        return "xbox series console living room television setup photo"
-    elif any(w in slug_lower or w in query_lower for w in ["ps5", "playstation", "sony"]):
-        return "playstation 5 console dualsense controller daylight photo"
-    elif any(w in slug_lower or w in query_lower for w in ["gta", "rockstar", "vice city"]):
-        return "vice city miami beach palm trees sunset photography"
-    elif any(w in slug_lower or w in query_lower for w in ["award", "tga", "goty"]):
-        return "gold trophy ceremony stage lights photography"
-    elif any(w in slug_lower or w in query_lower for w in ["fbi", "police", "investigation"]):
-        return "fbi seal stone building headquarters real photo"
-    elif any(w in slug_lower or w in query_lower for w in ["hack", "breach", "cve", "vulnerability"]):
-        return "person typing laptop dark office evening desk photo"
-    elif any(w in slug_lower or w in query_lower for w in ["apple", "iphone", "ios", "macbook"]):
-        return "apple store glass cube fifth avenue new york real photo"
-    elif any(w in slug_lower or w in query_lower for w in ["google", "android", "pixel"]):
-        return "googleplex mountain view campus exterior real photo"
-    elif any(w in slug_lower or w in query_lower for w in ["amazon", "aws", "cloud", "server", "outage"]):
+    def has_word(words):
+        return any(re.search(rf"\b{re.escape(w)}\b", combined) for w in words)
+
+    # 1. Specific game / hardware matches first, then server infrastructure
+    if has_word(["fortnite", "nintendo", "switch", "mario"]):
+        return "nintendo switch gaming setup controller daylight photography"
+    elif has_word(["outage", "down", "server", "servers", "aws", "cloudflare", "datacenter", "m365", "365"]):
         return "server rack datacenter blue ethernet cables real photo"
+    elif has_word(["xbox"]):
+        return "xbox series console living room television setup photo"
+    elif has_word(["ps5", "playstation", "sony"]):
+        return "playstation 5 console dualsense controller daylight photo"
+    elif has_word(["gta", "rockstar", "vice"]):
+        return "vice city miami beach palm trees sunset photography"
+    elif has_word(["award", "tga", "goty"]):
+        return "gold trophy ceremony stage lights photography"
+    elif has_word(["fbi", "police", "investigation"]):
+        return "fbi seal stone building headquarters real photo"
+    elif has_word(["hack", "breach", "cve", "vulnerability", "cyber", "ransomware", "malware"]):
+        return "person typing laptop dark office evening desk photo"
+    elif has_word(["apple", "iphone", "ios", "macbook", "ipad"]):
+        return "apple store glass cube fifth avenue new york real photo"
+    elif has_word(["google", "android", "pixel"]):
+        return "googleplex mountain view campus exterior real photo"
+    elif has_word(["qqq", "nasdaq"]):
+        return "nasdaq tower times square new york architecture photography"
+    elif has_word(["semiconductor", "chip", "chips", "nvidia", "intel", "amd", "tsmc"]):
+        return "semiconductor silicon wafer manufacturing cleanroom photography"
+    elif has_word(["gold", "bullion"]):
+        return "polished gold bars dark wood surface photography"
+    elif has_word(["bitcoin", "crypto", "btc", "ethereum"]):
+        return "financial times newspaper coffee wooden desk morning light photography"
+    elif has_word(["rate", "rates", "fed", "inflation"]):
+        return "federal reserve bank building stone columns architecture photo"
+    elif has_word(["stock", "stocks", "market", "dow", "sp500"]):
+        return "new york stock exchange building facade architecture real photo"
+    elif has_word(["microsoft"]):
+        return "modern tech office glass architecture laptop workspace real photo"
 
+    query_lower = query.lower()
     # Clean generic AI bait words out of any other query
     ai_bait = [
         "chart", "charts", "trading screen", "screens", "crypto", "bitcoin",
@@ -511,16 +518,22 @@ def fetch_pinterest_banner(query, slug, category="Gaming"):
             except Exception:
                 return -999
 
-        valid_cands = [p for p in downloaded if score(p) > -9000]
-        if valid_cands:
-            best = max(valid_cands, key=score)
-        elif downloaded:
-            best = max(downloaded, key=score)
-        else:
-            best = None
-
-        if best and score(best) > -9000:
-            normalize_image(best, dest_path)
+        ranked_cands = sorted(downloaded, key=score, reverse=True)
+        chosen_ok = False
+        for cand in ranked_cands:
+            if score(cand) <= -9000:
+                continue
+            normalize_image(cand, dest_path)
+            with open(dest_path, "rb") as fp:
+                norm_data = fp.read()
+                if hashlib.md5(norm_data).hexdigest() not in existing_hashes and len(norm_data) not in existing_sizes:
+                    chosen_ok = True
+                    break
+        if chosen_ok:
+            print(f"[✔] Ingested distinct Pinterest banner: {dest_path}")
+            return f"/blog/articles/{slug}.jpg"
+        elif ranked_cands:
+            normalize_image(ranked_cands[0], dest_path)
             print(f"[✔] Ingested distinct Pinterest banner: {dest_path}")
             return f"/blog/articles/{slug}.jpg"
 
@@ -557,14 +570,14 @@ def fetch_wikimedia_photo(query, dest_path, existing_hashes):
     import urllib.parse
     import json
 
-    # Clean query terms
+    # Clean query terms (broad 2-3 keyword query matches best on Wikimedia Commons)
     terms = [w for w in query.replace("real photo", "").replace("photography", "").split() if len(w) > 2]
-    search_term = " ".join(terms[:4]) if terms else query
+    search_term = " ".join(terms[:3]) if terms else query
 
     api_url = (
         "https://commons.wikimedia.org/w/api.php?action=query&generator=search"
         f"&gsrsearch={urllib.parse.quote(search_term)}&gsrnamespace=6&gsrlimit=10"
-        "&prop=imageinfo&iiprop=url|size|mime&format=json"
+        "&prop=imageinfo&iiprop=url|size|mime&iiurlwidth=1920&format=json"
     )
     headers = {"User-Agent": "BugwriteEditorialBot/1.0 (https://www.bugwrite.com; editorial@bugwrite.com)"}
     try:
@@ -578,8 +591,8 @@ def fetch_wikimedia_photo(query, dest_path, existing_hashes):
             mime = ii.get("mime", "").lower()
             width = ii.get("width", 0)
             height = ii.get("height", 0)
-            url = ii.get("url", "")
-            if ("jpeg" in mime or "jpg" in mime) and width >= 800 and height >= 500:
+            url = ii.get("thumburl") or ii.get("url", "")
+            if ("jpeg" in mime or "jpg" in mime) and width >= 800 and height >= 500 and url:
                 candidates.append((width * height, url))
 
         if candidates:
@@ -659,11 +672,17 @@ def save_article_to_catalog(art_data, category):
 
 
 def run_deployment_pipeline():
-    """Runs build_seo.py, audit_seo.py, and ping_indexnow.py."""
-    print("\n[Build] Regenerating static SEO HTML pages...")
+    """Runs build_seo.py, compiles Tailwind CSS, runs audit_seo.py, and pings IndexNow."""
+    print("\n[Build] Regenerating static SEO HTML pages & llms.txt...")
     subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "build_seo.py")], check=True)
 
-    print("\n[Audit] Running SEO & schema audit...")
+    print("\n[CSS] Compiling minified Tailwind CSS...")
+    try:
+        subprocess.run("npm run css", shell=True, cwd=ROOT, check=True)
+    except Exception as e:
+        print(f"[!] CSS compile notice: {e}")
+
+    print("\n[Audit] Running SEO, AI-crawler & schema audit...")
     subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "audit_seo.py")], check=True)
 
     print("\n[IndexNow] Submitting URLs to search engines...")
@@ -673,13 +692,67 @@ def run_deployment_pipeline():
         print(f"[!] IndexNow notice: {e}")
 
 
-def harvest_all_spikes(min_volume=1000, min_growth=50):
+def score_winnable_spike(trend_item):
+    """
+    Scores search spikes by Win Probability + Growth Velocity + CTR Potential
+    instead of raw volume alone, avoiding hyper-competitive generic tickers.
+    """
+    import math
+    title_low = trend_item.get("trend", "").lower()
+    breakdown_low = " ".join(trend_item.get("all_breakdown", [])).lower()
+    combined = f"{title_low} {breakdown_low}"
+    words = title_low.split()
+
+    vol = max(100, trend_item.get("volume_raw") or 100)
+    growth = trend_item.get("growth_raw") or 50
+    cat = trend_item.get("assignedCategory", "Business")
+
+    # Log-scaled volume + growth base so niche 5k spikes compete fairly with 100k tickers
+    score = math.log10(vol) * 100 + min(growth, 1200) * 0.45
+
+    # Desk bonuses: Gaming, Outages, and Security rank far faster into Positions 1-3
+    if cat == "Security":
+        score += 380
+    elif cat == "Gaming":
+        score += 280
+    elif cat == "Big Tech":
+        score += 240
+
+    # High-CTR specific intent keywords (outages, CVEs, patches, release times, rumors)
+    high_ctr_terms = [
+        "outage", "down", "error", "fix", "cve", "vulnerability", "hack", "breach",
+        "patch", "update", "release", "embargo", "leak", "rumor", "review",
+        "gta", "xbox", "ps5", "switch", "nintendo", "apple", "ios", "android",
+        "openai", "chatgpt", "nvidia", "rtx", "steam", "black friday", "deal", "vpn"
+    ]
+    matches = sum(1 for k in high_ctr_terms if k in combined)
+    score += matches * 120
+
+    # Long-tail & explicit user question bonus
+    if len(words) >= 3:
+        score += 140
+    if trend_item.get("questions"):
+        score += 180
+
+    # Penalize hyper-competitive broad finance/political head terms where Forbes/CNBC lock top 5
+    broad_giants = {
+        "dow jones", "sp500", "s&p 500", "nasdaq", "social security", "wage",
+        "fidelity", "stock", "stocks", "market", "gold", "tariff", "treasury",
+        "scott bessent", "franchising"
+    }
+    if title_low in broad_giants or (cat == "Business" and len(words) <= 2 and matches == 0):
+        score -= 420
+
+    return round(score, 1)
+
+
+def harvest_all_spikes(min_volume=500, min_growth=50):
     """
     Harvests all spikes across all 4 categories:
     Gaming (6), Big Tech (18), Business (3), and Security.
-    Ranks them in a single unified priority queue by search volume.
+    Ranks them by Winnability, CTR potential, and growth velocity.
     """
-    from scripts.fetch_trending import fetch_google_trends
+    from scripts.fetch_trending import fetch_google_trends, fetch_extended_questions
 
     print("================================================================================")
     print(" HARVESTING REAL-TIME SEARCH SPIKES ACROSS ALL CATEGORIES")
@@ -693,10 +766,13 @@ def harvest_all_spikes(min_volume=1000, min_growth=50):
         print(f"[+] Category {cat_name}: {len(trends)} active trends returned.")
         for t in trends:
             t["assignedCategory"] = cat_name
-            # Check if security keyword present
             text = (t["trend"] + " " + " ".join(t.get("all_breakdown", []))).lower()
-            if any(k in text for k in ["cyber", "fbi", "vulnerability", "hack", "ransomware", "data breach", "malware", "zero-day"]):
+            if any(k in text for k in ["cyber", "fbi", "vulnerability", "hack", "ransomware", "data breach", "malware", "zero-day", "cve", "scam", "phishing"]):
                 t["assignedCategory"] = "Security"
+            elif any(k in text for k in ["outage", "down", "ios", "android", "openai", "chatgpt", "macbook", "ipad", "iphone", "microsoft", "aws", "cloudflare", "nordvpn", "vpn"]):
+                t["assignedCategory"] = "Big Tech"
+            elif any(k in text for k in ["gta", "xbox", "playstation", "ps5", "nintendo", "switch", "steam", "game pass", "esports"]):
+                t["assignedCategory"] = "Gaming"
             all_candidates.append(t)
 
     # Filter by minimum threshold and deduplicate across pool
@@ -711,14 +787,27 @@ def harvest_all_spikes(min_volume=1000, min_growth=50):
         vol = t.get("volume_raw") or 0
         growth = t.get("growth_raw") or 0
         if vol >= min_volume and growth >= min_growth:
+            t["winScore"] = score_winnable_spike(t)
             filtered_spikes.append(t)
 
-    # Sort descending by raw volume and growth
-    filtered_spikes.sort(key=lambda x: (x.get("volume_raw") or 0, x.get("growth_raw") or 0), reverse=True)
+    # Sort descending by winScore (balancing velocity, CTR, and low competition)
+    filtered_spikes.sort(key=lambda x: x.get("winScore", 0), reverse=True)
 
-    print(f"\n[★] Total High-Velocity Spikes Identified: {len(filtered_spikes)}")
-    for i, s in enumerate(filtered_spikes[:10], 1):
-        print(f"  {i}. [{s['assignedCategory'].upper()}] {s['trend']} | Vol: {s['search_volume']} | Growth: {s['growth']}")
+    # Enrich top 8 candidates with live Google Autocomplete questions for AI Overviews
+    for s in filtered_spikes[:8]:
+        try:
+            extra_q = fetch_extended_questions(s["trend"], limit=5)
+            existing_q = s.get("questions", [])
+            for eq in extra_q:
+                if eq not in existing_q:
+                    existing_q.append(eq)
+            s["questions"] = existing_q
+        except Exception:
+            pass
+
+    print(f"\n[★] Total High-Velocity Winnable Spikes Identified: {len(filtered_spikes)}")
+    for i, s in enumerate(filtered_spikes[:12], 1):
+        print(f"  {i}. [Score {s['winScore']}] [{s['assignedCategory'].upper()}] {s['trend']} | Vol: {s['search_volume']} | Growth: {s['growth']}")
 
     return filtered_spikes
 

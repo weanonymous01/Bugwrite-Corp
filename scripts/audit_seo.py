@@ -93,10 +93,18 @@ assert len(rss_items) == min(50, len(article_pages)), f"Unexpected RSS item coun
 print(f"Valid rss.xml: {len(rss_items)} feed items")
 
 assert os.path.exists("public/e7b4c9a21f6d48039b5e2a8c1d7f4e90.txt"), "Missing IndexNow verification key file!"
+assert os.path.exists("public/llms.txt"), "Missing AI crawler index: public/llms.txt!"
+llms_txt = open("public/llms.txt", encoding="utf-8").read()
+assert "Bugwrite" in llms_txt and CANONICAL_HOST in llms_txt, "Invalid public/llms.txt!"
+assert llms_txt.count("\u2014") == 0 and llms_txt.count("\u2013") == 0, "public/llms.txt contains forbidden em/en dashes!"
+
+robots_txt = open("public/robots.txt", encoding="utf-8").read()
+for bot in ["OAI-SearchBot", "GPTBot", "Google-Extended", "PerplexityBot"]:
+    assert bot in robots_txt, f"robots.txt missing explicit Allow for {bot}!"
 
 # 5. Verify live HTTP 200 on local Vite (or verify static files if server is offline)
 live_routes = [
-    "/", "/robots.txt", "/sitemap.xml", "/news-sitemap.xml", "/rss.xml", "/ads.txt",
+    "/", "/robots.txt", "/llms.txt", "/sitemap.xml", "/news-sitemap.xml", "/rss.xml", "/ads.txt",
     "/favicon.svg", "/favicon.ico", "/favicon-48x48.png", "/site.webmanifest",
     "/assets/styles.css", "/blog/bugwrite-logo.png",
     "/about", "/contact", "/privacy-policy", "/terms-of-service",
