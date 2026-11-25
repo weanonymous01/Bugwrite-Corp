@@ -177,33 +177,9 @@
       syncTheme();
 
       const bar = document.getElementById('gta-announcement-bar');
-      const timerEl = document.getElementById('gta-countdown-timer');
-      const textEl = document.getElementById('gta-countdown-text');
       const dismissBtn = document.getElementById('dismiss-announcement-btn');
-      if (bar && timerEl) {
-        const target = new Date(2026, 10, 19, 0, 0, 0).getTime();
-        const pad = (n) => String(n).padStart(2, '0');
-        function tick() {
-          const diff = target - Date.now();
-          if (diff <= 0) {
-            textEl.textContent = 'Grand Theft Auto VI is live now on PS5 and Xbox Series X|S.';
-            timerEl.textContent = '';
-            timerEl.classList.add('hidden');
-            return;
-          }
-          const days = Math.floor(diff / 86400000);
-          const hours = Math.floor((diff % 86400000) / 3600000);
-          const mins = Math.floor((diff % 3600000) / 60000);
-          const secs = Math.floor((diff % 60000) / 1000);
-          timerEl.textContent = days > 0
-            ? `${pad(days)}d ${pad(hours)}h ${pad(mins)}m ${pad(secs)}s`
-            : `${pad(hours)}h ${pad(mins)}m ${pad(secs)}s`;
-        }
-        tick();
-        setInterval(tick, 1000);
-        if (dismissBtn) {
-          dismissBtn.addEventListener('click', () => bar.classList.add('hidden'));
-        }
+      if (bar && dismissBtn) {
+        dismissBtn.addEventListener('click', () => bar.classList.add('hidden'));
       }
     })();
   </script>

@@ -125,18 +125,16 @@ def parse_iso_date(date_str):
 
 
 def build_announcement_bar(is_spa=False):
-    guide_href = "/gaming/article/when-is-gta-6-playable-release-times"
-    onclick = " onclick=\"event.preventDefault(); openArticleView('when-is-gta-6-playable-release-times')\"" if is_spa else ""
-    return f"""  <!-- GTA 6 LAUNCH COUNTDOWN ANNOUNCEMENT BAR -->
+    guide_href = "https://chat.whatsapp.com/HSpSgCon0LSKbtT1ptEjzI"
+    return f"""  <!-- TOP ANNOUNCEMENT BAR -->
   <div id="gta-announcement-bar" class="bg-neutral-950 dark:bg-[#161a22] text-white border-b border-neutral-800">
     <div class="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between gap-3 text-xs">
       <div class="w-4 hidden sm:block shrink-0" aria-hidden="true"></div>
       <div class="flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 text-center">
-        <span class="font-bold uppercase tracking-[0.09em] text-neutral-200">GTA VI Launch</span>
+        <span class="font-bold uppercase tracking-[0.09em] text-neutral-200">FREE CLAUDE CODE</span>
         <span class="text-neutral-600 hidden sm:inline">|</span>
-        <span id="gta-countdown-text" class="text-neutral-300">Unlocks Nov 19 at midnight local time:</span>
-        <span id="gta-countdown-timer" class="font-bold tabular-nums tracking-wider text-white">00h 00m 00s</span>
-        <a href="{guide_href}"{onclick} class="ml-1 font-semibold underline underline-offset-4 text-neutral-200 hover:text-white transition-colors">
+        <span class="text-neutral-300">Run with billions of tokens for free with a few simple steps.</span>
+        <a href="{guide_href}" target="_blank" rel="noopener noreferrer" class="ml-1 font-semibold underline underline-offset-4 text-neutral-200 hover:text-white transition-colors">
           Launch Guide &rarr;
         </a>
       </div>
@@ -317,33 +315,9 @@ SHARED_FOOTER_SCRIPT = """  <script>
       syncTheme();
 
       const bar = document.getElementById('gta-announcement-bar');
-      const timerEl = document.getElementById('gta-countdown-timer');
-      const textEl = document.getElementById('gta-countdown-text');
       const dismissBtn = document.getElementById('dismiss-announcement-btn');
-      if (bar && timerEl) {
-        const target = new Date(2026, 10, 19, 0, 0, 0).getTime();
-        const pad = (n) => String(n).padStart(2, '0');
-        function tick() {
-          const diff = target - Date.now();
-          if (diff <= 0) {
-            textEl.textContent = 'Grand Theft Auto VI is live now on PS5 and Xbox Series X|S.';
-            timerEl.textContent = '';
-            timerEl.classList.add('hidden');
-            return;
-          }
-          const days = Math.floor(diff / 86400000);
-          const hours = Math.floor((diff % 86400000) / 3600000);
-          const mins = Math.floor((diff % 3600000) / 60000);
-          const secs = Math.floor((diff % 60000) / 1000);
-          timerEl.textContent = days > 0
-            ? `${pad(days)}d ${pad(hours)}h ${pad(mins)}m ${pad(secs)}s`
-            : `${pad(hours)}h ${pad(mins)}m ${pad(secs)}s`;
-        }
-        tick();
-        setInterval(tick, 1000);
-        if (dismissBtn) {
-          dismissBtn.addEventListener('click', () => bar.classList.add('hidden'));
-        }
+      if (bar && dismissBtn) {
+        dismissBtn.addEventListener('click', () => bar.classList.add('hidden'));
       }
     })();
   </script>"""
